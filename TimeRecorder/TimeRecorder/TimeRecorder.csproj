@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FC3CD4A-524F-47CC-82E7-965BCD0D4207}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TimeRecorder</RootNamespace>
+    <AssemblyName>TimeRecorder</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormFile\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFile\FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFile\FormAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFile\FormAna.Designer.cs">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFile\FormLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFile\FormLabel.Designer.cs">
+      <DependentUpon>FormLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFile\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFile\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFile\FormTodaySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFile\FormTodaySummary.Designer.cs">
+      <DependentUpon>FormTodaySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormFile\FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormAna.resx">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormLabel.resx">
+      <DependentUpon>FormLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormTodaySummary.resx">
+      <DependentUpon>FormTodaySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\2019-06-23_11-49-40.png" />
+    <Content Include="icon\201906231156352_easyicon_net_32.ico" />
+    <Content Include="icon\Arrow back.png" />
+    <Content Include="icon\Arrow forward.png" />
+    <Content Include="icon\bold.png" />
+    <Content Include="icon\Close.png" />
+    <Content Include="icon\color.png" />
+    <Content Include="icon\Copy.png" />
+    <Content Include="icon\Cut %281%29.png" />
+    <Content Include="icon\font10.png" />
+    <Content Include="icon\font_italic.png" />
+    <Content Include="icon\font_underlined.png" />
+    <Content Include="icon\New.png" />
+    <Content Include="icon\Open.png" />
+    <Content Include="icon\Paste.png" />
+    <Content Include="icon\picture.png" />
+    <Content Include="icon\Save.png" />
+    <Content Include="icon\图片2.png" />
+    <Content Include="icon\柳比歇夫.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
