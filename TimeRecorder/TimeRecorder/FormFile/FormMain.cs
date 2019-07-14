@@ -100,12 +100,18 @@ namespace TimeRecorder
             dgvShow.Columns[1].Visible = false;  //日期列隐藏
             dgvShow.Columns[2].DefaultCellStyle.Format = "HH:mm";  //开始时间列  小写的hh会将13:00显示为 1:00，即12小时制
             dgvShow.Columns[3].DefaultCellStyle.Format = "HH:mm";  //结束时间列
+            dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
             //foreach (DataRow item in dgvShow.Rows)
             //{
             //    //TODO：根据一级标签设置颜色
             //    //if(item.ha)
             //}
+
+            
+            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
+            formSummary.LoadChartPie(mcMain.SelectionStart);
+            formSummary.LoadSummary(mcMain.SelectionStart);
         }
 
         private void LoadLabelTable()
@@ -155,9 +161,6 @@ namespace TimeRecorder
             LoadDgvShow(mcMain.SelectionStart);
       
 
-            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
-            formSummary.LoadChartPie(mcMain.SelectionStart);
-            formSummary.LoadSummary(mcMain.SelectionStart);
         }
 
 
@@ -225,6 +228,7 @@ namespace TimeRecorder
 
             btnSave.PerformClick();
             dTPBeginTime.Value = dTPEndTime.Value;
+            txtNote.Clear();
             dTPEndTime.Focus();
 
         }
@@ -285,6 +289,8 @@ namespace TimeRecorder
 
 
         #endregion
+
+
 
         #region 菜单栏点击事件
 

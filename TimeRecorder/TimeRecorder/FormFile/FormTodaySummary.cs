@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -14,7 +10,7 @@ namespace TimeRecorder
 {
     public partial class FormTodaySummary : Form
     {
-        string summaryDir = @"summary/";
+        string summaryDir = @"summary/";  //summary存放的目录
         string rtfExtison = ".rtf";
         string summaryFileName = String.Empty;
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
@@ -53,9 +49,9 @@ namespace TimeRecorder
         public void LoadChartPie(DateTime dt)
         {
             //TODO: 显示格式修改为 8H：10m的样式
+            //TODO: 显示的时间会很长，例如48.666667分钟
             List<double> yTimeSpanData = new List<double>();
             List<string> xLbaelData = new List<string>();
-
             xLbaelData.Clear();
             yTimeSpanData.Clear();
             dayDictionary.Clear();
@@ -86,8 +82,9 @@ namespace TimeRecorder
 
             foreach (var item in dayDictionary)
             {
+                
                 xLbaelData.Add(item.Key);
-                yTimeSpanData.Add(item.Value.TotalMinutes);
+                yTimeSpanData.Add( (int) item.Value.TotalMinutes);
             }
 
 

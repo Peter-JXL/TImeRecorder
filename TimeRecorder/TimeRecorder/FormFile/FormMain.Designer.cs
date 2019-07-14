@@ -410,6 +410,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblCountdownLeft);
             this.panel1.Controls.Add(this.dtpCountdownEnd);
             this.panel1.Controls.Add(this.dtpCountdownBegin);
@@ -430,9 +431,9 @@
             this.lblCountdownLeft.AutoSize = true;
             this.lblCountdownLeft.Location = new System.Drawing.Point(112, 185);
             this.lblCountdownLeft.Name = "lblCountdownLeft";
-            this.lblCountdownLeft.Size = new System.Drawing.Size(51, 21);
+            this.lblCountdownLeft.Size = new System.Drawing.Size(50, 21);
             this.lblCountdownLeft.TabIndex = 32;
-            this.lblCountdownLeft.Text = "2分钟";
+            this.lblCountdownLeft.Text = "x分钟";
             // 
             // dtpCountdownEnd
             // 

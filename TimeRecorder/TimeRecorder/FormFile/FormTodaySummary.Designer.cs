@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTodaySummary));
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -58,9 +58,9 @@
             // 
             // rTxtTodaySummary
             // 
-            this.rTxtTodaySummary.Location = new System.Drawing.Point(312, 66);
+            this.rTxtTodaySummary.Location = new System.Drawing.Point(416, 72);
             this.rTxtTodaySummary.Name = "rTxtTodaySummary";
-            this.rTxtTodaySummary.Size = new System.Drawing.Size(478, 385);
+            this.rTxtTodaySummary.Size = new System.Drawing.Size(354, 433);
             this.rTxtTodaySummary.TabIndex = 0;
             this.rTxtTodaySummary.Text = "";
             this.rTxtTodaySummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rTxtTodaySummary_KeyDown);
@@ -68,23 +68,23 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend2);
-            this.chartAnalysis.Location = new System.Drawing.Point(12, 66);
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend1);
+            this.chartAnalysis.Location = new System.Drawing.Point(12, 37);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartAreaPie";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "LegendPie";
-            series2.Name = "SeriesPie";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series2.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series2);
-            this.chartAnalysis.Size = new System.Drawing.Size(294, 222);
+            series1.ChartArea = "ChartAreaPie";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "LegendPie";
+            series1.Name = "SeriesPie";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series1.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series1);
+            this.chartAnalysis.Size = new System.Drawing.Size(398, 436);
             this.chartAnalysis.TabIndex = 20;
             this.chartAnalysis.Text = "chart1";
             // 
@@ -256,7 +256,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 25);
+            this.label1.Location = new System.Drawing.Point(416, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 21);
             this.label1.TabIndex = 23;
