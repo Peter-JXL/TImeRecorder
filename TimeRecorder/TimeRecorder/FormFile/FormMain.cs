@@ -22,7 +22,7 @@ namespace TimeRecorder
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
         DataSet myDataSet = new DataSet("MyDataSet");
 
-        FormTodaySummary formSummary = new FormTodaySummary();
+        FormTodaySummary formSummary;
         int secondsOfMinutes;
 
         #endregion
@@ -31,12 +31,16 @@ namespace TimeRecorder
         public FormMain()
         {
             InitializeComponent();
+            formSummary = new FormTodaySummary();
             InitFormControlsProperties();
             LoadDgvShow(DateTime.Now);
             LoadLabelTable();
             fillcboFirstLbl();
-            formSummary.LoadSummary(DateTime.Now);
-            formSummary.LoadChartPie(DateTime.Now);
+
+            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
+            formSummary.LoadChartPie(mcMain.SelectionStart);
+            formSummary.LoadSummary(mcMain.SelectionStart);
+
         }
 
         private void InitFormControlsProperties()
@@ -67,10 +71,10 @@ namespace TimeRecorder
             numericUpDownCountDown.TextAlign = HorizontalAlignment.Center;
             dtpCountdownBegin.Format = DateTimePickerFormat.Custom;
             dtpCountdownEnd.Format = DateTimePickerFormat.Custom;
-            
+
             dtpCountdownEnd.CustomFormat = "HH:mm";
             dtpCountdownBegin.CustomFormat = "HH:mm";
-            
+
 
             txtNote.ImeMode = ImeMode.On;
 
@@ -102,16 +106,13 @@ namespace TimeRecorder
             dgvShow.Columns[3].DefaultCellStyle.Format = "HH:mm";  //结束时间列
             dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
-            //foreach (DataRow item in dgvShow.Rows)
-            //{
-            //    //TODO：根据一级标签设置颜色
-            //    //if(item.ha)
-            //}
+                                                                           //foreach (DataRow item in dgvShow.Rows)
+                                                                           //{
+                                                                           //    //TODO：根据一级标签设置颜色
+                                                                           //    //if(item.ha)
+                                                                           //}
 
-            
-            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
-            formSummary.LoadChartPie(mcMain.SelectionStart);
-            formSummary.LoadSummary(mcMain.SelectionStart);
+
         }
 
         private void LoadLabelTable()
@@ -151,7 +152,7 @@ namespace TimeRecorder
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-          
+
         }
 
         private void mcMain_DateChanged(object sender, DateRangeEventArgs e)
@@ -159,7 +160,10 @@ namespace TimeRecorder
             dTPBeginTime.Value = mcMain.SelectionStart;
             dTPEndTime.Value = mcMain.SelectionStart;
             LoadDgvShow(mcMain.SelectionStart);
-      
+
+            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
+            formSummary.LoadChartPie(mcMain.SelectionStart);
+            formSummary.LoadSummary(mcMain.SelectionStart);
 
         }
 
@@ -309,6 +313,7 @@ namespace TimeRecorder
         private void tsmShowSummary_Click(object sender, EventArgs e)
         {
             formSummary.Show();
+            formSummary.Focus();
         }
 
 
@@ -321,7 +326,7 @@ namespace TimeRecorder
 
         private void timerTomato_Tick(object sender, EventArgs e)
         {
-            if(secondsOfMinutes > 0)
+            if (secondsOfMinutes > 0)
             {
                 secondsOfMinutes--;
                 lblCountdownLeft.Text = (secondsOfMinutes / 60).ToString();
@@ -350,7 +355,7 @@ namespace TimeRecorder
         private void btnStopCountdown_Click(object sender, EventArgs e)
         {
             SystemSounds.Beep.Play();  //Windows声音
-            MessageBox.Show("倒计时结束了！", "通知" , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("倒计时结束了！", "通知", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             timerTomato.Stop();
             btnCountDown.Enabled = true;
             timerTomato.Enabled = false;

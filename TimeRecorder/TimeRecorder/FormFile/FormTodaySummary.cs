@@ -189,7 +189,6 @@ namespace TimeRecorder
         {
             rTxtTodaySummary_save();
         }
-
-
+        
     }
 }
