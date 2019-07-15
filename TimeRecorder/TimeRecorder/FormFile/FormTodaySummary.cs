@@ -24,8 +24,10 @@ namespace TimeRecorder
         public FormTodaySummary()
         {
             InitializeComponent();
+            //this.StartPosition = FormStartPosition;  //TODO:总结窗口在记录窗口的右边
             tableOfDay = new DataTable(); //避免null异常
             rTxtTodaySummary.ImeMode = ImeMode.On;
+            chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
 
         }
 
@@ -49,7 +51,6 @@ namespace TimeRecorder
         public void LoadChartPie(DateTime dt)
         {
             //TODO: 显示格式修改为 8H：10m的样式
-            //TODO: 显示的时间会很长，例如48.666667分钟
             List<double> yTimeSpanData = new List<double>();
             List<string> xLbaelData = new List<string>();
             xLbaelData.Clear();
@@ -142,8 +143,28 @@ namespace TimeRecorder
             rTxtTodaySummary.SelectionFont = newFont;
         }
 
-        private void toolStripBtnStrikeout_Click(object sender, EventArgs e)
+        private void toolStripBtnIndent_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolStripBtnNumList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripBtnOutdent_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rTxtTodaySummary_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+        private void toolStripBtnStrikeout_Click(object sender, EventArgs e)
+        { //划线：在中间有条线划掉选中的字
             Font oldFont = rTxtTodaySummary.SelectionFont;
             Font newFont;
             if (oldFont.Strikeout)
