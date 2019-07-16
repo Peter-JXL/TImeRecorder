@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
 namespace TimeRecorder
 {
     public partial class FormTodaySummary : Form
@@ -14,7 +15,7 @@ namespace TimeRecorder
         string rtfExtison = ".rtf";
         string summaryFileName = String.Empty;
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
-        double minutesOfDay = 60 * 24;
+        const int minutesOfDay = 60 * 24;
         Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
         string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签";
         string dateColumnName = "日期", beginTimeColumnName = "开始时间", endTimeColumnName = "结束时间";
@@ -24,7 +25,7 @@ namespace TimeRecorder
         public FormTodaySummary()
         {
             InitializeComponent();
-            //this.StartPosition = FormStartPosition;  //TODO:总结窗口在记录窗口的右边
+            this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
             tableOfDay = new DataTable(); //避免null异常
             rTxtTodaySummary.ImeMode = ImeMode.On;
             chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
@@ -81,13 +82,17 @@ namespace TimeRecorder
                 }
             }
 
+            int minutesOfUnRecord = minutesOfDay;
             foreach (var item in dayDictionary)
             {
                 
                 xLbaelData.Add(item.Key);
                 yTimeSpanData.Add( (int) item.Value.TotalMinutes);
+                minutesOfUnRecord -= (int)item.Value.TotalMinutes;
             }
 
+            xLbaelData.Add("未记录");
+            yTimeSpanData.Add(minutesOfUnRecord);
 
             chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;

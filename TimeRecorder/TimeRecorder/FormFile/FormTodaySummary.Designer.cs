@@ -35,14 +35,15 @@
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.toolStripFormSummary = new System.Windows.Forms.ToolStrip();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolStripBtnBold = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnItalic = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnUnerLine = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnStrikeout = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnIndent = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnOutdent = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnNumList = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnOutdent = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.webBrowserWord = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.toolStripFormSummary.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             // 
             this.rTxtTodaySummary.Location = new System.Drawing.Point(416, 72);
             this.rTxtTodaySummary.Name = "rTxtTodaySummary";
-            this.rTxtTodaySummary.Size = new System.Drawing.Size(354, 433);
+            this.rTxtTodaySummary.Size = new System.Drawing.Size(268, 206);
             this.rTxtTodaySummary.TabIndex = 0;
             this.rTxtTodaySummary.Text = "";
             this.rTxtTodaySummary.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rTxtTodaySummary_LinkClicked);
@@ -95,15 +96,6 @@
             this.toolStripFormSummary.Size = new System.Drawing.Size(823, 25);
             this.toolStripFormSummary.TabIndex = 21;
             this.toolStripFormSummary.Text = "toolStrip1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(416, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 21);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "今日总结：";
             // 
             // toolStripBtnBold
             // 
@@ -155,16 +147,6 @@
             this.toolStripBtnIndent.Text = "toolStripButton13";
             this.toolStripBtnIndent.Click += new System.EventHandler(this.toolStripBtnIndent_Click);
             // 
-            // toolStripBtnOutdent
-            // 
-            this.toolStripBtnOutdent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnOutdent.Image = global::TimeRecorder.Properties.Resources.outdent_48px;
-            this.toolStripBtnOutdent.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnOutdent.Name = "toolStripBtnOutdent";
-            this.toolStripBtnOutdent.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnOutdent.Text = "toolStripButton1";
-            this.toolStripBtnOutdent.Click += new System.EventHandler(this.toolStripBtnOutdent_Click);
-            // 
             // toolStripBtnNumList
             // 
             this.toolStripBtnNumList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -175,11 +157,39 @@
             this.toolStripBtnNumList.Text = "toolStripButton2";
             this.toolStripBtnNumList.Click += new System.EventHandler(this.toolStripBtnNumList_Click);
             // 
+            // toolStripBtnOutdent
+            // 
+            this.toolStripBtnOutdent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnOutdent.Image = global::TimeRecorder.Properties.Resources.outdent_48px;
+            this.toolStripBtnOutdent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnOutdent.Name = "toolStripBtnOutdent";
+            this.toolStripBtnOutdent.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnOutdent.Text = "toolStripButton1";
+            this.toolStripBtnOutdent.Click += new System.EventHandler(this.toolStripBtnOutdent_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(416, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "今日总结：";
+            // 
+            // webBrowserWord
+            // 
+            this.webBrowserWord.Location = new System.Drawing.Point(434, 299);
+            this.webBrowserWord.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserWord.Name = "webBrowserWord";
+            this.webBrowserWord.Size = new System.Drawing.Size(366, 261);
+            this.webBrowserWord.TabIndex = 24;
+            // 
             // FormTodaySummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 572);
+            this.Controls.Add(this.webBrowserWord);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStripFormSummary);
             this.Controls.Add(this.chartAnalysis);
@@ -210,5 +220,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton toolStripBtnOutdent;
         private System.Windows.Forms.ToolStripButton toolStripBtnNumList;
+        private System.Windows.Forms.WebBrowser webBrowserWord;
     }
 }
