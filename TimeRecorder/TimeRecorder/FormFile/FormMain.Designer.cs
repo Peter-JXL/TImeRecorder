@@ -75,6 +75,7 @@
             this.lblExplainCountdownLeft = new System.Windows.Forms.Label();
             this.lblExplainCountdownEnd = new System.Windows.Forms.Label();
             this.lblExplainCountdownBegin = new System.Windows.Forms.Label();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
@@ -169,7 +170,8 @@
             // tsmFile
             // 
             this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmShowSummary});
+            this.tsmShowSummary,
+            this.wordToolStripMenuItem});
             this.tsmFile.Name = "tsmFile";
             this.tsmFile.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.tsmFile.Size = new System.Drawing.Size(58, 21);
@@ -179,7 +181,7 @@
             // 
             this.tsmShowSummary.Name = "tsmShowSummary";
             this.tsmShowSummary.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.tsmShowSummary.Size = new System.Drawing.Size(157, 22);
+            this.tsmShowSummary.Size = new System.Drawing.Size(180, 22);
             this.tsmShowSummary.Text = "每日总结表";
             this.tsmShowSummary.Click += new System.EventHandler(this.tsmShowSummary_Click);
             // 
@@ -196,14 +198,14 @@
             // 
             this.tsmLabelModify.Name = "tsmLabelModify";
             this.tsmLabelModify.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.tsmLabelModify.Size = new System.Drawing.Size(145, 22);
+            this.tsmLabelModify.Size = new System.Drawing.Size(180, 22);
             this.tsmLabelModify.Text = "标签修改";
             this.tsmLabelModify.Click += new System.EventHandler(this.tsmLabelModify_Click);
             // 
             // 标签统计ToolStripMenuItem
             // 
             this.标签统计ToolStripMenuItem.Name = "标签统计ToolStripMenuItem";
-            this.标签统计ToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.标签统计ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.标签统计ToolStripMenuItem.Text = "标签统计";
             // 
             // 帮助ToolStripMenuItem
@@ -219,14 +221,14 @@
             // 
             this.tsmAbout.Name = "tsmAbout";
             this.tsmAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsmAbout.Size = new System.Drawing.Size(146, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
             this.tsmAbout.Text = "关于(&A)...";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // tsmAboutLanguage
             // 
             this.tsmAboutLanguage.Name = "tsmAboutLanguage";
-            this.tsmAboutLanguage.Size = new System.Drawing.Size(146, 22);
+            this.tsmAboutLanguage.Size = new System.Drawing.Size(180, 22);
             this.tsmAboutLanguage.Text = "关于语言(&L)";
             // 
             // cboFirstLbl
@@ -478,6 +480,12 @@
             this.lblExplainCountdownBegin.TabIndex = 23;
             this.lblExplainCountdownBegin.Text = "开始时间:";
             // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wordToolStripMenuItem.Text = "word";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -560,6 +568,7 @@
         private System.Windows.Forms.DateTimePicker dtpCountdownEnd;
         private System.Windows.Forms.DateTimePicker dtpCountdownBegin;
         private System.Windows.Forms.Label lblCountdownLeft;
+        private System.Windows.Forms.ToolStripMenuItem wordToolStripMenuItem;
     }
 }
 

@@ -1,4 +1,4 @@
-﻿namespace TimeRecorder.FormFile
+﻿namespace TimeRecorder
 {
     partial class word
     {
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(word));
             this.label1 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.axWebBrowserWord = new AxSHDocVw.AxWebBrowser();
+            ((System.ComponentModel.ISupportInitialize)(this.axWebBrowserWord)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,24 +43,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // webBrowser1
+            // axWebBrowserWord
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(112, 44);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 1;
+            this.axWebBrowserWord.Enabled = true;
+            this.axWebBrowserWord.Location = new System.Drawing.Point(141, 55);
+            this.axWebBrowserWord.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWebBrowserWord.OcxState")));
+            this.axWebBrowserWord.Size = new System.Drawing.Size(389, 345);
+            this.axWebBrowserWord.TabIndex = 2;
             // 
             // word
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 335);
-            this.Controls.Add(this.webBrowser1);
+            this.ClientSize = new System.Drawing.Size(601, 465);
+            this.Controls.Add(this.axWebBrowserWord);
             this.Controls.Add(this.label1);
             this.Name = "word";
             this.Text = "word";
             this.Load += new System.EventHandler(this.word_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.axWebBrowserWord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,6 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private AxSHDocVw.AxWebBrowser axWebBrowserWord;
     }
 }
