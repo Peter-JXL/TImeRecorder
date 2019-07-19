@@ -42,6 +42,7 @@
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmShowSummary = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabelModify = new System.Windows.Forms.ToolStripMenuItem();
             this.标签统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +76,6 @@
             this.lblExplainCountdownLeft = new System.Windows.Forms.Label();
             this.lblExplainCountdownEnd = new System.Windows.Forms.Label();
             this.lblExplainCountdownBegin = new System.Windows.Forms.Label();
-            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
@@ -181,9 +181,15 @@
             // 
             this.tsmShowSummary.Name = "tsmShowSummary";
             this.tsmShowSummary.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.tsmShowSummary.Size = new System.Drawing.Size(180, 22);
+            this.tsmShowSummary.Size = new System.Drawing.Size(157, 22);
             this.tsmShowSummary.Text = "每日总结表";
             this.tsmShowSummary.Click += new System.EventHandler(this.tsmShowSummary_Click);
+            // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.wordToolStripMenuItem.Text = "word";
             // 
             // tsmLabel
             // 
@@ -198,14 +204,14 @@
             // 
             this.tsmLabelModify.Name = "tsmLabelModify";
             this.tsmLabelModify.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.tsmLabelModify.Size = new System.Drawing.Size(180, 22);
+            this.tsmLabelModify.Size = new System.Drawing.Size(145, 22);
             this.tsmLabelModify.Text = "标签修改";
             this.tsmLabelModify.Click += new System.EventHandler(this.tsmLabelModify_Click);
             // 
             // 标签统计ToolStripMenuItem
             // 
             this.标签统计ToolStripMenuItem.Name = "标签统计ToolStripMenuItem";
-            this.标签统计ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.标签统计ToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.标签统计ToolStripMenuItem.Text = "标签统计";
             // 
             // 帮助ToolStripMenuItem
@@ -221,14 +227,14 @@
             // 
             this.tsmAbout.Name = "tsmAbout";
             this.tsmAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(146, 22);
             this.tsmAbout.Text = "关于(&A)...";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // tsmAboutLanguage
             // 
             this.tsmAboutLanguage.Name = "tsmAboutLanguage";
-            this.tsmAboutLanguage.Size = new System.Drawing.Size(180, 22);
+            this.tsmAboutLanguage.Size = new System.Drawing.Size(146, 22);
             this.tsmAboutLanguage.Text = "关于语言(&L)";
             // 
             // cboFirstLbl
@@ -314,7 +320,7 @@
             this.dTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dTPEndTime.Location = new System.Drawing.Point(97, 68);
             this.dTPEndTime.Name = "dTPEndTime";
-            this.dTPEndTime.Size = new System.Drawing.Size(116, 29);
+            this.dTPEndTime.Size = new System.Drawing.Size(150, 29);
             this.dTPEndTime.TabIndex = 2;
             // 
             // dTPBeginTime
@@ -322,7 +328,7 @@
             this.dTPBeginTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dTPBeginTime.Location = new System.Drawing.Point(97, 20);
             this.dTPBeginTime.Name = "dTPBeginTime";
-            this.dTPBeginTime.Size = new System.Drawing.Size(116, 29);
+            this.dTPBeginTime.Size = new System.Drawing.Size(150, 29);
             this.dTPBeginTime.TabIndex = 1;
             // 
             // timerTomato
@@ -479,12 +485,6 @@
             this.lblExplainCountdownBegin.Size = new System.Drawing.Size(78, 21);
             this.lblExplainCountdownBegin.TabIndex = 23;
             this.lblExplainCountdownBegin.Text = "开始时间:";
-            // 
-            // wordToolStripMenuItem
-            // 
-            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
-            this.wordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.wordToolStripMenuItem.Text = "word";
             // 
             // FormMain
             // 

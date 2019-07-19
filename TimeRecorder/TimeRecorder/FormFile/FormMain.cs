@@ -54,13 +54,13 @@ namespace TimeRecorder
             mcMain.MaxSelectionCount = 1;
 
             dTPBeginTime.Format = DateTimePickerFormat.Custom;
-            dTPBeginTime.CustomFormat = "HH:mm";
-            dTPBeginTime.MaxDate = DateTime.Now.AddDays(1);
+            dTPBeginTime.CustomFormat = "dd日 HH:mm";
+            dTPBeginTime.MaxDate = DateTime.Now;
             dTPBeginTime.ShowUpDown = true;
 
             dTPEndTime.Format = DateTimePickerFormat.Custom;
-            dTPEndTime.CustomFormat = "HH:mm";
-            dTPEndTime.MaxDate = DateTime.Now.AddDays(1);
+            dTPEndTime.CustomFormat = "dd日 HH:mm";
+            dTPEndTime.MaxDate = DateTime.Now;
             dTPEndTime.ShowUpDown = true;
 
             timerTomato.Interval = 1000;  //timer以毫秒为单位  秒，毫秒，微妙，纳秒
@@ -103,7 +103,19 @@ namespace TimeRecorder
             dgvShow.Columns[0].Visible = false;  //ID列隐藏
             dgvShow.Columns[1].Visible = false;  //日期列隐藏
             dgvShow.Columns[2].DefaultCellStyle.Format = "HH:mm";  //开始时间列  小写的hh会将13:00显示为 1:00，即12小时制
+            dgvShow.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgvShow.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;//开始时间4个字变成一列字了
+            dgvShow.Columns[2].Width = 75;  //两行两列
+
             dgvShow.Columns[3].DefaultCellStyle.Format = "HH:mm";  //结束时间列
+            dgvShow.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgvShow.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            dgvShow.Columns[3].Width = 75;
+
+
+            dgvShow.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //一级标签列
+            dgvShow.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //二级标签列
+
             dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
                                                                            //foreach (DataRow item in dgvShow.Rows)
@@ -111,7 +123,7 @@ namespace TimeRecorder
                                                                            //    //TODO：根据一级标签设置颜色
                                                                            //    //if(item.ha)
                                                                            //}
-
+        
 
         }
 
@@ -158,7 +170,11 @@ namespace TimeRecorder
         private void mcMain_DateChanged(object sender, DateRangeEventArgs e)
         {
             dTPBeginTime.Value = mcMain.SelectionStart;
+            dTPBeginTime.MaxDate = mcMain.SelectionStart;
+        
             dTPEndTime.Value = mcMain.SelectionStart;
+            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+
             LoadDgvShow(mcMain.SelectionStart);
 
             formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
@@ -354,14 +370,25 @@ namespace TimeRecorder
 
         private void btnStopCountdown_Click(object sender, EventArgs e)
         {
-            SystemSounds.Beep.Play();  //Windows声音
-            MessageBox.Show("倒计时结束了！", "通知", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            timerTomato.Stop();
-            btnCountDown.Enabled = true;
-            timerTomato.Enabled = false;
-            dTPBeginTime.Value = dtpCountdownBegin.Value;
-            dTPEndTime.Value = dtpCountdownEnd.Value;
-            btnAddTodgv.PerformClick();
+            if (secondsOfMinutes == 0)
+            {
+                SystemSounds.Beep.Play();  //Windows声音
+                MessageBox.Show("倒计时结束了！", "通知", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                timerTomato.Stop();
+                btnCountDown.Enabled = true;
+                timerTomato.Enabled = false;
+                dTPBeginTime.Value = dtpCountdownBegin.Value;
+                dTPEndTime.Value = dtpCountdownEnd.Value;
+                btnAddTodgv.PerformClick();
+            }
+            else
+            {
+                SystemSounds.Beep.Play();  //Windows声音
+                MessageBox.Show("倒计时结束了！", "通知", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                timerTomato.Stop();
+                btnCountDown.Enabled = true;
+                timerTomato.Enabled = false;
+            }
 
         }
 
