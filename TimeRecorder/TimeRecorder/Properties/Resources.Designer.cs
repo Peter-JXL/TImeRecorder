@@ -93,6 +93,16 @@ namespace TimeRecorder.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap back_26px {
+            get {
+                object obj = ResourceManager.GetObject("back_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap bold {
             get {
                 object obj = ResourceManager.GetObject("bold", resourceCulture);
@@ -193,6 +203,16 @@ namespace TimeRecorder.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap forward_26px {
+            get {
+                object obj = ResourceManager.GetObject("forward_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap indent_48px {
             get {
                 object obj = ResourceManager.GetObject("indent_48px", resourceCulture);
@@ -286,6 +306,16 @@ namespace TimeRecorder.Properties {
         internal static System.Drawing.Bitmap text_48px {
             get {
                 object obj = ResourceManager.GetObject("text_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap today_26px {
+            get {
+                object obj = ResourceManager.GetObject("today_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -43,6 +43,8 @@
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmShowSummary = new System.Windows.Forms.ToolStripMenuItem();
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAnalysis = new System.Windows.Forms.ToolStripMenuItem();
+            this.测试word窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabelModify = new System.Windows.Forms.ToolStripMenuItem();
             this.标签统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,20 +71,23 @@
             this.tsmBeginCountdown = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEndCountdown = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelF = new System.Windows.Forms.Panel();
             this.lblCountdownLeft = new System.Windows.Forms.Label();
             this.dtpCountdownEnd = new System.Windows.Forms.DateTimePicker();
             this.dtpCountdownBegin = new System.Windows.Forms.DateTimePicker();
             this.lblExplainCountdownLeft = new System.Windows.Forms.Label();
             this.lblExplainCountdownEnd = new System.Windows.Forms.Label();
             this.lblExplainCountdownBegin = new System.Windows.Forms.Label();
+            this.btnToday = new System.Windows.Forms.Button();
+            this.btnTomorrow = new System.Windows.Forms.Button();
+            this.btnYesterday = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
             this.panelRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountDown)).BeginInit();
             this.contextMenuStripIcon.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelF.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddTodgv
@@ -106,7 +111,7 @@
             // 
             // mcMain
             // 
-            this.mcMain.Location = new System.Drawing.Point(610, 60);
+            this.mcMain.Location = new System.Drawing.Point(632, 60);
             this.mcMain.Name = "mcMain";
             this.mcMain.TabIndex = 6;
             this.mcMain.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mcMain_DateChanged);
@@ -163,7 +168,7 @@
             this.帮助ToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1156, 25);
+            this.menuStripMain.Size = new System.Drawing.Size(1227, 25);
             this.menuStripMain.TabIndex = 16;
             this.menuStripMain.Text = "menuStripMain";
             // 
@@ -171,7 +176,9 @@
             // 
             this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmShowSummary,
-            this.wordToolStripMenuItem});
+            this.wordToolStripMenuItem,
+            this.tsmAnalysis,
+            this.测试word窗口ToolStripMenuItem});
             this.tsmFile.Name = "tsmFile";
             this.tsmFile.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.tsmFile.Size = new System.Drawing.Size(58, 21);
@@ -181,15 +188,30 @@
             // 
             this.tsmShowSummary.Name = "tsmShowSummary";
             this.tsmShowSummary.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.tsmShowSummary.Size = new System.Drawing.Size(157, 22);
+            this.tsmShowSummary.Size = new System.Drawing.Size(175, 22);
             this.tsmShowSummary.Text = "每日总结表";
             this.tsmShowSummary.Click += new System.EventHandler(this.tsmShowSummary_Click);
             // 
             // wordToolStripMenuItem
             // 
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
-            this.wordToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.wordToolStripMenuItem.Text = "word";
+            // 
+            // tsmAnalysis
+            // 
+            this.tsmAnalysis.Name = "tsmAnalysis";
+            this.tsmAnalysis.ShortcutKeys = System.Windows.Forms.Keys.F9;
+            this.tsmAnalysis.Size = new System.Drawing.Size(175, 22);
+            this.tsmAnalysis.Text = "分析窗口";
+            this.tsmAnalysis.Click += new System.EventHandler(this.tsmAnalysis_Click);
+            // 
+            // 测试word窗口ToolStripMenuItem
+            // 
+            this.测试word窗口ToolStripMenuItem.Name = "测试word窗口ToolStripMenuItem";
+            this.测试word窗口ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
+            this.测试word窗口ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.测试word窗口ToolStripMenuItem.Text = "测试word窗口";
             // 
             // tsmLabel
             // 
@@ -226,15 +248,14 @@
             // tsmAbout
             // 
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsmAbout.Size = new System.Drawing.Size(146, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(138, 22);
             this.tsmAbout.Text = "关于(&A)...";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // tsmAboutLanguage
             // 
             this.tsmAboutLanguage.Name = "tsmAboutLanguage";
-            this.tsmAboutLanguage.Size = new System.Drawing.Size(146, 22);
+            this.tsmAboutLanguage.Size = new System.Drawing.Size(138, 22);
             this.tsmAboutLanguage.Text = "关于语言(&L)";
             // 
             // cboFirstLbl
@@ -265,7 +286,7 @@
             this.dgvShow.Location = new System.Drawing.Point(12, 60);
             this.dgvShow.Name = "dgvShow";
             this.dgvShow.RowTemplate.Height = 23;
-            this.dgvShow.Size = new System.Drawing.Size(576, 530);
+            this.dgvShow.Size = new System.Drawing.Size(608, 530);
             this.dgvShow.TabIndex = 17;
             this.dgvShow.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvShow_CellEndEdit);
             // 
@@ -276,7 +297,7 @@
             this.toolStripStatusLabel1});
             this.statusStripMain.Location = new System.Drawing.Point(0, 628);
             this.statusStripMain.Name = "statusStripMain";
-            this.statusStripMain.Size = new System.Drawing.Size(1156, 25);
+            this.statusStripMain.Size = new System.Drawing.Size(1227, 25);
             this.statusStripMain.TabIndex = 18;
             this.statusStripMain.Text = "statusStrip1";
             // 
@@ -310,7 +331,7 @@
             this.panelRecord.Controls.Add(this.lblSecondLabel);
             this.panelRecord.Controls.Add(this.txtNote);
             this.panelRecord.Controls.Add(this.lblNote);
-            this.panelRecord.Location = new System.Drawing.Point(610, 258);
+            this.panelRecord.Location = new System.Drawing.Point(634, 259);
             this.panelRecord.Name = "panelRecord";
             this.panelRecord.Size = new System.Drawing.Size(323, 332);
             this.panelRecord.TabIndex = 0;
@@ -416,23 +437,23 @@
             this.tsmExit.Text = "退出";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
-            // panel1
+            // panelF
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblCountdownLeft);
-            this.panel1.Controls.Add(this.dtpCountdownEnd);
-            this.panel1.Controls.Add(this.dtpCountdownBegin);
-            this.panel1.Controls.Add(this.lblExplainCountdownLeft);
-            this.panel1.Controls.Add(this.lblExplainCountdownEnd);
-            this.panel1.Controls.Add(this.lblExplainCountdownBegin);
-            this.panel1.Controls.Add(this.btnCountDown);
-            this.panel1.Controls.Add(this.btnStopCountdown);
-            this.panel1.Controls.Add(this.numericUpDownCountDown);
-            this.panel1.Controls.Add(this.lblCountDown);
-            this.panel1.Location = new System.Drawing.Point(878, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 234);
-            this.panel1.TabIndex = 23;
+            this.panelF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelF.Controls.Add(this.lblCountdownLeft);
+            this.panelF.Controls.Add(this.dtpCountdownEnd);
+            this.panelF.Controls.Add(this.dtpCountdownBegin);
+            this.panelF.Controls.Add(this.lblExplainCountdownLeft);
+            this.panelF.Controls.Add(this.lblExplainCountdownEnd);
+            this.panelF.Controls.Add(this.lblExplainCountdownBegin);
+            this.panelF.Controls.Add(this.btnCountDown);
+            this.panelF.Controls.Add(this.btnStopCountdown);
+            this.panelF.Controls.Add(this.numericUpDownCountDown);
+            this.panelF.Controls.Add(this.lblCountDown);
+            this.panelF.Location = new System.Drawing.Point(949, 60);
+            this.panelF.Name = "panelF";
+            this.panelF.Size = new System.Drawing.Size(266, 234);
+            this.panelF.TabIndex = 23;
             // 
             // lblCountdownLeft
             // 
@@ -486,18 +507,55 @@
             this.lblExplainCountdownBegin.TabIndex = 23;
             this.lblExplainCountdownBegin.Text = "开始时间:";
             // 
+            // btnToday
+            // 
+            this.btnToday.Image = global::TimeRecorder.Properties.Resources.today_26px;
+            this.btnToday.Location = new System.Drawing.Point(864, 98);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(31, 32);
+            this.btnToday.TabIndex = 26;
+            this.btnToday.UseVisualStyleBackColor = true;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
+            this.btnToday.MouseHover += new System.EventHandler(this.btnDateChanged_MouseHover);
+            // 
+            // btnTomorrow
+            // 
+            this.btnTomorrow.Image = global::TimeRecorder.Properties.Resources.forward_26px;
+            this.btnTomorrow.Location = new System.Drawing.Point(864, 136);
+            this.btnTomorrow.Name = "btnTomorrow";
+            this.btnTomorrow.Size = new System.Drawing.Size(31, 32);
+            this.btnTomorrow.TabIndex = 25;
+            this.btnTomorrow.UseVisualStyleBackColor = true;
+            this.btnTomorrow.Click += new System.EventHandler(this.btnTomorrow_Click);
+            this.btnTomorrow.MouseHover += new System.EventHandler(this.btnDateChanged_MouseHover);
+            // 
+            // btnYesterday
+            // 
+            this.btnYesterday.Image = global::TimeRecorder.Properties.Resources.back_26px;
+            this.btnYesterday.Location = new System.Drawing.Point(864, 60);
+            this.btnYesterday.Name = "btnYesterday";
+            this.btnYesterday.Size = new System.Drawing.Size(31, 32);
+            this.btnYesterday.TabIndex = 24;
+            this.btnYesterday.UseVisualStyleBackColor = true;
+            this.btnYesterday.Click += new System.EventHandler(this.btnYesterday_Click);
+            this.btnYesterday.MouseHover += new System.EventHandler(this.btnDateChanged_MouseHover);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 653);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1227, 653);
+            this.Controls.Add(this.btnToday);
+            this.Controls.Add(this.btnTomorrow);
+            this.Controls.Add(this.btnYesterday);
+            this.Controls.Add(this.panelF);
             this.Controls.Add(this.panelRecord);
             this.Controls.Add(this.dgvShow);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.mcMain);
             this.Controls.Add(this.menuStripMain);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HelpButton = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStripMain;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -515,8 +573,8 @@
             this.panelRecord.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountDown)).EndInit();
             this.contextMenuStripIcon.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelF.ResumeLayout(false);
+            this.panelF.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +614,7 @@
         private System.Windows.Forms.Button btnCountDown;
         private System.Windows.Forms.Button btnStopCountdown;
         private System.Windows.Forms.NotifyIcon notifyIconMain;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelF;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripIcon;
         private System.Windows.Forms.ToolStripMenuItem tsmOpenRecordForm;
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
@@ -569,6 +627,11 @@
         private System.Windows.Forms.DateTimePicker dtpCountdownBegin;
         private System.Windows.Forms.Label lblCountdownLeft;
         private System.Windows.Forms.ToolStripMenuItem wordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmAnalysis;
+        private System.Windows.Forms.ToolStripMenuItem 测试word窗口ToolStripMenuItem;
+        private System.Windows.Forms.Button btnYesterday;
+        private System.Windows.Forms.Button btnTomorrow;
+        private System.Windows.Forms.Button btnToday;
     }
 }
 

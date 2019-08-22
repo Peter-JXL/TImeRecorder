@@ -18,6 +18,8 @@ namespace TimeRecorder
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new word());
             Application.Run(new FormMain());
+            //Application.Run(new FormAna());
+
         }
     }
 }

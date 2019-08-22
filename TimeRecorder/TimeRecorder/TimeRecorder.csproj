@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>柳比歇夫.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,6 +88,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\AccessHelper.cs" />
     <EmbeddedResource Include="FormFile\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,7 +135,11 @@
     <Content Include="icon\201906231156352_easyicon_net_32.ico" />
     <Content Include="icon\Arrow back.png" />
     <Content Include="icon\Arrow forward.png" />
+    <None Include="icon\back_26px.png" />
     <Content Include="icon\bold.png" />
+    <None Include="icon\forward_26px.png" />
+    <None Include="icon\today_26px.png" />
+    <Content Include="柳比歇夫.ico" />
     <None Include="icon\bold_48px.png" />
     <None Include="icon\bulleted_list_48px.png" />
     <Content Include="icon\Close.png" />

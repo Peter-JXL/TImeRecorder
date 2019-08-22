@@ -28,7 +28,10 @@ namespace TimeRecorder
             dataAdapter.Fill(dataSet, "Lable");
             dgvLabel.DataSource = dataSet.Tables["Lable"];
             dgvLabel.Columns[0].Visible = false;
+            dgvLabel.ImeMode = ImeMode.On;
+
             connection.Close();
+            
         }
 
 

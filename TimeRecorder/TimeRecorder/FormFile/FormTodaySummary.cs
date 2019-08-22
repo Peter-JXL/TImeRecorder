@@ -28,26 +28,11 @@ namespace TimeRecorder
             this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
             tableOfDay = new DataTable(); //避免null异常
             rTxtTodaySummary.ImeMode = ImeMode.On;
+            rTxtTodaySummary.AutoWordSelection = true;
             chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
 
         }
 
-        private void rTxtTodaySummary_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control)
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.S: break;
-                    case Keys.B: toolStripBtnBold.PerformClick(); ; break;
-                    case Keys.I: toolStripBtnItalic.PerformClick(); break;
-                    case Keys.U: toolStripBtnUnerLine.PerformClick(); break;
-                    case Keys.T: toolStripBtnStrikeout.PerformClick(); break;
-
-                    default: break;
-                }
-            }
-        }
 
         public void LoadChartPie(DateTime dt)
         {
@@ -85,14 +70,17 @@ namespace TimeRecorder
             int minutesOfUnRecord = minutesOfDay;
             foreach (var item in dayDictionary)
             {
-                
+
                 xLbaelData.Add(item.Key);
-                yTimeSpanData.Add( (int) item.Value.TotalMinutes);
+                yTimeSpanData.Add((int)item.Value.TotalMinutes);
                 minutesOfUnRecord -= (int)item.Value.TotalMinutes;
             }
 
-            xLbaelData.Add("未记录");
-            yTimeSpanData.Add(minutesOfUnRecord);
+            if (minutesOfUnRecord != 0)
+            {
+                xLbaelData.Add("未记录");
+                yTimeSpanData.Add(minutesOfUnRecord);
+            }
 
             chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
@@ -100,6 +88,24 @@ namespace TimeRecorder
         }
 
         #region 富文本编辑
+
+        private void rTxtTodaySummary_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.Control)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.S: rTxtTodaySummary_save(); break;
+                    case Keys.B: toolStripBtnBold.PerformClick(); ; break;
+                    case Keys.I: toolStripBtnItalic.PerformClick(); break;
+                    case Keys.U: toolStripBtnUnerLine.PerformClick(); break;
+                    case Keys.T: toolStripBtnStrikeout.PerformClick(); break;
+
+                    default: break;
+                }
+            }
+        }
 
         private void toolStripBtnBold_Click(object sender, EventArgs e)
         {
@@ -160,7 +166,7 @@ namespace TimeRecorder
 
         private void toolStripBtnOutdent_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void rTxtTodaySummary_LinkClicked(object sender, LinkClickedEventArgs e)
@@ -215,6 +221,6 @@ namespace TimeRecorder
         {
             rTxtTodaySummary_save();
         }
-        
+
     }
 }

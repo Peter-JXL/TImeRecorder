@@ -45,6 +45,7 @@ namespace TimeRecorder
 
         private void InitFormControlsProperties()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             myDataSet.Tables.Add(yearAndMonthTableName);
 
             dgvShow.AllowUserToResizeRows = false;
@@ -54,13 +55,15 @@ namespace TimeRecorder
             mcMain.MaxSelectionCount = 1;
 
             dTPBeginTime.Format = DateTimePickerFormat.Custom;
-            dTPBeginTime.CustomFormat = "dd日 HH:mm";
-            dTPBeginTime.MaxDate = DateTime.Now;
+            dTPBeginTime.CustomFormat = "dd日  HH:mm";
+            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);  //为了能录入所有当天的时间
+            dTPBeginTime.MinDate = new DateTime();
             dTPBeginTime.ShowUpDown = true;
 
             dTPEndTime.Format = DateTimePickerFormat.Custom;
-            dTPEndTime.CustomFormat = "dd日 HH:mm";
-            dTPEndTime.MaxDate = DateTime.Now;
+            dTPEndTime.CustomFormat = "dd日  HH:mm";
+            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
 
             timerTomato.Interval = 1000;  //timer以毫秒为单位  秒，毫秒，微妙，纳秒
@@ -83,6 +86,14 @@ namespace TimeRecorder
             cboSecondLbl.ImeMode = ImeMode.On;
             cboSecondLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
 
+        }
+
+        private void SetHelpProvider()
+        {
+            helpProviderMain.SetShowHelp(btnYesterday, true);
+            helpProviderMain.SetHelpString(btnYesterday, "后退一日");
+            helpProviderMain.SetHelpString(btnToday, "回到今日");
+            helpProviderMain.SetHelpString(btnTomorrow, "前进一日");
         }
 
         private void LoadDgvShow(DateTime dt)
@@ -123,7 +134,7 @@ namespace TimeRecorder
                                                                            //    //TODO：根据一级标签设置颜色
                                                                            //    //if(item.ha)
                                                                            //}
-        
+
 
         }
 
@@ -147,13 +158,8 @@ namespace TimeRecorder
                 switch (e.KeyCode)
                 {
                     case Keys.S: btnSave.PerformClick(); break;
-                    case Keys.Left: mcMain.SelectionStart = mcMain.SelectionStart.AddDays(-1); break;
-                    case Keys.Right:
-                        if (mcMain.SelectionStart < mcMain.MaxDate)
-                        {
-                            mcMain.SelectionStart = mcMain.SelectionStart.AddDays(1);
-                        }
-                        break;
+                    case Keys.Left: btnYesterday.PerformClick(); break;
+                    case Keys.Right: btnTomorrow.PerformClick(); break;
 
                     default:
                         break;
@@ -169,11 +175,11 @@ namespace TimeRecorder
 
         private void mcMain_DateChanged(object sender, DateRangeEventArgs e)
         {
+            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPBeginTime.Value = mcMain.SelectionStart;
-            dTPBeginTime.MaxDate = mcMain.SelectionStart;
-        
-            dTPEndTime.Value = mcMain.SelectionStart;
+
             dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            dTPEndTime.Value = mcMain.SelectionStart;
 
             LoadDgvShow(mcMain.SelectionStart);
 
@@ -183,6 +189,23 @@ namespace TimeRecorder
 
         }
 
+        private void btnYesterday_Click(object sender, EventArgs e)
+        {
+            mcMain.SelectionStart = mcMain.SelectionStart.AddDays(-1);
+        }
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            mcMain.SelectionStart = mcMain.TodayDate;
+        }
+
+        private void btnTomorrow_Click(object sender, EventArgs e)
+        {
+            if (mcMain.SelectionStart < mcMain.MaxDate)
+            {
+                mcMain.SelectionStart = mcMain.SelectionStart.AddDays(1);
+            }
+        }
 
         #region 录入相关
 
@@ -213,6 +236,7 @@ namespace TimeRecorder
                     cboSecondLbl.Items.Add(item[secondLabelColumnName]);
                 }
             }
+            cboSecondLbl.SelectedIndex = 0; //改变一级标签后，默认选中第二项
         }
 
         private void cboSecondLbl_TextChanged(object sender, EventArgs e)
@@ -255,21 +279,22 @@ namespace TimeRecorder
 
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
-            //根据备注来选定一级标签和二级标签
+            //功能：根据备注来选定一级标签和二级标签
             //原理：将备注分割成单词，然后循环在标签表的备注里匹配
             if (string.IsNullOrWhiteSpace(txtNote.Text))
             {
                 return;  //防止删除文本后，标签设置为空
             }
-            string[] wordsOfNote = txtNote.Text.Split(' '); //不能用双引号，因为参数是char类型，而“”是string类型
+            string[] wordsOfNote = txtNote.Text.ToLower().Split(' '); //将备注的单词分割，不能用双引号，因为参数是char类型，而“”是string类型
+
             foreach (DataRow item in myDataSet.Tables[LabelTableName].Rows)
             {
-                string[] wordsOfDescribe = item[noteColumnName].ToString().Split(' ');
+                string[] wordsOfDescribe = item[noteColumnName].ToString().ToLower().Split(' ');  //标签每行的备注的单词集合
                 foreach (string n in wordsOfNote)
                 {
                     foreach (string d in wordsOfDescribe)
                     {
-                        if (n == d)
+                        if (n == d)  //匹配成功，开始选择一级和二级标签
                         {
                             string first = item[firstLabelColumnName].ToString();
                             int indexOfFirstLabel = cboFirstLbl.FindString(first);
@@ -322,8 +347,14 @@ namespace TimeRecorder
 
         private void tsmLabelModify_Click(object sender, EventArgs e)
         {
-            FormLabel formLabel = new FormLabel();
-            formLabel.ShowDialog();
+            FormLabel labelForm = new FormLabel();
+            labelForm.Owner = this;
+            
+            if(labelForm.ShowDialog() == DialogResult.Cancel)
+            {
+                LoadLabelTable();
+                fillcboFirstLbl();
+            }
         }
 
         private void tsmShowSummary_Click(object sender, EventArgs e)
@@ -368,6 +399,36 @@ namespace TimeRecorder
 
         }
 
+
+
+        private void tsmAnalysis_Click(object sender, EventArgs e)
+        {
+            FormAna formAna = new FormAna();
+            formAna.ShowDialog();
+        }
+
+        private void btnDateChanged_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.AutoPopDelay = 5000;//提示信息的可见时间
+            toolTip1.InitialDelay = 500;//事件触发多久后出现提示
+            toolTip1.ReshowDelay = 500;//指针从一个控件移向另一个控件时，经过多久才会显示下一个提示框
+            toolTip1.ShowAlways = true;//是否显示提示框
+
+
+            
+            Button btnTemp = (Button)sender;
+            switch (btnTemp.Name)
+            {
+                case "btnYesterday": toolTip1.SetToolTip(btnTemp, "后退一天"); break;  //设置提示按钮和提示内容 
+                case "btnToday": toolTip1.SetToolTip(btnTemp, "回到今天"); break;
+                case "btnTomorrow": toolTip1.SetToolTip(btnTemp, "前进一天"); break;
+                     
+            }
+
+
+        }
+
         private void btnStopCountdown_Click(object sender, EventArgs e)
         {
             if (secondsOfMinutes == 0)
@@ -394,6 +455,7 @@ namespace TimeRecorder
 
 
         #endregion
+
 
 
         #region 任务栏事件
