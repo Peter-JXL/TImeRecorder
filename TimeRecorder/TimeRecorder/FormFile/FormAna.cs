@@ -14,6 +14,7 @@ namespace TimeRecorder
 {
     public partial class FormAna : Form
     {
+        #region 数据定义
         int minutesOfDay = 60 * 24;
         string yearAndMonthTableName = DateTime.Now.ToString("yyyyMM");
         string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签", describeColumnName = "描述";
@@ -22,12 +23,19 @@ namespace TimeRecorder
         string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;Data source = userData.accdb";
         Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
 
-
         public DataTable tableOfDay;
 
         OleDbConnection connection;
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
         DataSet myDataSet = new DataSet("MyDataSet");
+        #endregion
+
+        private void btnAna_Click(object sender, EventArgs e)
+        {
+            DateTime beginDate = dtpBeginTime.Value;
+            DateTime endDate = dtpEndTime.Value;
+        }
+
 
 
         public FormAna()
@@ -43,25 +51,7 @@ namespace TimeRecorder
         }
 
 
-        private void mcAnalysis_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            DateTime mcSelectStart = mcAnalysis.SelectionStart;
-            DateTime mcSelectEnd = mcAnalysis.SelectionEnd;
-
-            string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}# ",
-                yearAndMonthTableName, dateColumnName, mcSelectStart, mcSelectEnd);
-            //日期类型的两边要加#
-            connection = new OleDbConnection(filePath);
-            connection.Open();
-            OleDbCommand command = new OleDbCommand(sql, connection);
-            dataAdapter.SelectCommand = command;
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
-
-            myDataSet.Tables[yearAndMonthTableName].Clear();//清空数据，否则会叠加数据
-            dataAdapter.Fill(myDataSet, yearAndMonthTableName);
-        }
-
-
+   
         public void LoadChartPie(DateTime dt)
         {
             //TODO: 显示格式修改为 8H：10m的样式
