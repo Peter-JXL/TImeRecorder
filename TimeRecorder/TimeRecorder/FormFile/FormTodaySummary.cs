@@ -11,16 +11,23 @@ namespace TimeRecorder
 {
     public partial class FormTodaySummary : Form
     {
+        #region 数据定义
+
+        public DataTable tableOfDay;
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTableName;
+        string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
+
         string summaryDir = @"summary/";  //summary存放的目录
         string rtfExtison = ".rtf";
         string summaryFileName = String.Empty;
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
-        const int minutesOfDay = 60 * 24;
-        Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
-        string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签";
-        string dateColumnName = "日期", beginTimeColumnName = "开始时间", endTimeColumnName = "结束时间";
 
-        public DataTable tableOfDay;
+        #endregion
+
+
+        
 
         public FormTodaySummary()
         {
@@ -37,6 +44,8 @@ namespace TimeRecorder
         public void LoadChartPie(DateTime dt)
         {
             //TODO: 显示格式修改为 8H：10m的样式
+            Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
+
             List<double> yTimeSpanData = new List<double>();
             List<string> xLbaelData = new List<string>();
             xLbaelData.Clear();
@@ -67,7 +76,7 @@ namespace TimeRecorder
                 }
             }
 
-            int minutesOfUnRecord = minutesOfDay;
+            int minutesOfUnRecord = 60 * 24;
             foreach (var item in dayDictionary)
             {
 
@@ -175,7 +184,8 @@ namespace TimeRecorder
         }
 
         private void toolStripBtnStrikeout_Click(object sender, EventArgs e)
-        { //划线：在中间有条线划掉选中的字
+        { 
+            //划线：在中间有条线划掉选中的字
             Font oldFont = rTxtTodaySummary.SelectionFont;
             Font newFont;
             if (oldFont.Strikeout)
@@ -198,7 +208,7 @@ namespace TimeRecorder
             if (!Directory.Exists(summaryDir))
                 Directory.CreateDirectory(summaryDir);
 
-            summaryFileName = summaryDir + dt.ToString("yyyyMMdd") + dt.DayOfWeek + rtfExtison;
+            summaryFileName = summaryDir + dt.ToString("yyyyMMdd ") + dt.DayOfWeek + rtfExtison;
             if (!File.Exists(summaryFileName))
                 rTxtTodaySummary.SaveFile(summaryFileName);
             rTxtTodaySummary.Clear();  //避免更换日期时总结不消除

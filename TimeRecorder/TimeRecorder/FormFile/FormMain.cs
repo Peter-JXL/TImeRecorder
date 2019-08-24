@@ -13,16 +13,19 @@ namespace TimeRecorder
     public partial class FormMain : Form
     {
         #region 数据定义
-        string yearAndMonthTableName = DateTime.Now.ToString("yyyyMM");
-        string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签";
-        string dateColumnName = "日期", beginTimeColumnName = "开始时间", endTimeColumnName = "结束时间", noteColumnName = "备注";
-        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = userData.accdb";
+
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTableName;
+        string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName, 
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
+
+        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
 
         OleDbConnection connection;
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
         DataSet myDataSet = new DataSet("MyDataSet");
 
-        FormTodaySummary formSummary;
+        FormTodaySummary formSummary = new FormTodaySummary();
         int secondsOfMinutes;
 
         #endregion
@@ -31,13 +34,12 @@ namespace TimeRecorder
         public FormMain()
         {
             InitializeComponent();
-            formSummary = new FormTodaySummary();
             InitFormControlsProperties();
             LoadDgvShow(DateTime.Now);
             LoadLabelTable();
             fillcboFirstLbl();
 
-            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
+            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
             formSummary.LoadChartPie(mcMain.SelectionStart);
             formSummary.LoadSummary(mcMain.SelectionStart);
 
@@ -46,7 +48,7 @@ namespace TimeRecorder
         private void InitFormControlsProperties()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            myDataSet.Tables.Add(yearAndMonthTableName);
+            myDataSet.Tables.Add(dataTableName);
 
             dgvShow.AllowUserToResizeRows = false;
             dgvShow.ImeMode = ImeMode.On;
@@ -98,7 +100,7 @@ namespace TimeRecorder
 
         private void LoadDgvShow(DateTime dt)
         {
-            string sql = String.Format("select * from {0} where {1} = #{2}#", yearAndMonthTableName, dateColumnName, dt.ToString("yyyy/MM/dd"));
+            string sql = String.Format("select * from {0} where {1} = #{2}#", dataTableName, dateColumnName, dt.ToString("yyyy/MM/dd"));
             // 日期类型的两边要加#
             connection = new OleDbConnection(filePath);
             connection.Open();
@@ -106,11 +108,11 @@ namespace TimeRecorder
             dataAdapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
 
-            myDataSet.Tables[yearAndMonthTableName].Clear();//清空数据，否则会叠加数据
-            dataAdapter.Fill(myDataSet, yearAndMonthTableName);
+            myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
+            dataAdapter.Fill(myDataSet, dataTableName);
             connection.Close();
 
-            dgvShow.DataSource = myDataSet.Tables[yearAndMonthTableName];
+            dgvShow.DataSource = myDataSet.Tables[dataTableName];
             dgvShow.Columns[0].Visible = false;  //ID列隐藏
             dgvShow.Columns[1].Visible = false;  //日期列隐藏
             dgvShow.Columns[2].DefaultCellStyle.Format = "HH:mm";  //开始时间列  小写的hh会将13:00显示为 1:00，即12小时制
@@ -129,11 +131,9 @@ namespace TimeRecorder
 
             dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
-                                                                           //foreach (DataRow item in dgvShow.Rows)
-                                                                           //{
-                                                                           //    //TODO：根据一级标签设置颜色
-                                                                           //    //if(item.ha)
-                                                                           //}
+
+            //TODO：根据一级标签设置颜色
+
 
 
         }
@@ -183,7 +183,7 @@ namespace TimeRecorder
 
             LoadDgvShow(mcMain.SelectionStart);
 
-            formSummary.tableOfDay = myDataSet.Tables[yearAndMonthTableName];
+            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
             formSummary.LoadChartPie(mcMain.SelectionStart);
             formSummary.LoadSummary(mcMain.SelectionStart);
 
@@ -261,14 +261,14 @@ namespace TimeRecorder
 
         private void btnAddTodgv_Click(object sender, EventArgs e)
         {
-            DataRow newDataRow = myDataSet.Tables[yearAndMonthTableName].NewRow();
+            DataRow newDataRow = myDataSet.Tables[dataTableName].NewRow();
             newDataRow[dateColumnName] = mcMain.SelectionStart.ToString("yyyy-MM-dd");
             newDataRow[beginTimeColumnName] = dTPBeginTime.Value;  //建议不要用.Text，会将00:00 变成后一天的开始时间
             newDataRow[endTimeColumnName] = dTPEndTime.Value;
             newDataRow[firstLabelColumnName] = cboFirstLbl.Text;
             newDataRow[secondLabelColumnName] = cboSecondLbl.Text;
             newDataRow[noteColumnName] = txtNote.Text;
-            myDataSet.Tables[yearAndMonthTableName].Rows.Add(newDataRow);
+            myDataSet.Tables[dataTableName].Rows.Add(newDataRow);
 
             btnSave.PerformClick();
             dTPBeginTime.Value = dTPEndTime.Value;
@@ -315,7 +315,7 @@ namespace TimeRecorder
         {
             try
             {
-                dataAdapter.Update(myDataSet.Tables[yearAndMonthTableName]);
+                dataAdapter.Update(myDataSet.Tables[dataTableName]);
 
                 //MessageBox.Show("保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -349,8 +349,8 @@ namespace TimeRecorder
         {
             FormLabel labelForm = new FormLabel();
             labelForm.Owner = this;
-            
-            if(labelForm.ShowDialog() == DialogResult.Cancel)
+
+            if (labelForm.ShowDialog() == DialogResult.Cancel)
             {
                 LoadLabelTable();
                 fillcboFirstLbl();
@@ -416,14 +416,14 @@ namespace TimeRecorder
             toolTip1.ShowAlways = true;//是否显示提示框
 
 
-            
+
             Button btnTemp = (Button)sender;
             switch (btnTemp.Name)
             {
                 case "btnYesterday": toolTip1.SetToolTip(btnTemp, "后退一天"); break;  //设置提示按钮和提示内容 
                 case "btnToday": toolTip1.SetToolTip(btnTemp, "回到今天"); break;
                 case "btnTomorrow": toolTip1.SetToolTip(btnTemp, "前进一天"); break;
-                     
+
             }
 
 
