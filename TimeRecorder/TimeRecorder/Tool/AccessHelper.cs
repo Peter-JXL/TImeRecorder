@@ -35,15 +35,5 @@ namespace TimeRecorder
             connection.Close();
             return myDataSet.Tables[LabelTableName];
         }
-
-
-        public DataTable getDaysTable(DateTime beginTime, DateTime endTime)
-        {
-            DataTable daysTable = new DataTable();
-            string sql = string.Format("select * from {0} where {1} and {2}", beginTime.ToShortDateString(), endTime.ToShortDateString());
-
-
-            return daysTable;
-        }
     }
 }
