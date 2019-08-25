@@ -13,14 +13,12 @@ namespace TimeRecorder
     public partial class FormMain : Form
     {
         #region 数据定义
-        string dataTableName = GlobalData.dataTableName;
-        string dateColumnName = GlobalData.dateColumnName;
-        string beginTimeColumnName = GlobalData.beginTimeColumnName;
-        string endTimeColumnName = GlobalData.endTimeColumnName;
-        string LabelTableName = GlobalData.labelTabelName;
-        string firstLabelColumnName = GlobalData.firstLabelColumnName;
-        string secondLabelColumnName = GlobalData.secondLabelColumnName;
-        string noteColumnName = GlobalData.noteColumnName;
+
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTableName;
+        string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName, 
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
+
         string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
 
         OleDbConnection connection;
@@ -28,7 +26,6 @@ namespace TimeRecorder
         DataSet myDataSet = new DataSet("MyDataSet");
 
         FormTodaySummary formSummary = new FormTodaySummary();
-
         int secondsOfMinutes;
 
         #endregion
@@ -41,6 +38,9 @@ namespace TimeRecorder
             LoadDgvShow(DateTime.Now);
             LoadLabelTable();
             fillcboFirstLbl();
+
+            
+
         }
 
         private void InitFormControlsProperties()
@@ -66,25 +66,25 @@ namespace TimeRecorder
             dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
 
-            txtNote.ImeMode = ImeMode.On;
-
-            cboFirstLbl.ImeMode = ImeMode.On;
-            cboSecondLbl.ImeMode = ImeMode.On;
-            cboFirstLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cboSecondLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-
-
-            timerTomato.Interval = 1000;  //timer以毫秒为单位  秒，毫秒ms，微妙us，纳秒ns
+            timerTomato.Interval = 1000;  //timer以毫秒为单位  秒，毫秒，微妙，纳秒
             timerTomato.Enabled = false;
             numericUpDownCountDown.Minimum = 1;
             numericUpDownCountDown.Maximum = 30;
             numericUpDownCountDown.Value = 25;
             numericUpDownCountDown.TextAlign = HorizontalAlignment.Center;
-
             dtpCountdownBegin.Format = DateTimePickerFormat.Custom;
             dtpCountdownEnd.Format = DateTimePickerFormat.Custom;
+
             dtpCountdownEnd.CustomFormat = "HH:mm";
             dtpCountdownBegin.CustomFormat = "HH:mm";
+
+
+            txtNote.ImeMode = ImeMode.On;
+
+            cboFirstLbl.ImeMode = ImeMode.On;
+            cboFirstLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cboSecondLbl.ImeMode = ImeMode.On;
+            cboSecondLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
 
         }
 
@@ -105,6 +105,7 @@ namespace TimeRecorder
             OleDbCommand command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
+
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
             dataAdapter.Fill(myDataSet, dataTableName);
             connection.Close();
@@ -128,7 +129,10 @@ namespace TimeRecorder
 
             dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
-            //TODO：根据一级标签设置颜色              
+
+            //TODO：根据一级标签设置颜色
+
+
 
         }
 
@@ -176,8 +180,9 @@ namespace TimeRecorder
             dTPEndTime.Value = mcMain.SelectionStart;
 
             LoadDgvShow(mcMain.SelectionStart);
+
             refreshFormSummary();
-           
+
         }
 
         private void btnYesterday_Click(object sender, EventArgs e)
@@ -232,8 +237,9 @@ namespace TimeRecorder
 
         private void cboSecondLbl_TextChanged(object sender, EventArgs e)
         {
+            string fatherLabel = null;  //必须要设置成null，否则在FindString过程 index返回0（原因不明
+            string secondLabelText = cboSecondLbl.Text;
             //根据二级标签选定一级标签
-            string fatherLabel = null;  //必须要设置成null，否则在FindString过程 index返回0（原因不明           
             foreach (DataRow item in myDataSet.Tables[LabelTableName].Rows)
             {
                 if (item[secondLabelColumnName].ToString() == cboSecondLbl.Text)
@@ -247,6 +253,7 @@ namespace TimeRecorder
             if (index > -1)
             {
                 cboFirstLbl.SelectedIndex = index;
+                cboSecondLbl.Text = secondLabelText;
             }
         }
 
@@ -307,7 +314,7 @@ namespace TimeRecorder
             try
             {
                 dataAdapter.Update(myDataSet.Tables[dataTableName]);
-
+                refreshFormSummary();
                 //MessageBox.Show("保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -321,6 +328,8 @@ namespace TimeRecorder
         {
             btnSave.PerformClick();
         }
+
+
 
         #endregion
 
@@ -337,7 +346,6 @@ namespace TimeRecorder
         private void tsmLabelModify_Click(object sender, EventArgs e)
         {
             FormLabel labelForm = new FormLabel();
-
             labelForm.Owner = this;
 
             if (labelForm.ShowDialog() == DialogResult.Cancel)
@@ -349,19 +357,18 @@ namespace TimeRecorder
 
         private void tsmShowSummary_Click(object sender, EventArgs e)
         {
-            
-            
             formSummary.Show();
-
+            formSummary.Focus();
         }
 
-        //当日期变化时，总结窗口的数据也随之变化
         private void refreshFormSummary()
         {
             formSummary.tableOfDay = myDataSet.Tables[dataTableName];
             formSummary.LoadChartPie();
             formSummary.LoadSummary(mcMain.SelectionStart);
         }
+
+
 
         #endregion
 
@@ -396,6 +403,8 @@ namespace TimeRecorder
             secondsOfMinutes = (int)numericUpDownCountDown.Value * 60;
 
         }
+
+
 
         private void tsmAnalysis_Click(object sender, EventArgs e)
         {
@@ -448,6 +457,7 @@ namespace TimeRecorder
             }
 
         }
+
 
         #endregion
 

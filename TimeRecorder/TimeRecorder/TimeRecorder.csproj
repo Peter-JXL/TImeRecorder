@@ -84,6 +84,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool\AccessHelper.cs" />
+    <Compile Include="Tool\GlobalData.cs" />
     <EmbeddedResource Include="FormFile\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
