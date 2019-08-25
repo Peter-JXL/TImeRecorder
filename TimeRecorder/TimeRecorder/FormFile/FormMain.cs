@@ -14,7 +14,7 @@ namespace TimeRecorder
     {
         #region 数据定义
 
-        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTableName;
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName, 
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
@@ -38,8 +38,6 @@ namespace TimeRecorder
             LoadDgvShow(DateTime.Now);
             LoadLabelTable();
             fillcboFirstLbl();
-
-            
 
         }
 
@@ -66,6 +64,14 @@ namespace TimeRecorder
             dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
 
+           
+            cboFirstLbl.ImeMode = ImeMode.On;
+            cboSecondLbl.ImeMode = ImeMode.On;
+            cboFirstLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cboSecondLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+
+            txtNote.ImeMode = ImeMode.On;
+
             timerTomato.Interval = 1000;  //timer以毫秒为单位  秒，毫秒，微妙，纳秒
             timerTomato.Enabled = false;
             numericUpDownCountDown.Minimum = 1;
@@ -76,15 +82,7 @@ namespace TimeRecorder
             dtpCountdownEnd.Format = DateTimePickerFormat.Custom;
 
             dtpCountdownEnd.CustomFormat = "HH:mm";
-            dtpCountdownBegin.CustomFormat = "HH:mm";
-
-
-            txtNote.ImeMode = ImeMode.On;
-
-            cboFirstLbl.ImeMode = ImeMode.On;
-            cboFirstLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cboSecondLbl.ImeMode = ImeMode.On;
-            cboSecondLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            dtpCountdownBegin.CustomFormat = "HH:mm";         
 
         }
 
@@ -133,7 +131,6 @@ namespace TimeRecorder
             //TODO：根据一级标签设置颜色
 
 
-
         }
 
         private void LoadLabelTable()
@@ -180,7 +177,6 @@ namespace TimeRecorder
             dTPEndTime.Value = mcMain.SelectionStart;
 
             LoadDgvShow(mcMain.SelectionStart);
-
             refreshFormSummary();
 
         }

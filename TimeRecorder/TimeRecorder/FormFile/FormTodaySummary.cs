@@ -14,7 +14,8 @@ namespace TimeRecorder
         #region 数据定义
 
         public DataTable tableOfDay;
-        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTableName;
+        string test = GlobalData.dataTableName;
+        string ddataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
