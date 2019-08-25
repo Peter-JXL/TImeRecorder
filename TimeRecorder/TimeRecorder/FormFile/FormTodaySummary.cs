@@ -13,9 +13,7 @@ namespace TimeRecorder
     {
         #region 数据定义
 
-        public DataTable tableOfDay;
-        string test = GlobalData.dataTableName;
-        string ddataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
@@ -34,7 +32,6 @@ namespace TimeRecorder
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
-            tableOfDay = new DataTable(); //避免null异常
             rTxtTodaySummary.ImeMode = ImeMode.On;
             rTxtTodaySummary.AutoWordSelection = true;
             chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
@@ -42,7 +39,7 @@ namespace TimeRecorder
         }
 
 
-        public void LoadChartPie()
+        public void LoadChartPie(DataTable tableOfDay)
         {
             //TODO: 显示格式修改为 8H：10m的样式
             Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();

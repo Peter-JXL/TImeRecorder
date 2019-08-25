@@ -14,63 +14,48 @@ namespace TimeRecorder
 {
     public partial class FormAna : Form
     {
-        int minutesOfDay = 60 * 24;
-        string yearAndMonthTableName = DateTime.Now.ToString("yyyyMM");
-        string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签", describeColumnName = "描述";
-        string dateColumnName = "日期", beginTimeColumnName = "开始时间", endTimeColumnName = "结束时间", noteColumnName = "备注";
-        string chartPieName = "饼状图", legendPieName = "饼状图图例";
-        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;Data source = userData.accdb";
-        Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
+        #region 数据定义
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
+        string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
 
-        public DataTable tableOfDay;
+        #endregion
 
-        OleDbConnection connection;
-        OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
-        DataSet myDataSet = new DataSet("MyDataSet");
 
 
         public FormAna()
         {
             InitializeComponent();
+
         }
 
-        private void FormAna_Load(object sender, EventArgs e)
+
+
+       
+        private void btnAnalysis_Click(object sender, EventArgs e)
         {
-            myDataSet.Tables.Add(yearAndMonthTableName);
-           
+            AccessHelper accessHelper = new AccessHelper();
+            DataTable d = accessHelper.getDaysTable(dtpBeginTime.Value, dtpEndTime.Value);
+            LoadChartPie(d);
+         
 
         }
 
 
-        private void mcAnalysis_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            DateTime mcSelectStart = mcAnalysis.SelectionStart;
-            DateTime mcSelectEnd = mcAnalysis.SelectionEnd;
 
-            string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}# ",
-                yearAndMonthTableName, dateColumnName, mcSelectStart, mcSelectEnd);
-            //日期类型的两边要加#
-            connection = new OleDbConnection(filePath);
-            connection.Open();
-            OleDbCommand command = new OleDbCommand(sql, connection);
-            dataAdapter.SelectCommand = command;
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
-
-            myDataSet.Tables[yearAndMonthTableName].Clear();//清空数据，否则会叠加数据
-            dataAdapter.Fill(myDataSet, yearAndMonthTableName);
-        }
-
-
-        public void LoadChartPie(DateTime dt)
+        public void LoadChartPie(DataTable tableOfDay)
         {
             //TODO: 显示格式修改为 8H：10m的样式
+            Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
             List<double> yTimeSpanData = new List<double>();
             List<string> xLbaelData = new List<string>();
+            string chartPieName = "饼状图", legendPieName = "饼状图图例";
+
             xLbaelData.Clear();
             yTimeSpanData.Clear();
             dayDictionary.Clear();
-
             chartAnalysis.Series[0].Name = chartPieName;
             chartAnalysis.Legends[0].Name = legendPieName;
             chartAnalysis.Legends[legendPieName].Enabled = false;
@@ -96,20 +81,21 @@ namespace TimeRecorder
                 }
             }
 
-            int minutesOfUnRecord = minutesOfDay;
+
             foreach (var item in dayDictionary)
             {
 
                 xLbaelData.Add(item.Key);
                 yTimeSpanData.Add((int)item.Value.TotalMinutes);
-                minutesOfUnRecord -= (int)item.Value.TotalMinutes;
             }
 
-            if (minutesOfUnRecord != 0)
-            {
-                xLbaelData.Add("未记录");
-                yTimeSpanData.Add(minutesOfUnRecord);
-            }
+            //TODO: 累计多少时间没被记录
+            //int minutesOfUnRecord = 60 * 24;
+            //if (minutesOfUnRecord != 0)
+            //{
+            //    xLbaelData.Add("未记录");
+            //    yTimeSpanData.Add(minutesOfUnRecord);
+            //}
 
             chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;

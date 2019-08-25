@@ -81,6 +81,7 @@
             this.btnToday = new System.Windows.Forms.Button();
             this.btnTomorrow = new System.Windows.Forms.Button();
             this.btnYesterday = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountDown)).BeginInit();
             this.contextMenuStripIcon.SuspendLayout();
             this.panelF.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddTodgv
@@ -111,7 +113,7 @@
             // 
             // mcMain
             // 
-            this.mcMain.Location = new System.Drawing.Point(632, 60);
+            this.mcMain.Location = new System.Drawing.Point(8, 14);
             this.mcMain.Name = "mcMain";
             this.mcMain.TabIndex = 6;
             this.mcMain.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mcMain_DateChanged);
@@ -510,7 +512,7 @@
             // btnToday
             // 
             this.btnToday.Image = global::TimeRecorder.Properties.Resources.today_26px;
-            this.btnToday.Location = new System.Drawing.Point(864, 98);
+            this.btnToday.Location = new System.Drawing.Point(240, 92);
             this.btnToday.Name = "btnToday";
             this.btnToday.Size = new System.Drawing.Size(31, 32);
             this.btnToday.TabIndex = 26;
@@ -521,7 +523,7 @@
             // btnTomorrow
             // 
             this.btnTomorrow.Image = global::TimeRecorder.Properties.Resources.forward_26px;
-            this.btnTomorrow.Location = new System.Drawing.Point(864, 136);
+            this.btnTomorrow.Location = new System.Drawing.Point(240, 130);
             this.btnTomorrow.Name = "btnTomorrow";
             this.btnTomorrow.Size = new System.Drawing.Size(31, 32);
             this.btnTomorrow.TabIndex = 25;
@@ -532,7 +534,7 @@
             // btnYesterday
             // 
             this.btnYesterday.Image = global::TimeRecorder.Properties.Resources.back_26px;
-            this.btnYesterday.Location = new System.Drawing.Point(864, 60);
+            this.btnYesterday.Location = new System.Drawing.Point(240, 54);
             this.btnYesterday.Name = "btnYesterday";
             this.btnYesterday.Size = new System.Drawing.Size(31, 32);
             this.btnYesterday.TabIndex = 24;
@@ -540,19 +542,27 @@
             this.btnYesterday.Click += new System.EventHandler(this.btnYesterday_Click);
             this.btnYesterday.MouseHover += new System.EventHandler(this.btnDateChanged_MouseHover);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.mcMain);
+            this.panel1.Controls.Add(this.btnYesterday);
+            this.panel1.Controls.Add(this.btnToday);
+            this.panel1.Controls.Add(this.btnTomorrow);
+            this.panel1.Location = new System.Drawing.Point(634, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(289, 203);
+            this.panel1.TabIndex = 27;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 653);
-            this.Controls.Add(this.btnToday);
-            this.Controls.Add(this.btnTomorrow);
-            this.Controls.Add(this.btnYesterday);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelF);
             this.Controls.Add(this.panelRecord);
             this.Controls.Add(this.dgvShow);
             this.Controls.Add(this.statusStripMain);
-            this.Controls.Add(this.mcMain);
             this.Controls.Add(this.menuStripMain);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HelpButton = true;
@@ -575,6 +585,7 @@
             this.contextMenuStripIcon.ResumeLayout(false);
             this.panelF.ResumeLayout(false);
             this.panelF.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -632,6 +643,7 @@
         private System.Windows.Forms.Button btnYesterday;
         private System.Windows.Forms.Button btnTomorrow;
         private System.Windows.Forms.Button btnToday;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

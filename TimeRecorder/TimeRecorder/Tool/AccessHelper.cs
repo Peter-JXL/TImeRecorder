@@ -10,17 +10,20 @@ namespace TimeRecorder
 {
     class AccessHelper
     {
-        string yearAndMonthTableName = DateTime.Now.ToString("yyyyMM");
-        string LabelTableName = "标签表", firstLabelColumnName = "一级标签", secondLabelColumnName = "二级标签";
-        string dateColumnName = "日期", beginTimeColumnName = "开始时间", endTimeColumnName = "结束时间", noteColumnName = "备注";
-        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = userData.accdb";
+        #region 数据定义
 
+        string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
+        string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
+
+        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
 
         OleDbConnection connection;
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
-        DataSet myDataSet = new DataSet("MyDataSet");
+        DataSet myDataSet = new DataSet("MyDataSet");     
 
-
+        #endregion
 
         public DataTable getLabelTable()
         {
@@ -34,6 +37,25 @@ namespace TimeRecorder
             adapter.Fill(myDataSet, LabelTableName);
             connection.Close();
             return myDataSet.Tables[LabelTableName];
+        }
+
+        public DataTable getDaysTable(DateTime beginDate, DateTime endDate)
+        {
+            string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}#",
+                               dataTableName, dateColumnName, beginDate, endDate);
+
+            connection = new OleDbConnection(filePath);
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(sql, connection);
+            dataAdapter.SelectCommand = command;
+            OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
+
+            myDataSet.Tables.Add(dataTableName);
+            myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
+            dataAdapter.Fill(myDataSet, dataTableName);
+            connection.Close();
+            return myDataSet.Tables[dataTableName];
+
         }
     }
 }

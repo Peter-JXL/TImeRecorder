@@ -38,7 +38,7 @@ namespace TimeRecorder
             LoadDgvShow(DateTime.Now);
             LoadLabelTable();
             fillcboFirstLbl();
-
+            refreshFormSummary();
         }
 
         private void InitFormControlsProperties()
@@ -359,8 +359,7 @@ namespace TimeRecorder
 
         private void refreshFormSummary()
         {
-            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
-            formSummary.LoadChartPie();
+            formSummary.LoadChartPie(myDataSet.Tables[dataTableName]);
             formSummary.LoadSummary(mcMain.SelectionStart);
         }
 
