@@ -39,9 +39,7 @@ namespace TimeRecorder
             LoadLabelTable();
             fillcboFirstLbl();
 
-            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
-            formSummary.LoadChartPie(mcMain.SelectionStart);
-            formSummary.LoadSummary(mcMain.SelectionStart);
+            
 
         }
 
@@ -183,9 +181,7 @@ namespace TimeRecorder
 
             LoadDgvShow(mcMain.SelectionStart);
 
-            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
-            formSummary.LoadChartPie(mcMain.SelectionStart);
-            formSummary.LoadSummary(mcMain.SelectionStart);
+            refreshFormSummary();
 
         }
 
@@ -241,7 +237,8 @@ namespace TimeRecorder
 
         private void cboSecondLbl_TextChanged(object sender, EventArgs e)
         {
-            string fatherLabel = null;  //必须要设置成null，否则在FIndString过程 index返回0（原因不明
+            string fatherLabel = null;  //必须要设置成null，否则在FindString过程 index返回0（原因不明
+            string secondLabelText = cboSecondLbl.Text;
             //根据二级标签选定一级标签
             foreach (DataRow item in myDataSet.Tables[LabelTableName].Rows)
             {
@@ -256,6 +253,7 @@ namespace TimeRecorder
             if (index > -1)
             {
                 cboFirstLbl.SelectedIndex = index;
+                cboSecondLbl.Text = secondLabelText;
             }
         }
 
@@ -316,7 +314,7 @@ namespace TimeRecorder
             try
             {
                 dataAdapter.Update(myDataSet.Tables[dataTableName]);
-
+                refreshFormSummary();
                 //MessageBox.Show("保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -361,6 +359,13 @@ namespace TimeRecorder
         {
             formSummary.Show();
             formSummary.Focus();
+        }
+
+        private void refreshFormSummary()
+        {
+            formSummary.tableOfDay = myDataSet.Tables[dataTableName];
+            formSummary.LoadChartPie();
+            formSummary.LoadSummary(mcMain.SelectionStart);
         }
 
 

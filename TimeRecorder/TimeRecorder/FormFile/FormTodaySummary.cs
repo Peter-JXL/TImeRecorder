@@ -41,7 +41,7 @@ namespace TimeRecorder
         }
 
 
-        public void LoadChartPie(DateTime dt)
+        public void LoadChartPie()
         {
             //TODO: 显示格式修改为 8H：10m的样式
             Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
