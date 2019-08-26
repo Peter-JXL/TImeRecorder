@@ -161,6 +161,7 @@
             this.txtNote.Size = new System.Drawing.Size(250, 29);
             this.txtNote.TabIndex = 4;
             this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.txtNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
             // 
             // menuStripMain
             // 
@@ -270,6 +271,7 @@
             this.cboFirstLbl.Size = new System.Drawing.Size(121, 29);
             this.cboFirstLbl.TabIndex = 3;
             this.cboFirstLbl.SelectedIndexChanged += new System.EventHandler(this.cboFirstLbl_SelectedIndexChanged);
+            this.cboFirstLbl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
             // 
             // cboSecondLbl
             // 
@@ -281,6 +283,7 @@
             this.cboSecondLbl.Size = new System.Drawing.Size(121, 29);
             this.cboSecondLbl.TabIndex = 4;
             this.cboSecondLbl.TextChanged += new System.EventHandler(this.cboSecondLbl_TextChanged);
+            this.cboSecondLbl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
             // 
             // dgvShow
             // 
@@ -345,6 +348,7 @@
             this.dTPEndTime.Name = "dTPEndTime";
             this.dTPEndTime.Size = new System.Drawing.Size(150, 29);
             this.dTPEndTime.TabIndex = 2;
+            this.dTPEndTime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
             // 
             // dTPBeginTime
             // 
@@ -353,6 +357,7 @@
             this.dTPBeginTime.Name = "dTPBeginTime";
             this.dTPBeginTime.Size = new System.Drawing.Size(150, 29);
             this.dTPBeginTime.TabIndex = 1;
+            this.dTPBeginTime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
             // 
             // timerTomato
             // 

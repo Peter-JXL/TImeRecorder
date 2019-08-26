@@ -305,6 +305,11 @@ namespace TimeRecorder
 
         }
 
+        private void enter_KeyDown(object sender, KeyEventArgs e)
+        {
+            SendKeys.Send("{tab}");
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -324,9 +329,9 @@ namespace TimeRecorder
         {
             btnSave.PerformClick();
         }
-
-
-
+      
+        
+        
         #endregion
 
 
@@ -428,6 +433,7 @@ namespace TimeRecorder
 
 
         }
+
 
         private void btnStopCountdown_Click(object sender, EventArgs e)
         {
