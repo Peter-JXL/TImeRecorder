@@ -39,11 +39,8 @@ namespace TimeRecorder
             LoadLabelTable();
             fillcboFirstLbl();
             refreshFormSummary();
-
-            int num = myDataSet.Tables[dataTableName].Rows.Count;
-            dTPBeginTime.Value = DateTime.Parse(  myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString()  );
-            dTPEndTime.Focus();
-            txtNote.Focus();
+            setDtpBeginTime();
+           
         }
 
         private void InitFormControlsProperties()
@@ -138,6 +135,13 @@ namespace TimeRecorder
 
         }
 
+        private void setDtpBeginTime()
+        {
+            int num = myDataSet.Tables[dataTableName].Rows.Count;
+            dTPBeginTime.Value = DateTime.Parse(myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString());
+            dTPEndTime.Focus();
+        }
+
         private void LoadLabelTable()
         {
             string sql = string.Format("select * from {0}", LabelTableName);
@@ -182,6 +186,7 @@ namespace TimeRecorder
             dTPEndTime.Value = mcMain.SelectionStart;
 
             LoadDgvShow(mcMain.SelectionStart);
+            setDtpBeginTime();
             refreshFormSummary();
 
         }
