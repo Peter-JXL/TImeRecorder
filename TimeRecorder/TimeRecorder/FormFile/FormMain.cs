@@ -16,7 +16,7 @@ namespace TimeRecorder
 
         string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
-        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName, 
+        string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
         string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
@@ -39,6 +39,11 @@ namespace TimeRecorder
             LoadLabelTable();
             fillcboFirstLbl();
             refreshFormSummary();
+
+            int num = myDataSet.Tables[dataTableName].Rows.Count;
+            dTPBeginTime.Value = DateTime.Parse(  myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString()  );
+            dTPEndTime.Focus();
+            txtNote.Focus();
         }
 
         private void InitFormControlsProperties()
@@ -64,7 +69,7 @@ namespace TimeRecorder
             dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
 
-           
+
             cboFirstLbl.ImeMode = ImeMode.On;
             cboSecondLbl.ImeMode = ImeMode.On;
             cboFirstLbl.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -82,7 +87,7 @@ namespace TimeRecorder
             dtpCountdownEnd.Format = DateTimePickerFormat.Custom;
 
             dtpCountdownEnd.CustomFormat = "HH:mm";
-            dtpCountdownBegin.CustomFormat = "HH:mm";         
+            dtpCountdownBegin.CustomFormat = "HH:mm";
 
         }
 
@@ -152,7 +157,7 @@ namespace TimeRecorder
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.S: btnSave.PerformClick(); break;
+                    case Keys.S: saveToDataBase(); break;
                     case Keys.Left: btnYesterday.PerformClick(); break;
                     case Keys.Right: btnTomorrow.PerformClick(); break;
 
@@ -264,7 +269,7 @@ namespace TimeRecorder
             newDataRow[noteColumnName] = txtNote.Text;
             myDataSet.Tables[dataTableName].Rows.Add(newDataRow);
 
-            btnSave.PerformClick();
+            saveToDataBase();
             dTPBeginTime.Value = dTPEndTime.Value;
             txtNote.Clear();
             dTPEndTime.Focus();
@@ -307,10 +312,14 @@ namespace TimeRecorder
 
         private void enter_KeyDown(object sender, KeyEventArgs e)
         {
-            SendKeys.Send("{tab}");
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                SendKeys.Send("{tab}");
+            }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void saveToDataBase()
         {
             try
             {
@@ -325,13 +334,19 @@ namespace TimeRecorder
             }
         }
 
+        private void btnAddUnRecord_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void dgvShow_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            btnSave.PerformClick();
+            saveToDataBase();
         }
-      
-        
-        
+
+
+
         #endregion
 
 
@@ -433,6 +448,7 @@ namespace TimeRecorder
 
 
         }
+
 
 
         private void btnStopCountdown_Click(object sender, EventArgs e)

@@ -30,9 +30,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTodaySummary));
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -40,9 +40,9 @@
             this.cmsRichText = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripFormSummary = new System.Windows.Forms.ToolStrip();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripCboFont = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripCboFontSize = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripBtnColor = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripBtnBold = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnItalic = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnUnerLine = new System.Windows.Forms.ToolStripButton();
@@ -60,7 +60,7 @@
             // 
             this.rTxtTodaySummary.Location = new System.Drawing.Point(3, 28);
             this.rTxtTodaySummary.Name = "rTxtTodaySummary";
-            this.rTxtTodaySummary.Size = new System.Drawing.Size(494, 482);
+            this.rTxtTodaySummary.Size = new System.Drawing.Size(477, 482);
             this.rTxtTodaySummary.TabIndex = 0;
             this.rTxtTodaySummary.Text = "";
             this.rTxtTodaySummary.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rTxtTodaySummary_LinkClicked);
@@ -69,22 +69,22 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea11.BackColor = System.Drawing.Color.White;
-            chartArea11.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea11);
-            legend11.Enabled = false;
-            legend11.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend11);
+            chartArea5.BackColor = System.Drawing.Color.White;
+            chartArea5.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend5);
             this.chartAnalysis.Location = new System.Drawing.Point(-2, 44);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series11.ChartArea = "ChartAreaPie";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series11.Legend = "LegendPie";
-            series11.Name = "SeriesPie";
-            series11.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series11.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series11);
+            series5.ChartArea = "ChartAreaPie";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "LegendPie";
+            series5.Name = "SeriesPie";
+            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series5.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series5);
             this.chartAnalysis.Size = new System.Drawing.Size(437, 502);
             this.chartAnalysis.TabIndex = 20;
             this.chartAnalysis.Text = "chart1";
@@ -109,15 +109,15 @@
             this.panel1.Controls.Add(this.rTxtTodaySummary);
             this.panel1.Location = new System.Drawing.Point(442, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 513);
+            this.panel1.Size = new System.Drawing.Size(485, 513);
             this.panel1.TabIndex = 24;
             // 
             // toolStripFormSummary
             // 
             this.toolStripFormSummary.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox2,
-            this.toolStripComboBox1,
-            this.toolStripSplitButton1,
+            this.toolStripCboFont,
+            this.toolStripCboFontSize,
+            this.toolStripBtnColor,
             this.toolStripBtnBold,
             this.toolStripBtnItalic,
             this.toolStripBtnUnerLine,
@@ -128,28 +128,30 @@
             this.toolStripBtnNumList});
             this.toolStripFormSummary.Location = new System.Drawing.Point(0, 0);
             this.toolStripFormSummary.Name = "toolStripFormSummary";
-            this.toolStripFormSummary.Size = new System.Drawing.Size(503, 25);
+            this.toolStripFormSummary.Size = new System.Drawing.Size(485, 25);
             this.toolStripFormSummary.TabIndex = 25;
             this.toolStripFormSummary.Text = "toolStrip1";
             // 
-            // toolStripComboBox2
+            // toolStripCboFont
             // 
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 25);
+            this.toolStripCboFont.Name = "toolStripCboFont";
+            this.toolStripCboFont.Size = new System.Drawing.Size(150, 25);
+            this.toolStripCboFont.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFont_SelectedIndexChanged);
             // 
-            // toolStripComboBox1
+            // toolStripCboFontSize
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.toolStripCboFontSize.Name = "toolStripCboFontSize";
+            this.toolStripCboFontSize.Size = new System.Drawing.Size(75, 25);
+            this.toolStripCboFontSize.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFontSize_SelectedIndexChanged);
             // 
-            // toolStripSplitButton1
+            // toolStripBtnColor
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 22);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.toolStripBtnColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnColor.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnColor.Image")));
+            this.toolStripBtnColor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnColor.Name = "toolStripBtnColor";
+            this.toolStripBtnColor.Size = new System.Drawing.Size(32, 22);
+            this.toolStripBtnColor.Text = "toolStripSplitButton1";
             // 
             // toolStripBtnBold
             // 
@@ -230,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 603);
+            this.ClientSize = new System.Drawing.Size(1017, 603);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartAnalysis);
@@ -265,9 +267,9 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnIndent;
         private System.Windows.Forms.ToolStripButton toolStripBtnOutdent;
         private System.Windows.Forms.ToolStripButton toolStripBtnNumList;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripComboBox toolStripCboFont;
+        private System.Windows.Forms.ToolStripComboBox toolStripCboFontSize;
+        private System.Windows.Forms.ToolStripSplitButton toolStripBtnColor;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

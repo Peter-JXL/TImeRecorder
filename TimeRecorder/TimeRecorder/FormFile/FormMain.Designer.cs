@@ -56,7 +56,6 @@
             this.dgvShow = new System.Windows.Forms.DataGridView();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panelRecord = new System.Windows.Forms.Panel();
             this.dTPEndTime = new System.Windows.Forms.DateTimePicker();
             this.dTPBeginTime = new System.Windows.Forms.DateTimePicker();
@@ -82,6 +81,7 @@
             this.btnTomorrow = new System.Windows.Forms.Button();
             this.btnYesterday = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddUnRecord = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
@@ -94,7 +94,7 @@
             // 
             // btnAddTodgv
             // 
-            this.btnAddTodgv.Location = new System.Drawing.Point(55, 265);
+            this.btnAddTodgv.Location = new System.Drawing.Point(27, 265);
             this.btnAddTodgv.Name = "btnAddTodgv";
             this.btnAddTodgv.Size = new System.Drawing.Size(74, 35);
             this.btnAddTodgv.TabIndex = 5;
@@ -312,22 +312,12 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(68, 20);
             this.toolStripStatusLabel1.Text = "当前操作:";
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(178, 265);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(83, 35);
-            this.btnSave.TabIndex = 19;
-            this.btnSave.Text = "保存更新";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // panelRecord
             // 
+            this.panelRecord.Controls.Add(this.btnAddUnRecord);
             this.panelRecord.Controls.Add(this.dTPEndTime);
             this.panelRecord.Controls.Add(this.dTPBeginTime);
             this.panelRecord.Controls.Add(this.cboSecondLbl);
-            this.panelRecord.Controls.Add(this.btnSave);
             this.panelRecord.Controls.Add(this.btnAddTodgv);
             this.panelRecord.Controls.Add(this.lblBeginTime);
             this.panelRecord.Controls.Add(this.lblEndTime);
@@ -558,6 +548,16 @@
             this.panel1.Size = new System.Drawing.Size(289, 203);
             this.panel1.TabIndex = 27;
             // 
+            // btnAddUnRecord
+            // 
+            this.btnAddUnRecord.Location = new System.Drawing.Point(186, 265);
+            this.btnAddUnRecord.Name = "btnAddUnRecord";
+            this.btnAddUnRecord.Size = new System.Drawing.Size(134, 35);
+            this.btnAddUnRecord.TabIndex = 20;
+            this.btnAddUnRecord.Text = "添加未记录时间";
+            this.btnAddUnRecord.UseVisualStyleBackColor = true;
+            this.btnAddUnRecord.Click += new System.EventHandler(this.btnAddUnRecord_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -614,7 +614,6 @@
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmAbout;
         private System.Windows.Forms.StatusStrip statusStripMain;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem tsmLabelModify;
         private System.Windows.Forms.ToolStripMenuItem tsmAboutLanguage;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -649,6 +648,7 @@
         private System.Windows.Forms.Button btnTomorrow;
         private System.Windows.Forms.Button btnToday;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAddUnRecord;
     }
 }
 
