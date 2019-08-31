@@ -27,6 +27,7 @@ namespace TimeRecorder
         {
             InitializeComponent();
 
+            StartPosition = FormStartPosition.CenterParent;
             string sql = String.Format("select * from {0}", labelTableName);
             connection = new OleDbConnection(filePath);
             connection.Open();
