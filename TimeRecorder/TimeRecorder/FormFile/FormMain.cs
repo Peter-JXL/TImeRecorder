@@ -40,7 +40,7 @@ namespace TimeRecorder
             fillcboFirstLbl();
             refreshFormSummary();
             setDtpBeginTime();
-           
+
         }
 
         private void InitFormControlsProperties()
@@ -138,8 +138,15 @@ namespace TimeRecorder
         private void setDtpBeginTime()
         {
             int num = myDataSet.Tables[dataTableName].Rows.Count;
-            dTPBeginTime.Value = DateTime.Parse(myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString());
-            dTPEndTime.Focus();
+            if (num > 0)
+            {
+                dTPBeginTime.Value = DateTime.Parse(myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString());
+                dTPEndTime.Focus();
+            }
+            else
+            {
+                dTPBeginTime.Value = mcMain.SelectionStart;
+            }
         }
 
         private void LoadLabelTable()

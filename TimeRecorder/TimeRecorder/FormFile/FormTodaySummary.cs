@@ -54,18 +54,27 @@ namespace TimeRecorder
             {
                 toolStripCboFont.Items.Add(b.Name);
             }
-            toolStripCboFont.SelectedIndex = 0;
+            toolStripCboFont.SelectedItem = "微软雅黑"; //默认显示的字体
 
         }
 
         private void fillCboFontSize()
         {
-            string[] fontSizeName = { "8", "9", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72", "初号", "小初", "一号", "小一", "二号", "小二", "三号", "小三", "四号", "小四", "五号", "小五", "六号", "小六", "七号", "八号" };
+            toolStripCboFontSize.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            toolStripCboFontSize.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            //设置数组保存下来菜单上要显示的字号的大小, 利用榜和字号的关系定义一个字体大小的数组
+            //设置数组保存下拉菜单上要显示的字号的大小,
+            string[] fontSizeName = { "8", "9", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72", "初号", "小初", "一号", "小一", "二号", "小二", "三号", "小三", "四号", "小四", "五号", "小五", "六号", "小六", "七号", "八号" };
+            
+
+            //利用榜和字号的关系定义一个字体大小的数组
             float[] fontSize = { 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72, 42, 36, 26, 24, 22, 18, 16, 15, 14, 12, 10.5F, 9, 7.5F, 6.5F, 5.5F, 5 };
 
-
+            foreach(var f in fontSizeName)
+            {
+                toolStripCboFontSize.Items.Add(f);
+            }
+            toolStripCboFontSize.SelectedItem = "10";  //默认显示的字号
         }
 
 
@@ -216,7 +225,8 @@ namespace TimeRecorder
 
         private void toolStripCboFontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            float[] fontSize = { 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72, 42, 36, 26, 24, 22, 18, 16, 15, 14, 12, 10.5F, 9, 7.5F, 6.5F, 5.5F, 5 };
+            this.rTxtTodaySummary.SelectionFont = new Font(this.rTxtTodaySummary.SelectionFont.FontFamily, fontSize[this.toolStripCboFontSize.SelectedIndex], this.rTxtTodaySummary.SelectionFont.Style);
         }
 
         private void rTxtTodaySummary_LinkClicked(object sender, LinkClickedEventArgs e)
