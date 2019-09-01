@@ -37,7 +37,7 @@ namespace TimeRecorder
 
 
         public FormTodaySummary()
-        {      
+        {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
             fillCboFont();
@@ -46,6 +46,11 @@ namespace TimeRecorder
 
             rTxtTodaySummary.ImeMode = ImeMode.On;
             rTxtTodaySummary.AutoWordSelection = true;
+
+            //用来决定当焦点离开文本框后，选中的文本是否还以选中的方式显示
+            //最好设置为false，否则改变字体、大小时不会显示选中的文本
+            rTxtTodaySummary.HideSelection = false;
+
             chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
 
 
@@ -55,10 +60,10 @@ namespace TimeRecorder
         {
             toolStripCboFont.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             toolStripCboFont.AutoCompleteSource = AutoCompleteSource.ListItems;
-            
+
 
             var a = new System.Drawing.Text.InstalledFontCollection(); //引入系统安装的字体
-            foreach(var b in a.Families)
+            foreach (var b in a.Families)
             {
                 toolStripCboFont.Items.Add(b.Name);
             }
@@ -71,8 +76,8 @@ namespace TimeRecorder
             toolStripCboFontSize.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             toolStripCboFontSize.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-          
-            foreach(var f in fontSizeName)
+
+            foreach (var f in fontSizeName)
             {
                 toolStripCboFontSize.Items.Add(f);
             }
@@ -133,22 +138,36 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
 
         }
-  
+
 
         #region 富文本编辑
 
         private void rTxtTodaySummary_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
             if (e.Control)
             {
                 switch (e.KeyCode)
                 {
+
                     case Keys.S: rTxtTodaySummary_save(); break;
+                    case Keys.D: toolStripBtnColor.PerformClick(); break;
                     case Keys.B: toolStripBtnBold.PerformClick(); ; break;
                     case Keys.I: toolStripBtnItalic.PerformClick(); break;
                     case Keys.U: toolStripBtnUnerLine.PerformClick(); break;
                     case Keys.T: toolStripBtnStrikeout.PerformClick(); break;
+                    case Keys.W: if (e.Shift) toolStripBtnList.PerformClick(); break;
+                    case Keys.M:
+                        if (e.Shift)
+                        {
+                            toolStripBtnOutdent.PerformClick();
+                        }
+                        else
+                        {
+                            toolStripBtnIndent.PerformClick();
+                        }
+                        break;
+                    
 
                     default: break;
                 }
@@ -229,17 +248,28 @@ namespace TimeRecorder
 
         private void toolStripBtnIndent_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void toolStripBtnNumList_Click(object sender, EventArgs e)
-        {
-
+            rTxtTodaySummary.SelectionIndent += 10;
         }
 
         private void toolStripBtnOutdent_Click(object sender, EventArgs e)
         {
+            if (rTxtTodaySummary.SelectionIndent > 0)
+            {
+                if (rTxtTodaySummary.SelectionIndent > 10)
+                {
+                    rTxtTodaySummary.SelectionIndent -= 10;
+                }
+                else
+                {
+                    rTxtTodaySummary.SelectionIndent = 0;
+                }
+            }
+        }
 
+        private void toolStripBtnList_Click(object sender, EventArgs e)
+        {
+            bool t = rTxtTodaySummary.SelectionBullet;
+            rTxtTodaySummary.SelectionBullet = !t;
         }
 
         private void rTxtTodaySummary_LinkClicked(object sender, LinkClickedEventArgs e)
@@ -248,7 +278,7 @@ namespace TimeRecorder
         }
 
         private void toolStripBtnStrikeout_Click(object sender, EventArgs e)
-        { 
+        {
             //划线：在中间有条线划掉选中的字
             Font oldFont = rTxtTodaySummary.SelectionFont;
             Font newFont;

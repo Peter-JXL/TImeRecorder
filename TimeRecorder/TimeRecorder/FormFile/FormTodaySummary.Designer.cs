@@ -30,26 +30,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.cmsRichText = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripFormSummary = new System.Windows.Forms.ToolStrip();
             this.toolStripCboFont = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripCboFontSize = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripBtnColor = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnBold = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnItalic = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnUnerLine = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnStrikeout = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnIndent = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnOutdent = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNumList = new System.Windows.Forms.ToolStripButton();
-            this.toolStripFormSummary = new System.Windows.Forms.ToolStrip();
-            this.toolStripBtnColor = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnIndent = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnList = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.toolStripFormSummary.SuspendLayout();
@@ -68,22 +68,22 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend2);
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend1);
             this.chartAnalysis.Location = new System.Drawing.Point(-2, 44);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartAreaPie";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "LegendPie";
-            series2.Name = "SeriesPie";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series2.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series2);
+            series1.ChartArea = "ChartAreaPie";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "LegendPie";
+            series1.Name = "SeriesPie";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series1.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series1);
             this.chartAnalysis.Size = new System.Drawing.Size(437, 502);
             this.chartAnalysis.TabIndex = 20;
             this.chartAnalysis.Text = "chart1";
@@ -111,93 +111,6 @@
             this.panel1.Size = new System.Drawing.Size(547, 513);
             this.panel1.TabIndex = 24;
             // 
-            // toolStripCboFont
-            // 
-            this.toolStripCboFont.Name = "toolStripCboFont";
-            this.toolStripCboFont.Size = new System.Drawing.Size(150, 25);
-            this.toolStripCboFont.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFont_SelectedIndexChanged);
-            // 
-            // toolStripCboFontSize
-            // 
-            this.toolStripCboFontSize.Name = "toolStripCboFontSize";
-            this.toolStripCboFontSize.Size = new System.Drawing.Size(75, 25);
-            this.toolStripCboFontSize.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFontSize_SelectedIndexChanged);
-            // 
-            // toolStripBtnBold
-            // 
-            this.toolStripBtnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnBold.Image = global::TimeRecorder.Properties.Resources.bold_48px;
-            this.toolStripBtnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnBold.Name = "toolStripBtnBold";
-            this.toolStripBtnBold.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnBold.Text = "toolStripButton9";
-            this.toolStripBtnBold.Click += new System.EventHandler(this.toolStripBtnBold_Click);
-            // 
-            // toolStripBtnItalic
-            // 
-            this.toolStripBtnItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnItalic.Image = global::TimeRecorder.Properties.Resources.italic_48px;
-            this.toolStripBtnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnItalic.Name = "toolStripBtnItalic";
-            this.toolStripBtnItalic.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnItalic.Text = "toolStripButton10";
-            this.toolStripBtnItalic.Click += new System.EventHandler(this.toolStripBtnItalic_Click);
-            // 
-            // toolStripBtnUnerLine
-            // 
-            this.toolStripBtnUnerLine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnUnerLine.Image = global::TimeRecorder.Properties.Resources.underline_48px;
-            this.toolStripBtnUnerLine.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnUnerLine.Name = "toolStripBtnUnerLine";
-            this.toolStripBtnUnerLine.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnUnerLine.Text = "toolStripButton11";
-            this.toolStripBtnUnerLine.Click += new System.EventHandler(this.toolStripBtnUnerLine_Click);
-            // 
-            // toolStripBtnStrikeout
-            // 
-            this.toolStripBtnStrikeout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnStrikeout.Image = global::TimeRecorder.Properties.Resources.text_48px;
-            this.toolStripBtnStrikeout.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnStrikeout.Name = "toolStripBtnStrikeout";
-            this.toolStripBtnStrikeout.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnStrikeout.Text = "划掉";
-            this.toolStripBtnStrikeout.Click += new System.EventHandler(this.toolStripBtnStrikeout_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripBtnIndent
-            // 
-            this.toolStripBtnIndent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnIndent.Image = global::TimeRecorder.Properties.Resources.indent_48px;
-            this.toolStripBtnIndent.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnIndent.Name = "toolStripBtnIndent";
-            this.toolStripBtnIndent.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnIndent.Text = "toolStripButton13";
-            this.toolStripBtnIndent.Click += new System.EventHandler(this.toolStripBtnOutdent_Click);
-            // 
-            // toolStripBtnOutdent
-            // 
-            this.toolStripBtnOutdent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnOutdent.Image = global::TimeRecorder.Properties.Resources.outdent_48px;
-            this.toolStripBtnOutdent.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnOutdent.Name = "toolStripBtnOutdent";
-            this.toolStripBtnOutdent.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnOutdent.Text = "toolStripButton1";
-            this.toolStripBtnOutdent.Click += new System.EventHandler(this.toolStripBtnIndent_Click);
-            // 
-            // toolStripBtnNumList
-            // 
-            this.toolStripBtnNumList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtnNumList.Image = global::TimeRecorder.Properties.Resources.numbered_list_48px;
-            this.toolStripBtnNumList.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNumList.Name = "toolStripBtnNumList";
-            this.toolStripBtnNumList.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnNumList.Text = "toolStripButton2";
-            this.toolStripBtnNumList.Click += new System.EventHandler(this.toolStripBtnNumList_Click);
-            // 
             // toolStripFormSummary
             // 
             this.toolStripFormSummary.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -209,14 +122,28 @@
             this.toolStripBtnUnerLine,
             this.toolStripBtnStrikeout,
             this.toolStripSeparator1,
-            this.toolStripBtnIndent,
             this.toolStripBtnOutdent,
-            this.toolStripBtnNumList});
+            this.toolStripBtnIndent,
+            this.toolStripBtnList});
             this.toolStripFormSummary.Location = new System.Drawing.Point(0, 0);
             this.toolStripFormSummary.Name = "toolStripFormSummary";
             this.toolStripFormSummary.Size = new System.Drawing.Size(547, 25);
             this.toolStripFormSummary.TabIndex = 25;
             this.toolStripFormSummary.Text = "toolStrip1";
+            // 
+            // toolStripCboFont
+            // 
+            this.toolStripCboFont.Name = "toolStripCboFont";
+            this.toolStripCboFont.Size = new System.Drawing.Size(150, 25);
+            this.toolStripCboFont.Text = "修改字体";
+            this.toolStripCboFont.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFont_SelectedIndexChanged);
+            // 
+            // toolStripCboFontSize
+            // 
+            this.toolStripCboFontSize.Name = "toolStripCboFontSize";
+            this.toolStripCboFontSize.Size = new System.Drawing.Size(75, 25);
+            this.toolStripCboFontSize.Text = "修改字体大小";
+            this.toolStripCboFontSize.SelectedIndexChanged += new System.EventHandler(this.toolStripCboFontSize_SelectedIndexChanged);
             // 
             // toolStripBtnColor
             // 
@@ -225,8 +152,83 @@
             this.toolStripBtnColor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnColor.Name = "toolStripBtnColor";
             this.toolStripBtnColor.Size = new System.Drawing.Size(23, 22);
-            this.toolStripBtnColor.Text = "修改颜色";
+            this.toolStripBtnColor.Text = "修改颜色(Ctrl+D)";
             this.toolStripBtnColor.Click += new System.EventHandler(this.toolStripBtnColor_Click);
+            // 
+            // toolStripBtnBold
+            // 
+            this.toolStripBtnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnBold.Image = global::TimeRecorder.Properties.Resources.bold_48px;
+            this.toolStripBtnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnBold.Name = "toolStripBtnBold";
+            this.toolStripBtnBold.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnBold.Text = "加粗(Ctrl+B)";
+            this.toolStripBtnBold.Click += new System.EventHandler(this.toolStripBtnBold_Click);
+            // 
+            // toolStripBtnItalic
+            // 
+            this.toolStripBtnItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnItalic.Image = global::TimeRecorder.Properties.Resources.italic_48px;
+            this.toolStripBtnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnItalic.Name = "toolStripBtnItalic";
+            this.toolStripBtnItalic.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnItalic.Text = "斜体(Ctrl+I)";
+            this.toolStripBtnItalic.Click += new System.EventHandler(this.toolStripBtnItalic_Click);
+            // 
+            // toolStripBtnUnerLine
+            // 
+            this.toolStripBtnUnerLine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnUnerLine.Image = global::TimeRecorder.Properties.Resources.underline_48px;
+            this.toolStripBtnUnerLine.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnUnerLine.Name = "toolStripBtnUnerLine";
+            this.toolStripBtnUnerLine.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnUnerLine.Text = "下划线(Ctrl+U)";
+            this.toolStripBtnUnerLine.Click += new System.EventHandler(this.toolStripBtnUnerLine_Click);
+            // 
+            // toolStripBtnStrikeout
+            // 
+            this.toolStripBtnStrikeout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnStrikeout.Image = global::TimeRecorder.Properties.Resources.text_48px;
+            this.toolStripBtnStrikeout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnStrikeout.Name = "toolStripBtnStrikeout";
+            this.toolStripBtnStrikeout.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnStrikeout.Text = "删除线(Ctrl+T)";
+            this.toolStripBtnStrikeout.Click += new System.EventHandler(this.toolStripBtnStrikeout_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripBtnOutdent
+            // 
+            this.toolStripBtnOutdent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnOutdent.Image = global::TimeRecorder.Properties.Resources.indent_48px;
+            this.toolStripBtnOutdent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnOutdent.Name = "toolStripBtnOutdent";
+            this.toolStripBtnOutdent.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnOutdent.Text = "减少缩进(Ctrl+Shift+M)";
+            this.toolStripBtnOutdent.Click += new System.EventHandler(this.toolStripBtnOutdent_Click);
+            // 
+            // toolStripBtnIndent
+            // 
+            this.toolStripBtnIndent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnIndent.Image = global::TimeRecorder.Properties.Resources.outdent_48px;
+            this.toolStripBtnIndent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnIndent.Name = "toolStripBtnIndent";
+            this.toolStripBtnIndent.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnIndent.Text = "增加缩进(Ctrl+M)";
+            this.toolStripBtnIndent.Click += new System.EventHandler(this.toolStripBtnIndent_Click);
+            // 
+            // toolStripBtnList
+            // 
+            this.toolStripBtnList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnList.Image = global::TimeRecorder.Properties.Resources.bulleted_list_48px;
+            this.toolStripBtnList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnList.Name = "toolStripBtnList";
+            this.toolStripBtnList.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtnList.Text = "项目列表（Ctrl+Shift+W)";
+            this.toolStripBtnList.Click += new System.EventHandler(this.toolStripBtnList_Click);
             // 
             // FormTodaySummary
             // 
@@ -267,9 +269,9 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnUnerLine;
         private System.Windows.Forms.ToolStripButton toolStripBtnStrikeout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripBtnIndent;
         private System.Windows.Forms.ToolStripButton toolStripBtnOutdent;
-        private System.Windows.Forms.ToolStripButton toolStripBtnNumList;
+        private System.Windows.Forms.ToolStripButton toolStripBtnIndent;
         private System.Windows.Forms.ToolStripButton toolStripBtnColor;
+        private System.Windows.Forms.ToolStripButton toolStripBtnList;
     }
 }
