@@ -36,10 +36,11 @@ namespace TimeRecorder
             InitializeComponent();
             InitFormControlsProperties();
             LoadDgvShow(DateTime.Now);
+            setDtpBeginTime();
+            setDateTimePicker_MaxAndMin();
             LoadLabelTable();
             fillcboFirstLbl();
             refreshFormSummary();
-            setDtpBeginTime();
 
         }
 
@@ -65,7 +66,8 @@ namespace TimeRecorder
             dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
-
+            dTPBeginTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
+            dTPEndTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
 
             cboFirstLbl.ImeMode = ImeMode.On;
             cboSecondLbl.ImeMode = ImeMode.On;
@@ -86,8 +88,7 @@ namespace TimeRecorder
             dtpCountdownEnd.CustomFormat = "HH:mm";
             dtpCountdownBegin.CustomFormat = "HH:mm";
 
-            dTPBeginTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
-            dTPEndTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
+          
         }
 
         private void SetHelpProvider()
@@ -96,6 +97,14 @@ namespace TimeRecorder
             helpProviderMain.SetHelpString(btnYesterday, "后退一日");
             helpProviderMain.SetHelpString(btnToday, "回到今日");
             helpProviderMain.SetHelpString(btnTomorrow, "前进一日");
+        }
+
+        private void setDateTimePicker_MaxAndMin()
+        {
+            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            dTPBeginTime.MinDate = mcMain.SelectionStart;
+            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            dTPEndTime.MinDate = mcMain.SelectionStart;
         }
 
         private void LoadDgvShow(DateTime dt)
@@ -188,17 +197,14 @@ namespace TimeRecorder
 
         private void mcMain_DateChanged(object sender, DateRangeEventArgs e)
         {
-            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
-            dTPBeginTime.Value = mcMain.SelectionStart;
-
-            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
-            dTPEndTime.Value = mcMain.SelectionStart;
-
             LoadDgvShow(mcMain.SelectionStart);
             setDtpBeginTime();
+            setDateTimePicker_MaxAndMin();
             refreshFormSummary();
 
         }
+
+
 
         private void btnYesterday_Click(object sender, EventArgs e)
         {
