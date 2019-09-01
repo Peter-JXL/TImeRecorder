@@ -20,7 +20,6 @@ namespace TimeRecorder
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
-
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
         #endregion
 
@@ -69,7 +68,18 @@ namespace TimeRecorder
             else if (rdoPie.Checked)
             {
                 chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
-
+            }
+            else if (rdoDoughnut.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Doughnut;
+            }
+            else if (rdoFunnel.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Funnel;
+            }
+            else if (rdoPyramid.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pyramid;
             }
         }
 
