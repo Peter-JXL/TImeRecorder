@@ -57,5 +57,12 @@ namespace TimeRecorder
             return myDataSet.Tables[dataTableName];
 
         }
+
+        private Dictionary<string, TimeSpan> getLabelTime()
+        {
+            Dictionary<string, TimeSpan> ts = new Dictionary<string, TimeSpan>();
+
+            return ts;
+        }
     }
 }

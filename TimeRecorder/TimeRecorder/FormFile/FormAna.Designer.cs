@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,12 +52,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnEveryAnalysis = new System.Windows.Forms.Button();
+            this.dtpEveryBeginTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpEveryEndTime = new System.Windows.Forms.DateTimePicker();
             this.rdoDoughnut = new System.Windows.Forms.RadioButton();
             this.rdoFunnel = new System.Windows.Forms.RadioButton();
             this.rdoPyramid = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
@@ -66,25 +73,26 @@
             this.tabPageEveryDay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartAnalysis
             // 
-            chartArea1.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea1);
-            legend1.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend1);
+            chartArea5.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea5);
+            legend5.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend5);
             this.chartAnalysis.Location = new System.Drawing.Point(6, 128);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartAreaPie";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "LegendPie";
-            series1.Name = "SeriesPie";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series1.YValuesPerPoint = 6;
-            this.chartAnalysis.Series.Add(series1);
+            series5.ChartArea = "ChartAreaPie";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.Legend = "LegendPie";
+            series5.Name = "SeriesPie";
+            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series5.YValuesPerPoint = 6;
+            this.chartAnalysis.Series.Add(series5);
             this.chartAnalysis.Size = new System.Drawing.Size(828, 434);
             this.chartAnalysis.TabIndex = 0;
             this.chartAnalysis.Text = "chart1";
@@ -219,6 +227,7 @@
             // 
             // tabPageEveryDay
             // 
+            this.tabPageEveryDay.Controls.Add(this.groupBox1);
             this.tabPageEveryDay.Controls.Add(this.panel2);
             this.tabPageEveryDay.Controls.Add(this.chart1);
             this.tabPageEveryDay.Location = new System.Drawing.Point(4, 30);
@@ -231,16 +240,16 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(50, 172);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(740, 376);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -249,9 +258,9 @@
             // 
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.btnEveryAnalysis);
+            this.panel2.Controls.Add(this.dtpEveryBeginTime);
+            this.panel2.Controls.Add(this.dtpEveryEndTime);
             this.panel2.Location = new System.Drawing.Point(50, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(410, 109);
@@ -275,28 +284,29 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "结束时间 :";
             // 
-            // button1
+            // btnEveryAnalysis
             // 
-            this.button1.Location = new System.Drawing.Point(332, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "分析";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEveryAnalysis.Location = new System.Drawing.Point(332, 29);
+            this.btnEveryAnalysis.Name = "btnEveryAnalysis";
+            this.btnEveryAnalysis.Size = new System.Drawing.Size(58, 42);
+            this.btnEveryAnalysis.TabIndex = 1;
+            this.btnEveryAnalysis.Text = "分析";
+            this.btnEveryAnalysis.UseVisualStyleBackColor = true;
+            this.btnEveryAnalysis.Click += new System.EventHandler(this.btnEveryAnalysis_Click);
             // 
-            // dateTimePicker1
+            // dtpEveryBeginTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(107, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(204, 29);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpEveryBeginTime.Location = new System.Drawing.Point(107, 9);
+            this.dtpEveryBeginTime.Name = "dtpEveryBeginTime";
+            this.dtpEveryBeginTime.Size = new System.Drawing.Size(204, 29);
+            this.dtpEveryBeginTime.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // dtpEveryEndTime
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(107, 57);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(204, 29);
-            this.dateTimePicker2.TabIndex = 5;
+            this.dtpEveryEndTime.Location = new System.Drawing.Point(107, 57);
+            this.dtpEveryEndTime.Name = "dtpEveryEndTime";
+            this.dtpEveryEndTime.Size = new System.Drawing.Size(204, 29);
+            this.dtpEveryEndTime.TabIndex = 5;
             // 
             // rdoDoughnut
             // 
@@ -334,6 +344,87 @@
             this.rdoPyramid.UseVisualStyleBackColor = true;
             this.rdoPyramid.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Controls.Add(this.radioButton5);
+            this.groupBox1.Controls.Add(this.radioButton6);
+            this.groupBox1.Location = new System.Drawing.Point(478, 30);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(345, 109);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "显示类型";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(219, 63);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(76, 25);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "棱锥图";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(122, 63);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(76, 25);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "漏斗图";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(22, 63);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(76, 25);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "圆环图";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(219, 28);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(76, 25);
+            this.radioButton4.TabIndex = 2;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "柱状图";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(122, 29);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(76, 25);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "条形图";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(22, 29);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(60, 25);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "饼图";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
             // FormAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -355,6 +446,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -379,11 +472,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button btnEveryAnalysis;
+        private System.Windows.Forms.DateTimePicker dtpEveryBeginTime;
+        private System.Windows.Forms.DateTimePicker dtpEveryEndTime;
         private System.Windows.Forms.RadioButton rdoDoughnut;
         private System.Windows.Forms.RadioButton rdoPyramid;
         private System.Windows.Forms.RadioButton rdoFunnel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
     }
 }

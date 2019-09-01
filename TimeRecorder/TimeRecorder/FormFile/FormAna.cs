@@ -18,9 +18,11 @@ namespace TimeRecorder
         string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
-            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;  
 
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
+
+        AccessHelper accessHelper = new AccessHelper();
         #endregion
 
 
@@ -46,12 +48,14 @@ namespace TimeRecorder
        
         private void btnAnalysis_Click(object sender, EventArgs e)
         {
-            AccessHelper accessHelper = new AccessHelper();
             DataTable d = accessHelper.getDaysTable(dtpBeginTime.Value, dtpEndTime.Value);
             LoadChartPie(d);        
         }
 
+        private void btnEveryAnalysis_Click(object sender, EventArgs e)
+        {
 
+        }
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
