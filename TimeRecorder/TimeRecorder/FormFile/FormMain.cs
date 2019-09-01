@@ -55,13 +55,13 @@ namespace TimeRecorder
             mcMain.MaxSelectionCount = 1;
 
             dTPBeginTime.Format = DateTimePickerFormat.Custom;
-            dTPBeginTime.CustomFormat = "dd日  HH:mm";
+            dTPBeginTime.CustomFormat = "MM月dd日  HH:mm";
             dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);  //为了能录入所有当天的时间
             dTPBeginTime.MinDate = new DateTime();
             dTPBeginTime.ShowUpDown = true;
 
             dTPEndTime.Format = DateTimePickerFormat.Custom;
-            dTPEndTime.CustomFormat = "dd日  HH:mm";
+            dTPEndTime.CustomFormat = "MM月dd日  HH:mm";
             dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPBeginTime.MinDate = new DateTime();
             dTPEndTime.ShowUpDown = true;
@@ -86,6 +86,8 @@ namespace TimeRecorder
             dtpCountdownEnd.CustomFormat = "HH:mm";
             dtpCountdownBegin.CustomFormat = "HH:mm";
 
+            dTPBeginTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
+            dTPEndTime.MouseWheel += new MouseEventHandler(this.dateTimePicker_MouseWheel);
         }
 
         private void SetHelpProvider()
@@ -215,6 +217,22 @@ namespace TimeRecorder
                 mcMain.SelectionStart = mcMain.SelectionStart.AddDays(1);
             }
         }
+
+        private void dateTimePicker_MouseWheel(object sender, MouseEventArgs e)
+        {
+
+            //当 e.Delta > 0 时鼠标滚轮是向上滚动，e.Delta < 0 时鼠标滚轮向下滚动。
+            if (e.Delta < 0)//鼠标滚动轴往下滚
+            {
+                SendKeys.Send("{Down}");
+            }
+            else // 鼠标滚动轴 往上滚
+            {
+                SendKeys.Send("{Up}");
+            }
+
+        }
+
 
         #region 录入相关
 

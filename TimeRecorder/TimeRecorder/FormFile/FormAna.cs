@@ -21,6 +21,7 @@ namespace TimeRecorder
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
 
+        string chartPieName = "饼状图", legendPieName = "饼状图图例";
         #endregion
 
 
@@ -29,21 +30,48 @@ namespace TimeRecorder
         {
             InitializeComponent();
 
+
+            chartAnalysis.Legends[0].Name = legendPieName;
+            chartAnalysis.Legends[0].Enabled = false;
+
+            chartAnalysis.Series[0].Name = chartPieName;
+            chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
+            chartAnalysis.Series[chartPieName].IsValueShownAsLabel = false;   //设置为true则不会显示文字
+            chartAnalysis.Series[chartPieName].Label = "#VALX: #VAL分钟";
+            chartAnalysis.Series[chartPieName]["PieLabelStyle"] = "Outside";  //将文字移到外侧
+            chartAnalysis.Series[chartPieName]["PieLineColor"] = "Blue";      //绘制黑色的连线
+
+            rdoPie.Checked = true ; // 默认是饼状图
         }
-
-
 
        
         private void btnAnalysis_Click(object sender, EventArgs e)
         {
             AccessHelper accessHelper = new AccessHelper();
             DataTable d = accessHelper.getDaysTable(dtpBeginTime.Value, dtpEndTime.Value);
-            LoadChartPie(d);
-         
-
+            LoadChartPie(d);        
         }
 
 
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (rdoBar.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Bar;
+            }
+            else if (rdoColumn.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Column;
+
+            }
+            else if (rdoPie.Checked)
+            {
+                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
+
+            }
+        }
 
         public void LoadChartPie(DataTable tableOfDay)
         {
@@ -51,21 +79,11 @@ namespace TimeRecorder
             Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
             List<double> yTimeSpanData = new List<double>();
             List<string> xLbaelData = new List<string>();
-            string chartPieName = "饼状图", legendPieName = "饼状图图例";
 
             xLbaelData.Clear();
             yTimeSpanData.Clear();
             dayDictionary.Clear();
-            chartAnalysis.Series[0].Name = chartPieName;
-            chartAnalysis.Legends[0].Name = legendPieName;
-            chartAnalysis.Legends[legendPieName].Enabled = false;
-
-            chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
-            chartAnalysis.Series[chartPieName].IsValueShownAsLabel = false;   //设置为true则不会显示文字
-            chartAnalysis.Series[chartPieName].Label = "#VALX: #VAL分钟";
-            chartAnalysis.Series[chartPieName]["PieLabelStyle"] = "Outside";  //将文字移到外侧
-            chartAnalysis.Series[chartPieName]["PieLineColor"] = "Blue";      //绘制黑色的连线。
-
+          
 
             foreach (DataRow item in tableOfDay.Rows)
             {
@@ -84,7 +102,6 @@ namespace TimeRecorder
 
             foreach (var item in dayDictionary)
             {
-
                 xLbaelData.Add(item.Key);
                 yTimeSpanData.Add((int)item.Value.TotalMinutes);
             }
