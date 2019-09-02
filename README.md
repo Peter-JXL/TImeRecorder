@@ -1,3 +1,11 @@
+
+
+
+
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)    ![platform](https://img.shields.io/badge/platform-Windows-blue)
+
+
+
 # 为什么要记录时间
 
 时间是我们宝贵的财富，通过记录时间，可以更客观的了解自己，而不是凭借不可靠的记忆

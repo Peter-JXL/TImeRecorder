@@ -42,38 +42,37 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxType = new System.Windows.Forms.GroupBox();
+            this.rdoPyramid = new System.Windows.Forms.RadioButton();
+            this.rdoFunnel = new System.Windows.Forms.RadioButton();
+            this.rdoDoughnut = new System.Windows.Forms.RadioButton();
             this.rdoColumn = new System.Windows.Forms.RadioButton();
             this.rdoBar = new System.Windows.Forms.RadioButton();
             this.rdoPie = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageTotal = new System.Windows.Forms.TabPage();
             this.tabPageEveryDay = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnEveryAnalysis = new System.Windows.Forms.Button();
             this.dtpEveryBeginTime = new System.Windows.Forms.DateTimePicker();
             this.dtpEveryEndTime = new System.Windows.Forms.DateTimePicker();
-            this.rdoDoughnut = new System.Windows.Forms.RadioButton();
-            this.rdoFunnel = new System.Windows.Forms.RadioButton();
-            this.rdoPyramid = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cboEveryLabel = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageTotal.SuspendLayout();
             this.tabPageEveryDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // chartAnalysis
@@ -166,6 +165,42 @@
             this.groupBoxType.TabStop = false;
             this.groupBoxType.Text = "显示类型";
             // 
+            // rdoPyramid
+            // 
+            this.rdoPyramid.AutoSize = true;
+            this.rdoPyramid.Location = new System.Drawing.Point(219, 63);
+            this.rdoPyramid.Name = "rdoPyramid";
+            this.rdoPyramid.Size = new System.Drawing.Size(76, 25);
+            this.rdoPyramid.TabIndex = 5;
+            this.rdoPyramid.TabStop = true;
+            this.rdoPyramid.Text = "棱锥图";
+            this.rdoPyramid.UseVisualStyleBackColor = true;
+            this.rdoPyramid.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // rdoFunnel
+            // 
+            this.rdoFunnel.AutoSize = true;
+            this.rdoFunnel.Location = new System.Drawing.Point(122, 63);
+            this.rdoFunnel.Name = "rdoFunnel";
+            this.rdoFunnel.Size = new System.Drawing.Size(76, 25);
+            this.rdoFunnel.TabIndex = 4;
+            this.rdoFunnel.TabStop = true;
+            this.rdoFunnel.Text = "漏斗图";
+            this.rdoFunnel.UseVisualStyleBackColor = true;
+            this.rdoFunnel.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // rdoDoughnut
+            // 
+            this.rdoDoughnut.AutoSize = true;
+            this.rdoDoughnut.Location = new System.Drawing.Point(22, 63);
+            this.rdoDoughnut.Name = "rdoDoughnut";
+            this.rdoDoughnut.Size = new System.Drawing.Size(76, 25);
+            this.rdoDoughnut.TabIndex = 3;
+            this.rdoDoughnut.TabStop = true;
+            this.rdoDoughnut.Text = "圆环图";
+            this.rdoDoughnut.UseVisualStyleBackColor = true;
+            this.rdoDoughnut.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
             // rdoColumn
             // 
             this.rdoColumn.AutoSize = true;
@@ -227,6 +262,8 @@
             // 
             // tabPageEveryDay
             // 
+            this.tabPageEveryDay.Controls.Add(this.label5);
+            this.tabPageEveryDay.Controls.Add(this.cboEveryLabel);
             this.tabPageEveryDay.Controls.Add(this.groupBox1);
             this.tabPageEveryDay.Controls.Add(this.panel2);
             this.tabPageEveryDay.Controls.Add(this.chart1);
@@ -238,21 +275,50 @@
             this.tabPageEveryDay.Text = "每日分布";
             this.tabPageEveryDay.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // groupBox1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
-            this.chart1.Location = new System.Drawing.Point(50, 172);
-            this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(740, 376);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Controls.Add(this.radioButton5);
+            this.groupBox1.Controls.Add(this.radioButton6);
+            this.groupBox1.Location = new System.Drawing.Point(478, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(345, 66);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "显示类型";
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(219, 28);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(76, 25);
+            this.radioButton4.TabIndex = 2;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "柱状图";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(122, 29);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(76, 25);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "条形图";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(22, 29);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(60, 25);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "饼图";
+            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -308,122 +374,38 @@
             this.dtpEveryEndTime.Size = new System.Drawing.Size(204, 29);
             this.dtpEveryEndTime.TabIndex = 5;
             // 
-            // rdoDoughnut
+            // chart1
             // 
-            this.rdoDoughnut.AutoSize = true;
-            this.rdoDoughnut.Location = new System.Drawing.Point(22, 63);
-            this.rdoDoughnut.Name = "rdoDoughnut";
-            this.rdoDoughnut.Size = new System.Drawing.Size(76, 25);
-            this.rdoDoughnut.TabIndex = 3;
-            this.rdoDoughnut.TabStop = true;
-            this.rdoDoughnut.Text = "圆环图";
-            this.rdoDoughnut.UseVisualStyleBackColor = true;
-            this.rdoDoughnut.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(50, 172);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(740, 376);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
-            // rdoFunnel
+            // cboEveryLabel
             // 
-            this.rdoFunnel.AutoSize = true;
-            this.rdoFunnel.Location = new System.Drawing.Point(122, 63);
-            this.rdoFunnel.Name = "rdoFunnel";
-            this.rdoFunnel.Size = new System.Drawing.Size(76, 25);
-            this.rdoFunnel.TabIndex = 4;
-            this.rdoFunnel.TabStop = true;
-            this.rdoFunnel.Text = "漏斗图";
-            this.rdoFunnel.UseVisualStyleBackColor = true;
-            this.rdoFunnel.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.cboEveryLabel.FormattingEnabled = true;
+            this.cboEveryLabel.Location = new System.Drawing.Point(538, 27);
+            this.cboEveryLabel.Name = "cboEveryLabel";
+            this.cboEveryLabel.Size = new System.Drawing.Size(121, 29);
+            this.cboEveryLabel.TabIndex = 11;
             // 
-            // rdoPyramid
+            // label5
             // 
-            this.rdoPyramid.AutoSize = true;
-            this.rdoPyramid.Location = new System.Drawing.Point(219, 63);
-            this.rdoPyramid.Name = "rdoPyramid";
-            this.rdoPyramid.Size = new System.Drawing.Size(76, 25);
-            this.rdoPyramid.TabIndex = 5;
-            this.rdoPyramid.TabStop = true;
-            this.rdoPyramid.Text = "棱锥图";
-            this.rdoPyramid.UseVisualStyleBackColor = true;
-            this.rdoPyramid.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton6);
-            this.groupBox1.Location = new System.Drawing.Point(478, 30);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(345, 109);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "显示类型";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(219, 63);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 25);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "棱锥图";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(122, 63);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 25);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "漏斗图";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(22, 63);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(76, 25);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "圆环图";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(219, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(76, 25);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "柱状图";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(122, 29);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(76, 25);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "条形图";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(22, 29);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(60, 25);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "饼图";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(474, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 21);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "标签：";
             // 
             // FormAna
             // 
@@ -443,11 +425,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageTotal.ResumeLayout(false);
             this.tabPageEveryDay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.tabPageEveryDay.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,11 +462,10 @@
         private System.Windows.Forms.RadioButton rdoPyramid;
         private System.Windows.Forms.RadioButton rdoFunnel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboEveryLabel;
     }
 }

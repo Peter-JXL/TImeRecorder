@@ -54,7 +54,8 @@ namespace TimeRecorder
 
         private void btnEveryAnalysis_Click(object sender, EventArgs e)
         {
-
+            DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
+            LoadEveryChart(d);            
         }
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
@@ -131,6 +132,54 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
 
+        }
+
+
+        public void LoadEveryChart(DataTable tableOfDay)
+        {
+            //TODO: 显示格式修改为 8H：10m的样式
+            Dictionary<string, TimeSpan> dayDictionary = new Dictionary<string, TimeSpan>();
+            List<double> yTimeSpanData = new List<double>();
+            List<string> xLbaelData = new List<string>();
+
+            xLbaelData.Clear();
+            yTimeSpanData.Clear();
+            dayDictionary.Clear();
+
+            
+
+
+            foreach (DataRow item in tableOfDay.Rows)
+            {
+                TimeSpan ts = (DateTime)item[endTimeColumnName] - (DateTime)item[beginTimeColumnName];
+                string labelName = (string)item[firstLabelColumnName];
+                if (dayDictionary.ContainsKey(labelName))
+                {
+                    dayDictionary[labelName] += ts;
+                }
+                else
+                {
+                    dayDictionary.Add(labelName, ts);
+                }
+            }
+
+
+            foreach (var item in dayDictionary)
+            {
+                xLbaelData.Add(item.Key);
+                yTimeSpanData.Add((int)item.Value.TotalMinutes);
+            }
+
+            //TODO: 累计多少时间没被记录
+            //int minutesOfUnRecord = 60 * 24;
+            //if (minutesOfUnRecord != 0)
+            //{
+            //    xLbaelData.Add("未记录");
+            //    yTimeSpanData.Add(minutesOfUnRecord);
+            //}
+
+            chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
+            chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
         }
     }
 }

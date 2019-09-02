@@ -58,11 +58,22 @@ namespace TimeRecorder
 
         }
 
-        private Dictionary<string, TimeSpan> getLabelTime()
+        public DataTable getLabelTime(DateTime beginDate, DateTime endDate, string Label)
         {
-            Dictionary<string, TimeSpan> ts = new Dictionary<string, TimeSpan>();
+            string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}# and {4} = {5};",
+                               dataTableName, dateColumnName, beginDate, endDate, firstLabelColumnName, Label);
 
-            return ts;
+            connection = new OleDbConnection(filePath);
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(sql, connection);
+            dataAdapter.SelectCommand = command;
+            OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
+
+            DataTable temp = new DataTable();           
+            dataAdapter.Fill(temp, dataTableName);
+            connection.Close();
+
+            return temp;
         }
     }
 }
