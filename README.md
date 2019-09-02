@@ -22,6 +22,20 @@
 
 
 
+# 界面
+
+
+
+
+
+![](https://s2.ax1x.com/2019/09/02/niEWLQ.png)
+
+
+
+![](https://s2.ax1x.com/2019/09/02/niERsg.png)
+
+
+
 
 
 # 让记录更简单
