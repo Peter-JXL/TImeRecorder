@@ -197,9 +197,9 @@ namespace TimeRecorder
 
         private void mcMain_DateChanged(object sender, DateRangeEventArgs e)
         {
+            setDateTimePicker_MaxAndMin();
             LoadDgvShow(mcMain.SelectionStart);
             setDtpBeginTime();
-            setDateTimePicker_MaxAndMin();
             refreshFormSummary();
 
         }
