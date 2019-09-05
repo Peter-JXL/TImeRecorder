@@ -101,10 +101,10 @@ namespace TimeRecorder
 
         private void setDateTimePicker_MaxAndMin()
         {
-            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPBeginTime.MinDate = mcMain.SelectionStart;
-            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPEndTime.MinDate = mcMain.SelectionStart;
+            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
         }
 
         private void LoadDgvShow(DateTime dt)
@@ -151,6 +151,7 @@ namespace TimeRecorder
             int num = myDataSet.Tables[dataTableName].Rows.Count;
             if (num > 0)
             {
+                Console.WriteLine("行数：" + num);
                 dTPBeginTime.Value = DateTime.Parse(myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString());
                 dTPEndTime.Focus();
             }
