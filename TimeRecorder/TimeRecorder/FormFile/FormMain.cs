@@ -19,9 +19,11 @@ namespace TimeRecorder
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
-        string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
+        static string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
 
-        OleDbConnection connection;
+        OleDbConnection connection = new OleDbConnection(filePath);
+        OleDbCommand command;
+        OleDbCommandBuilder builder;
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
         DataSet myDataSet = new DataSet("MyDataSet");
 
@@ -88,7 +90,7 @@ namespace TimeRecorder
             dtpCountdownEnd.CustomFormat = "HH:mm";
             dtpCountdownBegin.CustomFormat = "HH:mm";
 
-          
+
         }
 
         private void SetHelpProvider()
@@ -101,7 +103,7 @@ namespace TimeRecorder
 
         private void setDateTimePicker_MaxAndMin()
         {
-            dTPBeginTime.MinDate = mcMain.SelectionStart;
+            dTPBeginTime.MinDate = mcMain.SelectionStart;  //注意要先设置最小值
             dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
             dTPEndTime.MinDate = mcMain.SelectionStart;
             dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
@@ -111,11 +113,11 @@ namespace TimeRecorder
         {
             string sql = String.Format("select * from {0} where {1} = #{2}#", dataTableName, dateColumnName, dt.ToString("yyyy/MM/dd"));
             // 日期类型的两边要加#
-            connection = new OleDbConnection(filePath);
             connection.Open();
-            OleDbCommand command = new OleDbCommand(sql, connection);
+            command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
+            builder = new OleDbCommandBuilder(dataAdapter);
+
 
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
             dataAdapter.Fill(myDataSet, dataTableName);
@@ -164,9 +166,8 @@ namespace TimeRecorder
         private void LoadLabelTable()
         {
             string sql = string.Format("select * from {0}", LabelTableName);
-            connection = new OleDbConnection(filePath);
             connection.Open();
-            OleDbCommand command = new OleDbCommand(sql, connection);
+            command = new OleDbCommand(sql, connection);
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             adapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
@@ -204,8 +205,6 @@ namespace TimeRecorder
             refreshFormSummary();
 
         }
-
-
 
         private void btnYesterday_Click(object sender, EventArgs e)
         {
@@ -351,23 +350,7 @@ namespace TimeRecorder
         {
             if (e.KeyCode == Keys.Enter)
             {
-
                 SendKeys.Send("{tab}");
-            }
-        }
-
-        private void saveToDataBase()
-        {
-            try
-            {
-                dataAdapter.Update(myDataSet.Tables[dataTableName]);
-                refreshFormSummary();
-                //MessageBox.Show("保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "保存失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -376,12 +359,23 @@ namespace TimeRecorder
 
         }
 
-
         private void dgvShow_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             saveToDataBase();
         }
 
+        private void saveToDataBase()
+        {
+            try
+            {
+                dataAdapter.Update(myDataSet.Tables[dataTableName]);
+                refreshFormSummary();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "保存失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
         #endregion

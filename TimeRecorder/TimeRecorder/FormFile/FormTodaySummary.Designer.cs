@@ -30,9 +30,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,22 +68,22 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend1);
+            chartArea3.BackColor = System.Drawing.Color.White;
+            chartArea3.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend3);
             this.chartAnalysis.Location = new System.Drawing.Point(-2, 44);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartAreaPie";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "LegendPie";
-            series1.Name = "SeriesPie";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series1.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series1);
+            series3.ChartArea = "ChartAreaPie";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "LegendPie";
+            series3.Name = "SeriesPie";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series3.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series3);
             this.chartAnalysis.Size = new System.Drawing.Size(437, 502);
             this.chartAnalysis.TabIndex = 20;
             this.chartAnalysis.Text = "chart1";
@@ -108,7 +108,7 @@
             this.panel1.Controls.Add(this.rTxtTodaySummary);
             this.panel1.Location = new System.Drawing.Point(442, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(547, 513);
+            this.panel1.Size = new System.Drawing.Size(483, 513);
             this.panel1.TabIndex = 24;
             // 
             // toolStripFormSummary
@@ -127,7 +127,7 @@
             this.toolStripBtnList});
             this.toolStripFormSummary.Location = new System.Drawing.Point(0, 0);
             this.toolStripFormSummary.Name = "toolStripFormSummary";
-            this.toolStripFormSummary.Size = new System.Drawing.Size(547, 25);
+            this.toolStripFormSummary.Size = new System.Drawing.Size(483, 25);
             this.toolStripFormSummary.TabIndex = 25;
             this.toolStripFormSummary.Text = "toolStrip1";
             // 

@@ -61,7 +61,7 @@ namespace TimeRecorder
         public DataTable getLabelTime(DateTime beginDate, DateTime endDate, string Label)
         {
             string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}# and {4} = {5};",
-                               dataTableName, dateColumnName, beginDate, endDate, firstLabelColumnName, Label);
+                                               dataTableName, dateColumnName, beginDate, endDate, firstLabelColumnName, Label);
 
             connection = new OleDbConnection(filePath);
             connection.Open();
@@ -75,5 +75,9 @@ namespace TimeRecorder
 
             return temp;
         }
+
+
+
+
     }
 }

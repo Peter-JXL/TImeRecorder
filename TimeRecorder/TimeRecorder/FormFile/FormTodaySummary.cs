@@ -45,6 +45,7 @@ namespace TimeRecorder
 
 
             rTxtTodaySummary.ImeMode = ImeMode.On;
+            rTxtTodaySummary.AcceptsTab = true; //按下tab键则增加空格而不是切换到下一个控件
             rTxtTodaySummary.AutoWordSelection = true;
 
             //用来决定当焦点离开文本框后，选中的文本是否还以选中的方式显示
