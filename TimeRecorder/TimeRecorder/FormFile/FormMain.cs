@@ -21,10 +21,10 @@ namespace TimeRecorder
 
         static string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
 
-        OleDbConnection connection = new OleDbConnection(filePath);
+        static OleDbConnection connection = new OleDbConnection(filePath);
         OleDbCommand command;
-        OleDbCommandBuilder builder;
-        OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
+        static OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
+        OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
         DataSet myDataSet = new DataSet("MyDataSet");
 
         FormTodaySummary formSummary = new FormTodaySummary();
@@ -50,6 +50,8 @@ namespace TimeRecorder
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             myDataSet.Tables.Add(dataTableName);
+            //builder.ConflictOption = ConflictOption.OverwriteChanges;
+            //builder.SetAllValues = false;
 
             dgvShow.AllowUserToResizeRows = false;
             dgvShow.ImeMode = ImeMode.On;
@@ -116,7 +118,7 @@ namespace TimeRecorder
             connection.Open();
             command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
-            builder = new OleDbCommandBuilder(dataAdapter);
+            
 
 
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
@@ -153,8 +155,8 @@ namespace TimeRecorder
             int num = myDataSet.Tables[dataTableName].Rows.Count;
             if (num > 0)
             {
-                Console.WriteLine("行数：" + num);
                 dTPBeginTime.Value = DateTime.Parse(myDataSet.Tables[dataTableName].Rows[num - 1][endTimeColumnName].ToString());
+                dTPEndTime.Value = dTPBeginTime.Value;
                 dTPEndTime.Focus();
             }
             else
@@ -168,10 +170,10 @@ namespace TimeRecorder
             string sql = string.Format("select * from {0}", LabelTableName);
             connection.Open();
             command = new OleDbCommand(sql, connection);
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
-            adapter.SelectCommand = command;
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.Fill(myDataSet, LabelTableName);
+            OleDbDataAdapter labelDatapter = new OleDbDataAdapter();
+            labelDatapter.SelectCommand = command;
+            OleDbCommandBuilder labelBuilder = new OleDbCommandBuilder(labelDatapter);
+            labelDatapter.Fill(myDataSet, LabelTableName);
             connection.Close();
         }
 
@@ -361,7 +363,20 @@ namespace TimeRecorder
 
         private void dgvShow_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            saveToDataBase();
+          
+            //saveToDataBase();
+            try            
+            {
+                dgvShow.EndEdit();
+                myDataSet.GetChanges();
+                dataAdapter.Update(myDataSet.Tables[dataTableName]);    
+                
+            }
+            catch (DBConcurrencyException ex)
+            {
+                MessageBox.Show(ex.ToString(), "原始数据已更改，请重做更新", MessageBoxButtons.OK);
+                dataAdapter.Fill(myDataSet);
+            }
         }
 
         private void saveToDataBase()

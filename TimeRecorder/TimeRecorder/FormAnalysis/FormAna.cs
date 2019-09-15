@@ -18,7 +18,7 @@ namespace TimeRecorder
         string dataTableName = GlobalData.dataTableName, LabelTableName = GlobalData.labelTabelName;
         string firstLabelColumnName = GlobalData.firstLabelColumnName, secondLabelColumnName = GlobalData.secondLabelColumnName;
         string dateColumnName = GlobalData.dateColumnName, beginTimeColumnName = GlobalData.beginTimeColumnName,
-            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;  
+            endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
 
@@ -26,12 +26,9 @@ namespace TimeRecorder
         #endregion
 
 
-
         public FormAna()
         {
             InitializeComponent();
-
-
             chartAnalysis.Legends[0].Name = legendPieName;
             chartAnalysis.Legends[0].Enabled = false;
 
@@ -42,51 +39,20 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName]["PieLabelStyle"] = "Outside";  //将文字移到外侧
             chartAnalysis.Series[chartPieName]["PieLineColor"] = "Blue";      //绘制黑色的连线
 
-            rdoPie.Checked = true ; // 默认是饼状图
+            rdoPie.Checked = true; // 默认是饼状图
         }
 
-       
+
+
+        #region 数据汇总选项卡
+
         private void btnAnalysis_Click(object sender, EventArgs e)
         {
             DataTable d = accessHelper.getDaysTable(dtpBeginTime.Value, dtpEndTime.Value);
-            LoadChartPie(d);        
+            LoadChartPie(d);
         }
 
-        private void btnEveryAnalysis_Click(object sender, EventArgs e)
-        {
-            DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
-            LoadEveryChart(d);            
-        }
-
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            if (rdoBar.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Bar;
-            }
-            else if (rdoColumn.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Column;
-
-            }
-            else if (rdoPie.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
-            }
-            else if (rdoDoughnut.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Doughnut;
-            }
-            else if (rdoFunnel.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Funnel;
-            }
-            else if (rdoPyramid.Checked)
-            {
-                chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pyramid;
-            }
-        }
+        
 
         public void LoadChartPie(DataTable tableOfDay)
         {
@@ -98,7 +64,7 @@ namespace TimeRecorder
             xLbaelData.Clear();
             yTimeSpanData.Clear();
             dayDictionary.Clear();
-          
+
 
             foreach (DataRow item in tableOfDay.Rows)
             {
@@ -134,6 +100,41 @@ namespace TimeRecorder
 
         }
 
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radioButton_Click(object sender, EventArgs e)
+        {
+            //TODO: 待优化
+            RadioButton temp = (RadioButton)sender;
+            var series = chartAnalysis.Series[chartPieName];
+            switch (temp.Name)
+            {
+                case "rdoBar": series.ChartType = SeriesChartType.Bar; break;
+                case "rdoColumn": series.ChartType = SeriesChartType.Column; break;
+                case "rdoPie": series.ChartType = SeriesChartType.Pie; break;
+                case "rdoDoughnut": series.ChartType = SeriesChartType.Doughnut; break;
+                case "rdoFunnel": series.ChartType = SeriesChartType.Funnel; break;
+                case "rdoPyramid": series.ChartType  = SeriesChartType.Pyramid; break;
+                default:
+                    break;
+            }
+        }
+
+        #endregion
+
+
+
+
+        #region 每日分布选项卡
+
+        private void btnEveryAnalysis_Click(object sender, EventArgs e)
+        {
+            DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
+            LoadEveryChart(d);
+        }
 
         public void LoadEveryChart(DataTable tableOfDay)
         {
@@ -146,9 +147,6 @@ namespace TimeRecorder
             yTimeSpanData.Clear();
             dayDictionary.Clear();
 
-            
-
-
             foreach (DataRow item in tableOfDay.Rows)
             {
                 TimeSpan ts = (DateTime)item[endTimeColumnName] - (DateTime)item[beginTimeColumnName];
@@ -181,6 +179,31 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].Points.DataBindXY(xLbaelData, yTimeSpanData);
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
         }
+
+
+        #endregion
+
+
+
+
+        #region 数据导入导出选项卡
+
+        private void btnIO_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void btnIOAll_Click(object sender, EventArgs e)
+        {
+            //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
+        }
+
+        #endregion
+
+
+
+
     }
 }
 

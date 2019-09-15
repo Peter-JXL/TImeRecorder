@@ -63,10 +63,10 @@
     <Compile Include="FormFile\FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFile\FormAna.cs">
+    <Compile Include="FormAnalysis\FormAna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFile\FormAna.Designer.cs">
+    <Compile Include="FormAnalysis\FormAna.Designer.cs">
       <DependentUpon>FormAna.cs</DependentUpon>
     </Compile>
     <Compile Include="FormFile\FormLabel.cs">
@@ -93,7 +93,7 @@
     <EmbeddedResource Include="FormFile\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFile\FormAna.resx">
+    <EmbeddedResource Include="FormAnalysis\FormAna.resx">
       <DependentUpon>FormAna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFile\FormLabel.resx">
