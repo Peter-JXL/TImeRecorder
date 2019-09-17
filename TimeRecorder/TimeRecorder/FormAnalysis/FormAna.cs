@@ -24,9 +24,11 @@ namespace TimeRecorder
         string summaryDir = @"summary/";  //summary存放的目录
         string rtfExtison = ".rtf";
 
+        string filename;
         string txtIOALLTip = "默认与exe文件同路径";
 
-        AccessHelper accessHelper = new AccessHelper();
+        SaveFileDialog diaSavaFile;
+        AccessHelper accessHelper;
         #endregion
 
 
@@ -45,7 +47,15 @@ namespace TimeRecorder
 
             rdoPie.Checked = true; // 默认是饼状图
 
-            txtIOAll.Text = txtIOALLTip;
+
+            txtIOFileDir.Text = txtIOALLTip;
+            SaveFileDialog diaSavaFile = new SaveFileDialog();
+            AccessHelper accessHelper = new AccessHelper();
+            diaSavaFile.Filter = ("Excel 文件(*.xls)|*.xlsx|Word 文件(*.doc*)|*.docx*");//后缀名。  
+            diaSavaFile.AddExtension = true;
+            diaSavaFile.RestoreDirectory = true;
+            diaSavaFile.Title = "选择要导出的位置";
+
         }
 
 
@@ -144,7 +154,7 @@ namespace TimeRecorder
             LoadEveryChart(d);
         }
 
-     
+
 
         public void LoadEveryChart(DataTable tableOfDay)
         {
@@ -191,68 +201,62 @@ namespace TimeRecorder
         }
 
 
+
+
+
+
+
+
+
         #endregion
-
-
-
 
         #region 数据导入导出选项卡
 
-        private void btnIO_Click(object sender, EventArgs e)
-        {
 
+        #region 导出Excel数据
+
+        private void txtIOFileDir_Enter(object sender, EventArgs e)
+        {
+            if (txtIOFileDir.Text.Equals(txtIOALLTip))  //用户没有选择过文件路径，则进入文本框时设置为空
+            {
+                txtIOFileDir.Text = "";
+            }
         }
 
-        private void btnIOChoseFile_Click(object sender, EventArgs e)
+        private void txtIOFileDir_Leave(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtIOFileDir.Text))  //用户离开焦点时，如果是空，说明没有选择过文件路径，则离开时设置提示文本
+            {
+                txtIOFileDir.Text = txtIOALLTip;
+            }
+        }
 
-            string filename = null;
 
-            SaveFileDialog diaSavaFile = new SaveFileDialog();//打开文件对话框。  
-            diaSavaFile.Filter = ("Excel 文件(*.xls)|*.xls");//后缀名。  
-            diaSavaFile.AddExtension = true;
-            diaSavaFile.RestoreDirectory = true;
-            diaSavaFile.Title = "选择要导出的位置";
-
+        private void btnIOFileDir_Click(object sender, EventArgs e)
+        {
             if (diaSavaFile.ShowDialog() == DialogResult.OK)
             {
                 filename = diaSavaFile.FileName;
             }
-            txtIOAll.Text = filename;
+            txtIOFileDir.Text = filename;
         }
 
 
-        private void txtIOAll_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtIOAll.Text))
-            {
-                txtIOAll.Text = txtIOALLTip;
-            }
-        }
 
 
-        private void txtIOAll_Enter(object sender, EventArgs e)
-        {
-            if (txtIOAll.Text.Equals(txtIOALLTip))
-            {
-                txtIOAll.Text = "";
-            }
-        }
-
-
-        private void btnIOAll_Click(object sender, EventArgs e)
+        private void btnIOExcelDaysAll_Click(object sender, EventArgs e)
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
             try
             {
                 bool isSuccess = false;
-                if (string.IsNullOrEmpty(txtIOAll.Text))
+                if (string.IsNullOrEmpty(txtIOFileDir.Text) || txtIOFileDir.Equals(txtIOALLTip))
                 {
                     isSuccess = accessHelper.exportAllDataToExcel();
                 }
                 else
                 {
-                    isSuccess = accessHelper.exportAllDataToExcel(txtIOAll.Text);
+                    isSuccess = accessHelper.exportAllDataToExcel(txtIOFileDir.Text);
                 }
                 if (isSuccess)
                 {
@@ -261,28 +265,40 @@ namespace TimeRecorder
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString(), "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-
-
         }
 
-
-        private void btnIOAllWord(object sender, EventArgs e)
+        private void btnIOExcelLabel_Click(object sender, EventArgs e)
         {
-        	//将全部总结导出到一个word文档里，同时将每份总结的日期设为标题1
-        	
-  
 
         }
 
-        private void btnIODaysWord(object sender, EventArgs s)
+        #endregion
+
+
+
+
+
+        #region 导出Word日志
+
+        private void btnIOWordDays_Click(object sender, EventArgs e)
         {
-        	//将指定日期的数据导出到word里，同时将每份总结的日期设为标题1
+            //将指定日期的数据导出到word里，同时将每份总结的日期设为标题1
 
         }
+
+        private void btnIOWordDaysAll_Click(object sender, EventArgs e)
+        {
+            //将全部总结导出到一个word文档里，同时将每份总结的日期设为标题1
+
+        }
+
+ 
+
+
+        #endregion
 
 
         #endregion

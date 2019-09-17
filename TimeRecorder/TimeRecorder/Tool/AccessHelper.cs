@@ -81,6 +81,7 @@ namespace TimeRecorder
 
         public bool exportAllDataToExcel(string excelFimeName = "TimeRecorderData.xlsx")
         {
+            //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
             //[excel名].[sheet名] 已有的excel的表要加$  
             string sql = string.Format(@"select * into [Excel 8.0; database={0}].[{1}] from {1};", excelFimeName, dataTableName);
             connection.Open();
