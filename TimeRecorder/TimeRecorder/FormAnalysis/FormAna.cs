@@ -25,8 +25,6 @@ namespace TimeRecorder
         string rtfExtison = ".rtf";
 
         string filename;
-        string txtIOALLTip = "默认与exe文件同路径";
-
         SaveFileDialog diaSavaFile;
         AccessHelper accessHelper;
         #endregion
@@ -47,10 +45,9 @@ namespace TimeRecorder
 
             rdoPie.Checked = true; // 默认是饼状图
 
+            diaSavaFile = new SaveFileDialog();
+            accessHelper = new AccessHelper();
 
-            txtIOFileDir.Text = txtIOALLTip;
-            SaveFileDialog diaSavaFile = new SaveFileDialog();
-            AccessHelper accessHelper = new AccessHelper();
             diaSavaFile.Filter = ("Excel 文件(*.xls)|*.xlsx|Word 文件(*.doc*)|*.docx*");//后缀名。  
             diaSavaFile.AddExtension = true;
             diaSavaFile.RestoreDirectory = true;
@@ -67,8 +64,6 @@ namespace TimeRecorder
             DataTable d = accessHelper.getDaysTable(dtpBeginTime.Value, dtpEndTime.Value);
             LoadChartPie(d);
         }
-
-
 
         public void LoadChartPie(DataTable tableOfDay)
         {
@@ -116,13 +111,6 @@ namespace TimeRecorder
 
         }
 
-
-
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radioButton_Click(object sender, EventArgs e)
         {
             //TODO: 待优化
@@ -153,8 +141,6 @@ namespace TimeRecorder
             DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
             LoadEveryChart(d);
         }
-
-
 
         public void LoadEveryChart(DataTable tableOfDay)
         {
@@ -202,35 +188,12 @@ namespace TimeRecorder
 
 
 
-
-
-
-
-
-
         #endregion
 
         #region 数据导入导出选项卡
 
 
         #region 导出Excel数据
-
-        private void txtIOFileDir_Enter(object sender, EventArgs e)
-        {
-            if (txtIOFileDir.Text.Equals(txtIOALLTip))  //用户没有选择过文件路径，则进入文本框时设置为空
-            {
-                txtIOFileDir.Text = "";
-            }
-        }
-
-        private void txtIOFileDir_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtIOFileDir.Text))  //用户离开焦点时，如果是空，说明没有选择过文件路径，则离开时设置提示文本
-            {
-                txtIOFileDir.Text = txtIOALLTip;
-            }
-        }
-
 
         private void btnIOFileDir_Click(object sender, EventArgs e)
         {
@@ -242,37 +205,76 @@ namespace TimeRecorder
         }
 
 
-
-
         private void btnIOExcelDaysAll_Click(object sender, EventArgs e)
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
             try
             {
                 bool isSuccess = false;
-                if (string.IsNullOrEmpty(txtIOFileDir.Text) || txtIOFileDir.Equals(txtIOALLTip))
-                {
+                if (string.IsNullOrEmpty(txtIOFileDir.Text))
                     isSuccess = accessHelper.exportAllDataToExcel();
-                }
+                
                 else
-                {
-                    isSuccess = accessHelper.exportAllDataToExcel(txtIOFileDir.Text);
-                }
+                    isSuccess = accessHelper.exportAllDataToExcel(filename);
+  
+
                 if (isSuccess)
-                {
                     MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
 
         }
 
+        private void btnIOExcelDays_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string beginDate = dtpIOBeginDate.Value.ToShortDateString();
+                string endDate = dtpIOEndDate.Value.ToShortDateString();
+
+                bool isSuccess = false;
+                if (string.IsNullOrEmpty(txtIOFileDir.Text))
+                    isSuccess = accessHelper.exportDaysDataToExcel(beginDate, endDate);
+                
+                else
+                    isSuccess = accessHelper.exportDaysDataToExcel(beginDate, endDate, filename);
+                
+                if (isSuccess)
+                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void btnIOExcelLabel_Click(object sender, EventArgs e)
         {
+            try
+            {
+                bool isSuccess = false;
+                if (string.IsNullOrEmpty(txtIOFileDir.Text))
+                    ;
 
+                else
+                    ;
+                
+
+                if (isSuccess)
+                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion

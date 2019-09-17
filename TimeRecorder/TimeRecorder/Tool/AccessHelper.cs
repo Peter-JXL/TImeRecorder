@@ -82,8 +82,36 @@ namespace TimeRecorder
         public bool exportAllDataToExcel(string excelFimeName = "TimeRecorderData.xlsx")
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
+            //TODO:然后每个月的数据一张表
             //[excel名].[sheet名] 已有的excel的表要加$  
-            string sql = string.Format(@"select * into [Excel 8.0; database={0}].[{1}] from {1};", excelFimeName, dataTableName);
+
+            string sql = string.Format(
+                @"select * into [Excel 8.0; database={0}].[{1}] 
+                from {1} ;", 
+                excelFimeName, dataTableName);
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(sql, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            return true;
+        }
+
+        public bool exportDaysDataToExcel
+            (string beginDate, string endDate, string excelFimeName = "TimeRecorderData.xlsx")
+        {
+            //将指定日期的数据导出到Excel
+            //[excel名].[sheet名] 已有的excel的表要加$  
+
+            string sql = string.Format(
+                @"select * into [Excel 8.0;  database={0}].[{1}] 
+                from {2} 
+                where {3} >= #{4}#  and {3} <= #{5}# ;",
+                 excelFimeName, beginDate,
+                 dataTableName,
+                 beginTimeColumnName, beginDate, endDate
+                 );
+            Console.WriteLine(sql);
+
             connection.Open();
             OleDbCommand command = new OleDbCommand(sql, connection);
             command.ExecuteNonQuery();

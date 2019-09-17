@@ -105,10 +105,24 @@ namespace TimeRecorder
 
         private void setDateTimePicker_MaxAndMin()
         {
-            dTPBeginTime.MinDate = mcMain.SelectionStart;  //注意要先设置最小值
-            dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
-            dTPEndTime.MinDate = mcMain.SelectionStart;
-            dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+            //设置最大和最小值，为了避免出现 MinDate > MaxDate 或者 MinDate < MaxDate的情况，分开设置
+            if (mcMain.SelectionStart < dTPBeginTime.Value)
+            {
+                dTPBeginTime.MinDate = mcMain.SelectionStart;
+                dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+
+                dTPEndTime.MinDate = mcMain.SelectionStart;
+                dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+
+            }
+            else
+            {
+                dTPBeginTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+                dTPBeginTime.MinDate = mcMain.SelectionStart;
+
+                dTPEndTime.MaxDate = mcMain.SelectionStart.AddDays(1);
+                dTPEndTime.MinDate = mcMain.SelectionStart;
+            }
         }
 
         private void LoadDgvShow(DateTime dt)
@@ -118,7 +132,7 @@ namespace TimeRecorder
             connection.Open();
             command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
-            
+
 
 
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
@@ -363,14 +377,14 @@ namespace TimeRecorder
 
         private void dgvShow_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-          
+
             //saveToDataBase();
-            try            
+            try
             {
                 dgvShow.EndEdit();
                 myDataSet.GetChanges();
-                dataAdapter.Update(myDataSet.Tables[dataTableName]);    
-                
+                dataAdapter.Update(myDataSet.Tables[dataTableName]);
+
             }
             catch (DBConcurrencyException ex)
             {
