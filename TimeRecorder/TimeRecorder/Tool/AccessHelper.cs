@@ -21,7 +21,7 @@ namespace TimeRecorder
 
         OleDbConnection connection = new OleDbConnection(filePath);
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
-        DataSet myDataSet = new DataSet("MyDataSet");     
+        DataSet myDataSet = new DataSet("MyDataSet");
 
         #endregion
 
@@ -53,7 +53,7 @@ namespace TimeRecorder
             dataAdapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
 
-            
+
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
             dataAdapter.Fill(myDataSet, dataTableName);
             connection.Close();
@@ -72,16 +72,22 @@ namespace TimeRecorder
             dataAdapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
 
-            DataTable temp = new DataTable();           
+            DataTable temp = new DataTable();
             dataAdapter.Fill(temp, dataTableName);
             connection.Close();
 
             return temp;
         }
 
-        public void exportAllDataToExcel(string excelFimeName = "TimeRecorderData.xlsx")
+        public bool exportAllDataToExcel(string excelFimeName = "TimeRecorderData.xlsx")
         {
-            string sql = string.Format(@"select * from");
+            //[excel名].[sheet名] 已有的excel的表要加$  
+            string sql = string.Format(@"select * into [Excel 8.0; database={0}].[{1}] from {1};", excelFimeName, dataTableName);
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(sql, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            return true;
         }
 
 

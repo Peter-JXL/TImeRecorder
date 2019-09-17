@@ -21,6 +21,10 @@ namespace TimeRecorder
             endTimeColumnName = GlobalData.endTimeColumnName, noteColumnName = GlobalData.noteColumnName;
 
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
+        string summaryDir = @"summary/";  //summary存放的目录
+        string rtfExtison = ".rtf";
+
+        string txtIOALLTip = "默认与exe文件同路径";
 
         AccessHelper accessHelper = new AccessHelper();
         #endregion
@@ -40,6 +44,8 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName]["PieLineColor"] = "Blue";      //绘制黑色的连线
 
             rdoPie.Checked = true; // 默认是饼状图
+
+            txtIOAll.Text = txtIOALLTip;
         }
 
 
@@ -52,7 +58,7 @@ namespace TimeRecorder
             LoadChartPie(d);
         }
 
-        
+
 
         public void LoadChartPie(DataTable tableOfDay)
         {
@@ -100,9 +106,11 @@ namespace TimeRecorder
 
         }
 
+
+
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void radioButton_Click(object sender, EventArgs e)
@@ -117,7 +125,7 @@ namespace TimeRecorder
                 case "rdoPie": series.ChartType = SeriesChartType.Pie; break;
                 case "rdoDoughnut": series.ChartType = SeriesChartType.Doughnut; break;
                 case "rdoFunnel": series.ChartType = SeriesChartType.Funnel; break;
-                case "rdoPyramid": series.ChartType  = SeriesChartType.Pyramid; break;
+                case "rdoPyramid": series.ChartType = SeriesChartType.Pyramid; break;
                 default:
                     break;
             }
@@ -135,6 +143,8 @@ namespace TimeRecorder
             DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
             LoadEveryChart(d);
         }
+
+     
 
         public void LoadEveryChart(DataTable tableOfDay)
         {
@@ -190,14 +200,90 @@ namespace TimeRecorder
 
         private void btnIO_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnIOChoseFile_Click(object sender, EventArgs e)
+        {
+
+            string filename = null;
+
+            SaveFileDialog diaSavaFile = new SaveFileDialog();//打开文件对话框。  
+            diaSavaFile.Filter = ("Excel 文件(*.xls)|*.xls");//后缀名。  
+            diaSavaFile.AddExtension = true;
+            diaSavaFile.RestoreDirectory = true;
+            diaSavaFile.Title = "选择要导出的位置";
+
+            if (diaSavaFile.ShowDialog() == DialogResult.OK)
+            {
+                filename = diaSavaFile.FileName;
+            }
+            txtIOAll.Text = filename;
+        }
+
+
+        private void txtIOAll_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtIOAll.Text))
+            {
+                txtIOAll.Text = txtIOALLTip;
+            }
+        }
+
+
+        private void txtIOAll_Enter(object sender, EventArgs e)
+        {
+            if (txtIOAll.Text.Equals(txtIOALLTip))
+            {
+                txtIOAll.Text = "";
+            }
         }
 
 
         private void btnIOAll_Click(object sender, EventArgs e)
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
+            try
+            {
+                bool isSuccess = false;
+                if (string.IsNullOrEmpty(txtIOAll.Text))
+                {
+                    isSuccess = accessHelper.exportAllDataToExcel();
+                }
+                else
+                {
+                    isSuccess = accessHelper.exportAllDataToExcel(txtIOAll.Text);
+                }
+                if (isSuccess)
+                {
+                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(), "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
         }
+
+
+        private void btnIOAllWord(object sender, EventArgs e)
+        {
+        	//将全部总结导出到一个word文档里，同时将每份总结的日期设为标题1
+        	
+  
+
+        }
+
+        private void btnIODaysWord(object sender, EventArgs s)
+        {
+        	//将指定日期的数据导出到word里，同时将每份总结的日期设为标题1
+
+        }
+
 
         #endregion
 
