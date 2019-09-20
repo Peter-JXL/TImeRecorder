@@ -23,6 +23,8 @@ namespace TimeRecorder
         OleDbDataAdapter dataAdapter = new OleDbDataAdapter();
         DataSet myDataSet = new DataSet("MyDataSet");
 
+        string summaryDir = GlobalData.summaryDir;
+
         #endregion
 
         public AccessHelper()
@@ -79,6 +81,9 @@ namespace TimeRecorder
             return temp;
         }
 
+
+        #region 导出Excel数据
+
         public bool exportAllDataToExcel(string excelFimeName = "TimeRecorderData.xlsx")
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
@@ -97,10 +102,13 @@ namespace TimeRecorder
         }
 
         public bool exportDaysDataToExcel
-            (string beginDate, string endDate, string excelFimeName = "TimeRecorderData.xlsx")
+            (DateTime beginDate2, DateTime endDate2, string excelFimeName = "TimeRecorderData.xlsx")
         {
             //将指定日期的数据导出到Excel
             //[excel名].[sheet名] 已有的excel的表要加$  
+
+            string beginDate = beginDate2.ToShortDateString();
+            string endDate = endDate2.ToShortDateString();
 
             string sql = string.Format(
                 @"select * into [Excel 8.0;  database={0}].[{1}] 
@@ -119,6 +127,62 @@ namespace TimeRecorder
             return true;
         }
 
+        public bool exportDaysDataWithLabelToExcel
+            (DateTime beginDate2, DateTime endDate2,string firstLabel, string secondLabel,
+            string excelFimeName = "TimeRecorderData.xlsx")
+        {
+            string beginDate = beginDate2.ToShortDateString();
+            string endDate = endDate2.ToShortDateString();
+
+            string sql = string.Format(
+                @"select * into [Excel 8.0;  database={0}].[{1}] 
+                from {2} 
+                where {3} >= #{4}#  and {3} <= #{5}# 
+                and {6} = {7};",
+                 excelFimeName, beginDate,
+                 dataTableName,
+                 beginTimeColumnName, beginDate, endDate,
+                 firstLabelColumnName, firstLabel
+                 );
+            Console.WriteLine(sql);
+
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(sql, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            return true;
+        }
+        #endregion
+
+
+        #region Word操作
+
+        public bool exportDaysDataToWord()
+        {
+            //导出指定日期的Word数据
+            if(!Directry.Exits(summaryDir))
+            {
+                return false;
+            }
+            else
+            {
+                System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
+                string rtfText = System.IO.File.ReadAllText(path);
+                rtBox.Rtf = rtfText;
+                string plainText = rtBox.Text;
+                System.Windows.Forms.MessageBox.Show(plainText);
+            }
+        }
+
+        public bool exportAllDataToEWord()
+        {
+            //导出全部日期的Word数据
+
+        }
+
+
+
+        #endregion
 
     }
 }

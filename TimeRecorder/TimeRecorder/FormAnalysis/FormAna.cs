@@ -239,10 +239,10 @@ namespace TimeRecorder
 
                 bool isSuccess = false;
                 if (string.IsNullOrEmpty(txtIOFileDir.Text))
-                    isSuccess = accessHelper.exportDaysDataToExcel(beginDate, endDate);
+                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value.);
                 
                 else
-                    isSuccess = accessHelper.exportDaysDataToExcel(beginDate, endDate, filename);
+                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value., filename);
                 
                 if (isSuccess)
                     MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);

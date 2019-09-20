@@ -30,9 +30,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTodaySummary));
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,22 +69,22 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackColor = System.Drawing.Color.White;
-            chartArea3.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend3);
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend1);
             this.chartAnalysis.Location = new System.Drawing.Point(-2, 44);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series3.ChartArea = "ChartAreaPie";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "LegendPie";
-            series3.Name = "SeriesPie";
-            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series3.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series3);
+            series1.ChartArea = "ChartAreaPie";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "LegendPie";
+            series1.Name = "SeriesPie";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series1.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series1);
             this.chartAnalysis.Size = new System.Drawing.Size(437, 502);
             this.chartAnalysis.TabIndex = 20;
             this.chartAnalysis.Text = "chart1";
@@ -239,6 +240,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartAnalysis);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTodaySummary";

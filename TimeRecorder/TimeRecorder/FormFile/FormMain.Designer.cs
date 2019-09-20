@@ -186,7 +186,7 @@
             // 
             this.tsmShowSummary.Name = "tsmShowSummary";
             this.tsmShowSummary.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.tsmShowSummary.Size = new System.Drawing.Size(180, 22);
+            this.tsmShowSummary.Size = new System.Drawing.Size(157, 22);
             this.tsmShowSummary.Text = "每日总结表";
             this.tsmShowSummary.Click += new System.EventHandler(this.tsmShowSummary_Click);
             // 
@@ -194,7 +194,7 @@
             // 
             this.tsmAnalysis.Name = "tsmAnalysis";
             this.tsmAnalysis.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.tsmAnalysis.Size = new System.Drawing.Size(180, 22);
+            this.tsmAnalysis.Size = new System.Drawing.Size(157, 22);
             this.tsmAnalysis.Text = "分析窗口";
             this.tsmAnalysis.Click += new System.EventHandler(this.tsmAnalysis_Click);
             // 
@@ -210,7 +210,7 @@
             // 
             this.tsmLabelModify.Name = "tsmLabelModify";
             this.tsmLabelModify.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.tsmLabelModify.Size = new System.Drawing.Size(180, 22);
+            this.tsmLabelModify.Size = new System.Drawing.Size(145, 22);
             this.tsmLabelModify.Text = "标签修改";
             this.tsmLabelModify.Click += new System.EventHandler(this.tsmLabelModify_Click);
             // 
@@ -226,14 +226,14 @@
             // tsmAbout
             // 
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(138, 22);
             this.tsmAbout.Text = "关于(&A)...";
             this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // tsmAboutLanguage
             // 
             this.tsmAboutLanguage.Name = "tsmAboutLanguage";
-            this.tsmAboutLanguage.Size = new System.Drawing.Size(180, 22);
+            this.tsmAboutLanguage.Size = new System.Drawing.Size(138, 22);
             this.tsmAboutLanguage.Text = "关于语言(&L)";
             // 
             // cboFirstLbl
@@ -546,6 +546,7 @@
             this.Controls.Add(this.menuStripMain);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStripMain;
             this.Margin = new System.Windows.Forms.Padding(5);

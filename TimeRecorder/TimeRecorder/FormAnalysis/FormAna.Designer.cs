@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAna));
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.rdoPie = new System.Windows.Forms.RadioButton();
             this.tabControlAnalysis = new System.Windows.Forms.TabControl();
             this.tabPageTotal = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabPageEveryDay = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.cboEveryLabel = new System.Windows.Forms.ComboBox();
@@ -65,26 +67,26 @@
             this.dtpEveryEndTime = new System.Windows.Forms.DateTimePicker();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPageIO = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboSecondLabel = new System.Windows.Forms.ComboBox();
+            this.btnIOExcelLabel = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboFirstLabel = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnIOWordDaysAll = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnIOExcelDaysAll = new System.Windows.Forms.Button();
+            this.btnIOExcelDays = new System.Windows.Forms.Button();
+            this.btnIOWordDays = new System.Windows.Forms.Button();
             this.grpIOAll = new System.Windows.Forms.GroupBox();
             this.btnIOFileDir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtIOFileDir = new System.Windows.Forms.TextBox();
-            this.btnIOExcelDaysAll = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpIOEndDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnIOExcelDays = new System.Windows.Forms.Button();
             this.dtpIOBeginDate = new System.Windows.Forms.DateTimePicker();
-            this.btnIOWordDays = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnIOWordDaysAll = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboFirstLabel = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnIOExcelLabel = new System.Windows.Forms.Button();
-            this.cboSecondLabel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
@@ -95,29 +97,32 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPageIO.SuspendLayout();
-            this.grpIOAll.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.grpIOAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartAnalysis
             // 
-            chartArea15.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea15);
-            legend15.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend15);
-            this.chartAnalysis.Location = new System.Drawing.Point(6, 128);
+            this.chartAnalysis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea1);
+            legend1.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend1);
+            this.chartAnalysis.Location = new System.Drawing.Point(26, 157);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series15.ChartArea = "ChartAreaPie";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series15.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series15.Legend = "LegendPie";
-            series15.Name = "SeriesPie";
-            series15.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series15.YValuesPerPoint = 6;
-            this.chartAnalysis.Series.Add(series15);
-            this.chartAnalysis.Size = new System.Drawing.Size(828, 434);
+            series1.ChartArea = "ChartAreaPie";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "LegendPie";
+            series1.Name = "SeriesPie";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series1.YValuesPerPoint = 6;
+            this.chartAnalysis.Series.Add(series1);
+            this.chartAnalysis.Size = new System.Drawing.Size(632, 450);
             this.chartAnalysis.TabIndex = 0;
             this.chartAnalysis.Text = "chart1";
             // 
@@ -270,21 +275,31 @@
             this.tabControlAnalysis.Location = new System.Drawing.Point(12, 12);
             this.tabControlAnalysis.Name = "tabControlAnalysis";
             this.tabControlAnalysis.SelectedIndex = 0;
-            this.tabControlAnalysis.Size = new System.Drawing.Size(848, 599);
+            this.tabControlAnalysis.Size = new System.Drawing.Size(930, 647);
             this.tabControlAnalysis.TabIndex = 10;
             // 
             // tabPageTotal
             // 
+            this.tabPageTotal.Controls.Add(this.groupBox3);
             this.tabPageTotal.Controls.Add(this.chartAnalysis);
             this.tabPageTotal.Controls.Add(this.groupBoxType);
             this.tabPageTotal.Controls.Add(this.panel1);
             this.tabPageTotal.Location = new System.Drawing.Point(4, 30);
             this.tabPageTotal.Name = "tabPageTotal";
             this.tabPageTotal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTotal.Size = new System.Drawing.Size(840, 565);
+            this.tabPageTotal.Size = new System.Drawing.Size(922, 613);
             this.tabPageTotal.TabIndex = 0;
             this.tabPageTotal.Text = "数据汇总";
             this.tabPageTotal.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(698, 157);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(206, 100);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
             // 
             // tabPageEveryDay
             // 
@@ -296,7 +311,7 @@
             this.tabPageEveryDay.Location = new System.Drawing.Point(4, 30);
             this.tabPageEveryDay.Name = "tabPageEveryDay";
             this.tabPageEveryDay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEveryDay.Size = new System.Drawing.Size(840, 565);
+            this.tabPageEveryDay.Size = new System.Drawing.Size(922, 613);
             this.tabPageEveryDay.TabIndex = 1;
             this.tabPageEveryDay.Text = "每日分布";
             this.tabPageEveryDay.UseVisualStyleBackColor = true;
@@ -419,16 +434,16 @@
             // 
             // chart1
             // 
-            chartArea16.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart1.Legends.Add(legend16);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(50, 172);
             this.chart1.Name = "chart1";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chart1.Series.Add(series16);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(740, 376);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -445,10 +460,137 @@
             this.tabPageIO.Location = new System.Drawing.Point(4, 30);
             this.tabPageIO.Name = "tabPageIO";
             this.tabPageIO.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIO.Size = new System.Drawing.Size(840, 565);
+            this.tabPageIO.Size = new System.Drawing.Size(922, 613);
             this.tabPageIO.TabIndex = 2;
             this.tabPageIO.Text = "数据导入/导出";
             this.tabPageIO.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cboSecondLabel);
+            this.groupBox2.Controls.Add(this.btnIOExcelLabel);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.cboFirstLabel);
+            this.groupBox2.Location = new System.Drawing.Point(29, 398);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(398, 134);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "导出指定标签数据";
+            // 
+            // cboSecondLabel
+            // 
+            this.cboSecondLabel.FormattingEnabled = true;
+            this.cboSecondLabel.Location = new System.Drawing.Point(240, 31);
+            this.cboSecondLabel.Name = "cboSecondLabel";
+            this.cboSecondLabel.Size = new System.Drawing.Size(121, 29);
+            this.cboSecondLabel.TabIndex = 14;
+            // 
+            // btnIOExcelLabel
+            // 
+            this.btnIOExcelLabel.Location = new System.Drawing.Point(128, 75);
+            this.btnIOExcelLabel.Name = "btnIOExcelLabel";
+            this.btnIOExcelLabel.Size = new System.Drawing.Size(214, 43);
+            this.btnIOExcelLabel.TabIndex = 13;
+            this.btnIOExcelLabel.Text = "导出指定标签数据到Excel";
+            this.btnIOExcelLabel.UseVisualStyleBackColor = true;
+            this.btnIOExcelLabel.Click += new System.EventHandler(this.btnIOExcelLabel_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 21);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "选择标签 :";
+            // 
+            // cboFirstLabel
+            // 
+            this.cboFirstLabel.FormattingEnabled = true;
+            this.cboFirstLabel.Location = new System.Drawing.Point(108, 31);
+            this.cboFirstLabel.Name = "cboFirstLabel";
+            this.cboFirstLabel.Size = new System.Drawing.Size(121, 29);
+            this.cboFirstLabel.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.94958F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.05042F));
+            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDaysAll, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDaysAll, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDays, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDays, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 157);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.68217F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.31783F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 202);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // btnIOWordDaysAll
+            // 
+            this.btnIOWordDaysAll.Location = new System.Drawing.Point(236, 88);
+            this.btnIOWordDaysAll.Name = "btnIOWordDaysAll";
+            this.btnIOWordDaysAll.Size = new System.Drawing.Size(214, 40);
+            this.btnIOWordDaysAll.TabIndex = 12;
+            this.btnIOWordDaysAll.Text = "导出全部日志数据到Word";
+            this.btnIOWordDaysAll.UseVisualStyleBackColor = true;
+            this.btnIOWordDaysAll.Click += new System.EventHandler(this.btnIOWordDaysAll_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(236, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 21);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "导出总结数据";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 21);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "导出日期数据";
+            // 
+            // btnIOExcelDaysAll
+            // 
+            this.btnIOExcelDaysAll.Location = new System.Drawing.Point(3, 88);
+            this.btnIOExcelDaysAll.Name = "btnIOExcelDaysAll";
+            this.btnIOExcelDaysAll.Size = new System.Drawing.Size(214, 40);
+            this.btnIOExcelDaysAll.TabIndex = 5;
+            this.btnIOExcelDaysAll.Text = "导出全部日期数据到Excel";
+            this.btnIOExcelDaysAll.UseVisualStyleBackColor = true;
+            this.btnIOExcelDaysAll.Click += new System.EventHandler(this.btnIOExcelDaysAll_Click);
+            // 
+            // btnIOExcelDays
+            // 
+            this.btnIOExcelDays.Location = new System.Drawing.Point(3, 27);
+            this.btnIOExcelDays.Name = "btnIOExcelDays";
+            this.btnIOExcelDays.Size = new System.Drawing.Size(214, 43);
+            this.btnIOExcelDays.TabIndex = 1;
+            this.btnIOExcelDays.Text = "导出指定日期数据到Excel";
+            this.btnIOExcelDays.UseVisualStyleBackColor = true;
+            this.btnIOExcelDays.Click += new System.EventHandler(this.btnIOExcelDays_Click);
+            // 
+            // btnIOWordDays
+            // 
+            this.btnIOWordDays.Location = new System.Drawing.Point(236, 27);
+            this.btnIOWordDays.Name = "btnIOWordDays";
+            this.btnIOWordDays.Size = new System.Drawing.Size(214, 43);
+            this.btnIOWordDays.TabIndex = 9;
+            this.btnIOWordDays.Text = "导出指定日期数据到Word";
+            this.btnIOWordDays.UseVisualStyleBackColor = true;
+            this.btnIOWordDays.Click += new System.EventHandler(this.btnIOWordDays_Click);
             // 
             // grpIOAll
             // 
@@ -489,16 +631,6 @@
             this.txtIOFileDir.Size = new System.Drawing.Size(257, 29);
             this.txtIOFileDir.TabIndex = 7;
             // 
-            // btnIOExcelDaysAll
-            // 
-            this.btnIOExcelDaysAll.Location = new System.Drawing.Point(3, 88);
-            this.btnIOExcelDaysAll.Name = "btnIOExcelDaysAll";
-            this.btnIOExcelDaysAll.Size = new System.Drawing.Size(214, 40);
-            this.btnIOExcelDaysAll.TabIndex = 5;
-            this.btnIOExcelDaysAll.Text = "导出全部日期数据到Excel";
-            this.btnIOExcelDaysAll.UseVisualStyleBackColor = true;
-            this.btnIOExcelDaysAll.Click += new System.EventHandler(this.btnIOExcelDaysAll_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -524,16 +656,6 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "开始日期 :";
             // 
-            // btnIOExcelDays
-            // 
-            this.btnIOExcelDays.Location = new System.Drawing.Point(3, 27);
-            this.btnIOExcelDays.Name = "btnIOExcelDays";
-            this.btnIOExcelDays.Size = new System.Drawing.Size(214, 43);
-            this.btnIOExcelDays.TabIndex = 1;
-            this.btnIOExcelDays.Text = "导出指定日期数据到Excel";
-            this.btnIOExcelDays.UseVisualStyleBackColor = true;
-            this.btnIOExcelDays.Click += new System.EventHandler(this.btnIOExcelDays_Click);
-            // 
             // dtpIOBeginDate
             // 
             this.dtpIOBeginDate.Location = new System.Drawing.Point(114, 39);
@@ -541,120 +663,14 @@
             this.dtpIOBeginDate.Size = new System.Drawing.Size(200, 29);
             this.dtpIOBeginDate.TabIndex = 0;
             // 
-            // btnIOWordDays
-            // 
-            this.btnIOWordDays.Location = new System.Drawing.Point(236, 27);
-            this.btnIOWordDays.Name = "btnIOWordDays";
-            this.btnIOWordDays.Size = new System.Drawing.Size(214, 43);
-            this.btnIOWordDays.TabIndex = 9;
-            this.btnIOWordDays.Text = "导出指定日期数据到Word";
-            this.btnIOWordDays.UseVisualStyleBackColor = true;
-            this.btnIOWordDays.Click += new System.EventHandler(this.btnIOWordDays_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.94958F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.05042F));
-            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDaysAll, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDaysAll, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDays, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDays, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 157);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.68217F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.31783F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 202);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 21);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "导出日期数据";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 21);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "导出总结数据";
-            // 
-            // btnIOWordDaysAll
-            // 
-            this.btnIOWordDaysAll.Location = new System.Drawing.Point(236, 88);
-            this.btnIOWordDaysAll.Name = "btnIOWordDaysAll";
-            this.btnIOWordDaysAll.Size = new System.Drawing.Size(214, 40);
-            this.btnIOWordDaysAll.TabIndex = 12;
-            this.btnIOWordDaysAll.Text = "导出全部日志数据到Word";
-            this.btnIOWordDaysAll.UseVisualStyleBackColor = true;
-            this.btnIOWordDaysAll.Click += new System.EventHandler(this.btnIOWordDaysAll_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cboSecondLabel);
-            this.groupBox2.Controls.Add(this.btnIOExcelLabel);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.cboFirstLabel);
-            this.groupBox2.Location = new System.Drawing.Point(29, 398);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 134);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "导出指定标签数据";
-            // 
-            // cboFirstLabel
-            // 
-            this.cboFirstLabel.FormattingEnabled = true;
-            this.cboFirstLabel.Location = new System.Drawing.Point(108, 31);
-            this.cboFirstLabel.Name = "cboFirstLabel";
-            this.cboFirstLabel.Size = new System.Drawing.Size(121, 29);
-            this.cboFirstLabel.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 34);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 21);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "选择标签 :";
-            // 
-            // btnIOExcelLabel
-            // 
-            this.btnIOExcelLabel.Location = new System.Drawing.Point(128, 75);
-            this.btnIOExcelLabel.Name = "btnIOExcelLabel";
-            this.btnIOExcelLabel.Size = new System.Drawing.Size(214, 43);
-            this.btnIOExcelLabel.TabIndex = 13;
-            this.btnIOExcelLabel.Text = "导出指定标签数据到Excel";
-            this.btnIOExcelLabel.UseVisualStyleBackColor = true;
-            this.btnIOExcelLabel.Click += new System.EventHandler(this.btnIOExcelLabel_Click);
-            // 
-            // cboSecondLabel
-            // 
-            this.cboSecondLabel.FormattingEnabled = true;
-            this.cboSecondLabel.Location = new System.Drawing.Point(240, 31);
-            this.cboSecondLabel.Name = "cboSecondLabel";
-            this.cboSecondLabel.Size = new System.Drawing.Size(121, 29);
-            this.cboSecondLabel.TabIndex = 14;
-            // 
             // FormAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 623);
+            this.ClientSize = new System.Drawing.Size(965, 671);
             this.Controls.Add(this.tabControlAnalysis);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormAna";
             this.Text = "分析区";
@@ -674,12 +690,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPageIO.ResumeLayout(false);
             this.tabPageIO.PerformLayout();
-            this.grpIOAll.ResumeLayout(false);
-            this.grpIOAll.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.grpIOAll.ResumeLayout(false);
+            this.grpIOAll.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -737,5 +753,6 @@
         private System.Windows.Forms.ComboBox cboFirstLabel;
         private System.Windows.Forms.Button btnIOExcelLabel;
         private System.Windows.Forms.ComboBox cboSecondLabel;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

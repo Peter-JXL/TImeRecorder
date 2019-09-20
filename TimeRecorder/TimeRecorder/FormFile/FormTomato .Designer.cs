@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTomato));
             this.panelF = new System.Windows.Forms.Panel();
-            this.lblCountdownLeft = new System.Windows.Forms.Label();
-            this.dtpCountdownEnd = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dtpCountdownBegin = new System.Windows.Forms.DateTimePicker();
-            this.lblleftTime = new System.Windows.Forms.Label();
+            this.dtpCountdownEnd = new System.Windows.Forms.DateTimePicker();
             this.lblEndTime = new System.Windows.Forms.Label();
             this.lblBeginTime = new System.Windows.Forms.Label();
+            this.lblCountdownLeft = new System.Windows.Forms.Label();
+            this.lblleftTime = new System.Windows.Forms.Label();
             this.btnBeginCountDown = new System.Windows.Forms.Button();
             this.btnStopCountdown = new System.Windows.Forms.Button();
             this.numUpDown = new System.Windows.Forms.NumericUpDown();
             this.lblCountDown = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelF.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // panelF
@@ -62,44 +63,43 @@
             this.panelF.Size = new System.Drawing.Size(610, 352);
             this.panelF.TabIndex = 24;
             // 
-            // lblCountdownLeft
+            // tableLayoutPanel1
             // 
-            this.lblCountdownLeft.AutoSize = true;
-            this.lblCountdownLeft.Location = new System.Drawing.Point(124, 259);
-            this.lblCountdownLeft.Name = "lblCountdownLeft";
-            this.lblCountdownLeft.Size = new System.Drawing.Size(50, 21);
-            this.lblCountdownLeft.TabIndex = 32;
-            this.lblCountdownLeft.Text = "x分钟";
-            // 
-            // dtpCountdownEnd
-            // 
-            this.dtpCountdownEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpCountdownEnd.Location = new System.Drawing.Point(89, 51);
-            this.dtpCountdownEnd.Name = "dtpCountdownEnd";
-            this.dtpCountdownEnd.Size = new System.Drawing.Size(116, 29);
-            this.dtpCountdownEnd.TabIndex = 31;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.38869F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.61131F));
+            this.tableLayoutPanel1.Controls.Add(this.dtpCountdownBegin, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dtpCountdownEnd, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblEndTime, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblBeginTime, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 130);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.52475F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.47525F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(283, 101);
+            this.tableLayoutPanel1.TabIndex = 33;
             // 
             // dtpCountdownBegin
             // 
             this.dtpCountdownBegin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpCountdownBegin.Location = new System.Drawing.Point(89, 3);
+            this.dtpCountdownBegin.Location = new System.Drawing.Point(88, 3);
             this.dtpCountdownBegin.Name = "dtpCountdownBegin";
             this.dtpCountdownBegin.Size = new System.Drawing.Size(116, 29);
             this.dtpCountdownBegin.TabIndex = 29;
             // 
-            // lblleftTime
+            // dtpCountdownEnd
             // 
-            this.lblleftTime.AutoSize = true;
-            this.lblleftTime.Location = new System.Drawing.Point(33, 259);
-            this.lblleftTime.Name = "lblleftTime";
-            this.lblleftTime.Size = new System.Drawing.Size(78, 21);
-            this.lblleftTime.TabIndex = 27;
-            this.lblleftTime.Text = "剩余分钟:";
+            this.dtpCountdownEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpCountdownEnd.Location = new System.Drawing.Point(88, 50);
+            this.dtpCountdownEnd.Name = "dtpCountdownEnd";
+            this.dtpCountdownEnd.Size = new System.Drawing.Size(116, 29);
+            this.dtpCountdownEnd.TabIndex = 31;
             // 
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(3, 48);
+            this.lblEndTime.Location = new System.Drawing.Point(3, 47);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(78, 21);
             this.lblEndTime.TabIndex = 25;
@@ -113,6 +113,24 @@
             this.lblBeginTime.Size = new System.Drawing.Size(78, 21);
             this.lblBeginTime.TabIndex = 23;
             this.lblBeginTime.Text = "开始时间:";
+            // 
+            // lblCountdownLeft
+            // 
+            this.lblCountdownLeft.AutoSize = true;
+            this.lblCountdownLeft.Location = new System.Drawing.Point(124, 259);
+            this.lblCountdownLeft.Name = "lblCountdownLeft";
+            this.lblCountdownLeft.Size = new System.Drawing.Size(50, 21);
+            this.lblCountdownLeft.TabIndex = 32;
+            this.lblCountdownLeft.Text = "x分钟";
+            // 
+            // lblleftTime
+            // 
+            this.lblleftTime.AutoSize = true;
+            this.lblleftTime.Location = new System.Drawing.Point(33, 259);
+            this.lblleftTime.Name = "lblleftTime";
+            this.lblleftTime.Size = new System.Drawing.Size(78, 21);
+            this.lblleftTime.TabIndex = 27;
+            this.lblleftTime.Text = "剩余分钟:";
             // 
             // btnBeginCountDown
             // 
@@ -148,23 +166,6 @@
             this.lblCountDown.TabIndex = 20;
             this.lblCountDown.Text = "分钟";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.38869F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.61131F));
-            this.tableLayoutPanel1.Controls.Add(this.dtpCountdownBegin, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dtpCountdownEnd, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblEndTime, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblBeginTime, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 130);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.52475F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.47525F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(283, 101);
-            this.tableLayoutPanel1.TabIndex = 33;
-            // 
             // FormTomato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -172,14 +173,15 @@
             this.ClientSize = new System.Drawing.Size(757, 449);
             this.Controls.Add(this.panelF);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTomato";
             this.Text = "FormTomato";
             this.panelF.ResumeLayout(false);
             this.panelF.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
