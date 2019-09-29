@@ -56,6 +56,7 @@
     <Compile Include="FormFile\FormTomato .Designer.cs">
       <DependentUpon>FormTomato .cs</DependentUpon>
     </Compile>
+    <Compile Include="Tool\LanguageHelper.cs" />
     <Compile Include="Tool\GlobalData.cs" />
     <Compile Include="FormFile\FormAbout.cs">
       <SubType>Form</SubType>
@@ -99,7 +100,16 @@
     <EmbeddedResource Include="FormFile\FormLabel.resx">
       <DependentUpon>FormLabel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormMain.en-US.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFile\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormMain.zh-CN.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFile\FormMain.zh-Hans.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFile\FormTodaySummary.resx">

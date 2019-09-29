@@ -186,6 +186,17 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
         }
 
+        private void checkBoxShowLegend_Click(object sender, EventArgs e)
+        {
+            bool temp = chartAnalysis.Legends[0].Enabled;
+            chartAnalysis.Legends[0].Enabled = !temp;
+        }
+
+        private void checkBoxShow3D_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         #endregion
@@ -239,10 +250,10 @@ namespace TimeRecorder
 
                 bool isSuccess = false;
                 if (string.IsNullOrEmpty(txtIOFileDir.Text))
-                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value.);
+                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value);
                 
                 else
-                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value., filename);
+                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value, filename);
                 
                 if (isSuccess)
                     MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -87,11 +87,14 @@
             this.dtpIOEndDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpIOBeginDate = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxShowLegend = new System.Windows.Forms.CheckBox();
+            this.checkBoxShow3D = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
             this.tabControlAnalysis.SuspendLayout();
             this.tabPageTotal.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPageEveryDay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -275,7 +278,7 @@
             this.tabControlAnalysis.Location = new System.Drawing.Point(12, 12);
             this.tabControlAnalysis.Name = "tabControlAnalysis";
             this.tabControlAnalysis.SelectedIndex = 0;
-            this.tabControlAnalysis.Size = new System.Drawing.Size(930, 647);
+            this.tabControlAnalysis.Size = new System.Drawing.Size(1073, 647);
             this.tabControlAnalysis.TabIndex = 10;
             // 
             // tabPageTotal
@@ -287,19 +290,21 @@
             this.tabPageTotal.Location = new System.Drawing.Point(4, 30);
             this.tabPageTotal.Name = "tabPageTotal";
             this.tabPageTotal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTotal.Size = new System.Drawing.Size(922, 613);
+            this.tabPageTotal.Size = new System.Drawing.Size(1065, 613);
             this.tabPageTotal.TabIndex = 0;
             this.tabPageTotal.Text = "数据汇总";
             this.tabPageTotal.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Location = new System.Drawing.Point(698, 157);
+            this.groupBox3.Controls.Add(this.checkBoxShow3D);
+            this.groupBox3.Controls.Add(this.checkBoxShowLegend);
+            this.groupBox3.Location = new System.Drawing.Point(664, 386);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(206, 100);
+            this.groupBox3.Size = new System.Drawing.Size(378, 209);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "图表设置";
             // 
             // tabPageEveryDay
             // 
@@ -663,11 +668,33 @@
             this.dtpIOBeginDate.Size = new System.Drawing.Size(200, 29);
             this.dtpIOBeginDate.TabIndex = 0;
             // 
+            // checkBoxShowLegend
+            // 
+            this.checkBoxShowLegend.AutoSize = true;
+            this.checkBoxShowLegend.Location = new System.Drawing.Point(15, 38);
+            this.checkBoxShowLegend.Name = "checkBoxShowLegend";
+            this.checkBoxShowLegend.Size = new System.Drawing.Size(93, 25);
+            this.checkBoxShowLegend.TabIndex = 0;
+            this.checkBoxShowLegend.Text = "显示图例";
+            this.checkBoxShowLegend.UseVisualStyleBackColor = true;
+            this.checkBoxShowLegend.Click += new System.EventHandler(this.checkBoxShowLegend_Click);
+            // 
+            // checkBoxShow3D
+            // 
+            this.checkBoxShow3D.AutoSize = true;
+            this.checkBoxShow3D.Location = new System.Drawing.Point(15, 69);
+            this.checkBoxShow3D.Name = "checkBoxShow3D";
+            this.checkBoxShow3D.Size = new System.Drawing.Size(82, 25);
+            this.checkBoxShow3D.TabIndex = 1;
+            this.checkBoxShow3D.Text = "3D显示";
+            this.checkBoxShow3D.UseVisualStyleBackColor = true;
+            this.checkBoxShow3D.Click += new System.EventHandler(this.checkBoxShow3D_Click);
+            // 
             // FormAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 671);
+            this.ClientSize = new System.Drawing.Size(1097, 671);
             this.Controls.Add(this.tabControlAnalysis);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -681,6 +708,8 @@
             this.groupBoxType.PerformLayout();
             this.tabControlAnalysis.ResumeLayout(false);
             this.tabPageTotal.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPageEveryDay.ResumeLayout(false);
             this.tabPageEveryDay.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -754,5 +783,7 @@
         private System.Windows.Forms.Button btnIOExcelLabel;
         private System.Windows.Forms.ComboBox cboSecondLabel;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox checkBoxShowLegend;
+        private System.Windows.Forms.CheckBox checkBoxShow3D;
     }
 }

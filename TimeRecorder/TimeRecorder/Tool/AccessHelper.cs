@@ -160,24 +160,25 @@ namespace TimeRecorder
         public bool exportDaysDataToWord()
         {
             //导出指定日期的Word数据
-            if(!Directry.Exits(summaryDir))
-            {
-                return false;
-            }
-            else
-            {
-                System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
-                string rtfText = System.IO.File.ReadAllText(path);
-                rtBox.Rtf = rtfText;
-                string plainText = rtBox.Text;
-                System.Windows.Forms.MessageBox.Show(plainText);
-            }
+            //if(!Directry.Exits(summaryDir))
+            //{
+            //    return false;
+            //}
+            //else
+            //{
+            //    System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
+            //    string rtfText = System.IO.File.ReadAllText(path);
+            //    rtBox.Rtf = rtfText;
+            //    string plainText = rtBox.Text;
+            //    System.Windows.Forms.MessageBox.Show(plainText);
+            //}
+            return true;
         }
 
         public bool exportAllDataToEWord()
         {
             //导出全部日期的Word数据
-
+            return true;
         }
 
 
