@@ -52,6 +52,10 @@
             this.tabControlAnalysis = new System.Windows.Forms.TabControl();
             this.tabPageTotal = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblShowType = new System.Windows.Forms.Label();
+            this.cboShowType = new System.Windows.Forms.ComboBox();
+            this.checkBoxShow3D = new System.Windows.Forms.CheckBox();
+            this.checkBoxShowLegend = new System.Windows.Forms.CheckBox();
             this.tabPageEveryDay = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.cboEveryLabel = new System.Windows.Forms.ComboBox();
@@ -87,8 +91,7 @@
             this.dtpIOEndDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpIOBeginDate = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxShowLegend = new System.Windows.Forms.CheckBox();
-            this.checkBoxShow3D = new System.Windows.Forms.CheckBox();
+            this.btnExportToJPG = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
@@ -297,14 +300,57 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnExportToJPG);
+            this.groupBox3.Controls.Add(this.lblShowType);
+            this.groupBox3.Controls.Add(this.cboShowType);
             this.groupBox3.Controls.Add(this.checkBoxShow3D);
             this.groupBox3.Controls.Add(this.checkBoxShowLegend);
-            this.groupBox3.Location = new System.Drawing.Point(664, 386);
+            this.groupBox3.Location = new System.Drawing.Point(664, 157);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(378, 209);
+            this.groupBox3.Size = new System.Drawing.Size(378, 438);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "图表设置";
+            // 
+            // lblShowType
+            // 
+            this.lblShowType.AutoSize = true;
+            this.lblShowType.Location = new System.Drawing.Point(15, 46);
+            this.lblShowType.Name = "lblShowType";
+            this.lblShowType.Size = new System.Drawing.Size(83, 21);
+            this.lblShowType.TabIndex = 3;
+            this.lblShowType.Text = "显示类型 :";
+            // 
+            // cboShowType
+            // 
+            this.cboShowType.FormattingEnabled = true;
+            this.cboShowType.Location = new System.Drawing.Point(104, 43);
+            this.cboShowType.Name = "cboShowType";
+            this.cboShowType.Size = new System.Drawing.Size(131, 29);
+            this.cboShowType.TabIndex = 2;
+            this.cboShowType.SelectedIndexChanged += new System.EventHandler(this.cboShowType_SelectedIndexChanged);
+            // 
+            // checkBoxShow3D
+            // 
+            this.checkBoxShow3D.AutoSize = true;
+            this.checkBoxShow3D.Location = new System.Drawing.Point(15, 147);
+            this.checkBoxShow3D.Name = "checkBoxShow3D";
+            this.checkBoxShow3D.Size = new System.Drawing.Size(82, 25);
+            this.checkBoxShow3D.TabIndex = 1;
+            this.checkBoxShow3D.Text = "3D显示";
+            this.checkBoxShow3D.UseVisualStyleBackColor = true;
+            this.checkBoxShow3D.Click += new System.EventHandler(this.checkBoxShow3D_Click);
+            // 
+            // checkBoxShowLegend
+            // 
+            this.checkBoxShowLegend.AutoSize = true;
+            this.checkBoxShowLegend.Location = new System.Drawing.Point(15, 116);
+            this.checkBoxShowLegend.Name = "checkBoxShowLegend";
+            this.checkBoxShowLegend.Size = new System.Drawing.Size(93, 25);
+            this.checkBoxShowLegend.TabIndex = 0;
+            this.checkBoxShowLegend.Text = "显示图例";
+            this.checkBoxShowLegend.UseVisualStyleBackColor = true;
+            this.checkBoxShowLegend.Click += new System.EventHandler(this.checkBoxShowLegend_Click);
             // 
             // tabPageEveryDay
             // 
@@ -316,7 +362,7 @@
             this.tabPageEveryDay.Location = new System.Drawing.Point(4, 30);
             this.tabPageEveryDay.Name = "tabPageEveryDay";
             this.tabPageEveryDay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEveryDay.Size = new System.Drawing.Size(922, 613);
+            this.tabPageEveryDay.Size = new System.Drawing.Size(1065, 613);
             this.tabPageEveryDay.TabIndex = 1;
             this.tabPageEveryDay.Text = "每日分布";
             this.tabPageEveryDay.UseVisualStyleBackColor = true;
@@ -465,7 +511,7 @@
             this.tabPageIO.Location = new System.Drawing.Point(4, 30);
             this.tabPageIO.Name = "tabPageIO";
             this.tabPageIO.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIO.Size = new System.Drawing.Size(922, 613);
+            this.tabPageIO.Size = new System.Drawing.Size(1065, 613);
             this.tabPageIO.TabIndex = 2;
             this.tabPageIO.Text = "数据导入/导出";
             this.tabPageIO.UseVisualStyleBackColor = true;
@@ -668,27 +714,14 @@
             this.dtpIOBeginDate.Size = new System.Drawing.Size(200, 29);
             this.dtpIOBeginDate.TabIndex = 0;
             // 
-            // checkBoxShowLegend
+            // btnExportToJPG
             // 
-            this.checkBoxShowLegend.AutoSize = true;
-            this.checkBoxShowLegend.Location = new System.Drawing.Point(15, 38);
-            this.checkBoxShowLegend.Name = "checkBoxShowLegend";
-            this.checkBoxShowLegend.Size = new System.Drawing.Size(93, 25);
-            this.checkBoxShowLegend.TabIndex = 0;
-            this.checkBoxShowLegend.Text = "显示图例";
-            this.checkBoxShowLegend.UseVisualStyleBackColor = true;
-            this.checkBoxShowLegend.Click += new System.EventHandler(this.checkBoxShowLegend_Click);
-            // 
-            // checkBoxShow3D
-            // 
-            this.checkBoxShow3D.AutoSize = true;
-            this.checkBoxShow3D.Location = new System.Drawing.Point(15, 69);
-            this.checkBoxShow3D.Name = "checkBoxShow3D";
-            this.checkBoxShow3D.Size = new System.Drawing.Size(82, 25);
-            this.checkBoxShow3D.TabIndex = 1;
-            this.checkBoxShow3D.Text = "3D显示";
-            this.checkBoxShow3D.UseVisualStyleBackColor = true;
-            this.checkBoxShow3D.Click += new System.EventHandler(this.checkBoxShow3D_Click);
+            this.btnExportToJPG.Location = new System.Drawing.Point(209, 376);
+            this.btnExportToJPG.Name = "btnExportToJPG";
+            this.btnExportToJPG.Size = new System.Drawing.Size(140, 42);
+            this.btnExportToJPG.TabIndex = 8;
+            this.btnExportToJPG.Text = "导出为JPG图片";
+            this.btnExportToJPG.UseVisualStyleBackColor = true;
             // 
             // FormAna
             // 
@@ -785,5 +818,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBoxShowLegend;
         private System.Windows.Forms.CheckBox checkBoxShow3D;
+        private System.Windows.Forms.Label lblShowType;
+        private System.Windows.Forms.ComboBox cboShowType;
+        private System.Windows.Forms.Button btnExportToJPG;
     }
 }

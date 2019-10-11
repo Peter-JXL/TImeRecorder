@@ -32,6 +32,7 @@ namespace TimeRecorder
 
         #endregion
 
+        #region 日期变化相关
 
         public FormMain()
         {
@@ -254,6 +255,8 @@ namespace TimeRecorder
             }
 
         }
+
+        #endregion
 
 
         #region 录入相关

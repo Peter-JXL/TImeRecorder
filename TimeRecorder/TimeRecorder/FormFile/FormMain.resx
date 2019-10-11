@@ -118,209 +118,1124 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsmAnalysis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+  <data name="btnAddTodgv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 265</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tsmAnalysis.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F9</value>
-  </data>
-  <data name="cboSecondLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 29</value>
-  </data>
-  <data name="&gt;&gt;btnYesterday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="helpProviderMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>32, 18</value>
+  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelF.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="dgvShow.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="numericUpDownCountDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 61</value>
-  </data>
-  <data name="&gt;&gt;panelRecord.Name" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStripIcon.Name" xml:space="preserve">
-    <value>contextMenuStripIcon</value>
-  </data>
-  <data name="dtpCountdownBegin.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dtpCountdownBegin.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="tsmAboutLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="dtpCountdownBegin.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="btnAddTodgv.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownLeft.Parent" xml:space="preserve">
-    <value>panelF</value>
+  <data name="btnAddTodgv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 35</value>
   </data>
-  <data name="&gt;&gt;btnAddTodgv.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;dtpCountdownEnd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cboFirstLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 29</value>
-  </data>
-  <data name="lblCountDown.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="statusStripMain.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;tsmAboutLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblSecondLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
-  </data>
-  <data name="btnCountDown.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="lblBeginTime.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblFirstLabel.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblExplainCountdownBegin.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="dtpCountdownEnd.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblExplainCountdownBegin.Name" xml:space="preserve">
-    <value>lblExplainCountdownBegin</value>
-  </data>
-  <data name="&gt;&gt;中文ToolStripMenuItem.Name" xml:space="preserve">
-    <value>中文ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;statusStripMain.ZOrder" xml:space="preserve">
+  <data name="btnAddTodgv.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;dtpCountdownEnd.Name" xml:space="preserve">
-    <value>dtpCountdownEnd</value>
+  <data name="btnAddTodgv.Text" xml:space="preserve">
+    <value>添加</value>
   </data>
-  <data name="dtpCountdownEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 29</value>
+  <data name="&gt;&gt;btnAddTodgv.Name" xml:space="preserve">
+    <value>btnAddTodgv</value>
   </data>
-  <data name="lblCountDown.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dtpCountdownEnd.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="txtNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 29</value>
-  </data>
-  <data name="&gt;&gt;lblEndTime.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnTomorrow.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="lblExplainCountdownEnd.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cboFirstLbl.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 19</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Name" xml:space="preserve">
-    <value>menuStripMain</value>
-  </data>
-  <data name="statusStripMain.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownCountDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSecondLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblExplainCountdownLeft.Text" xml:space="preserve">
-    <value>剩余分钟:</value>
+  <data name="&gt;&gt;btnAddTodgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnAddTodgv.Parent" xml:space="preserve">
     <value>panelRecord</value>
   </data>
-  <data name="&gt;&gt;tsmAnalysis.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnAddTodgv.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;英文ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblExplainCountdownLeft.Name" xml:space="preserve">
-    <value>lblExplainCountdownLeft</value>
-  </data>
-  <data name="&gt;&gt;dTPEndTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblEndTime.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblBeginTime.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblBeginTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="lblBeginTime.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBeginTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 21</value>
+  </data>
+  <data name="lblBeginTime.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="lblBeginTime.Text" xml:space="preserve">
     <value>开始时间 :</value>
   </data>
-  <data name="panelF.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblBeginTime.Name" xml:space="preserve">
+    <value>lblBeginTime</value>
+  </data>
+  <data name="&gt;&gt;lblBeginTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBeginTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;lblBeginTime.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="mcMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 14</value>
   </data>
-  <data name="&gt;&gt;btnYesterday.Name" xml:space="preserve">
-    <value>btnYesterday</value>
-  </data>
-  <data name="lblExplainCountdownEnd.Text" xml:space="preserve">
-    <value>结束时间:</value>
-  </data>
-  <data name="dTPEndTime.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="mcMain.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="mcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;mcMain.Name" xml:space="preserve">
+    <value>mcMain</value>
+  </data>
+  <data name="&gt;&gt;mcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mcMain.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;mcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblEndTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEndTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="lblEndTime.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEndTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 21</value>
+  </data>
+  <data name="lblEndTime.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblEndTime.Text" xml:space="preserve">
+    <value>结束时间 :</value>
+  </data>
+  <data name="&gt;&gt;lblEndTime.Name" xml:space="preserve">
+    <value>lblEndTime</value>
+  </data>
+  <data name="&gt;&gt;lblEndTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEndTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;lblEndTime.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblFirstLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFirstLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 121</value>
+  </data>
+  <data name="lblFirstLabel.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFirstLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 21</value>
+  </data>
+  <data name="lblFirstLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblFirstLabel.Text" xml:space="preserve">
+    <value>一级标签 :</value>
+  </data>
+  <data name="&gt;&gt;lblFirstLabel.Name" xml:space="preserve">
+    <value>lblFirstLabel</value>
+  </data>
+  <data name="&gt;&gt;lblFirstLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFirstLabel.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;lblFirstLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblSecondLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSecondLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 168</value>
+  </data>
+  <data name="lblSecondLabel.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSecondLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 21</value>
+  </data>
+  <data name="lblSecondLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblSecondLabel.Text" xml:space="preserve">
+    <value>二级标签 :</value>
+  </data>
+  <data name="&gt;&gt;lblSecondLabel.Name" xml:space="preserve">
+    <value>lblSecondLabel</value>
+  </data>
+  <data name="&gt;&gt;lblSecondLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSecondLabel.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;lblSecondLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblNote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 217</value>
+  </data>
+  <data name="lblNote.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="lblNote.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblNote.Text" xml:space="preserve">
+    <value>备注 :</value>
+  </data>
+  <data name="&gt;&gt;lblNote.Name" xml:space="preserve">
+    <value>lblNote</value>
+  </data>
+  <data name="&gt;&gt;lblNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNote.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;lblNote.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 214</value>
+  </data>
+  <data name="txtNote.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 29</value>
+  </data>
+  <data name="txtNote.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtNote.Name" xml:space="preserve">
+    <value>txtNote</value>
+  </data>
+  <data name="&gt;&gt;txtNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNote.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;txtNote.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="menuStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>194, 20</value>
+  </metadata>
+  <data name="menuStripMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStripMain.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="menuStripMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1072, 25</value>
+  </data>
+  <data name="menuStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="menuStripMain.Text" xml:space="preserve">
+    <value>menuStripMain</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Name" xml:space="preserve">
+    <value>menuStripMain</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStripMain.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tsmFile.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F4</value>
+  </data>
+  <data name="tsmFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 21</value>
+  </data>
+  <data name="tsmFile.Text" xml:space="preserve">
+    <value>文件(&amp;F)</value>
+  </data>
+  <data name="tsmShowSummary.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F4</value>
+  </data>
+  <data name="tsmShowSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="tsmShowSummary.Text" xml:space="preserve">
+    <value>每日总结表</value>
+  </data>
+  <data name="tsmAnalysis.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F9</value>
+  </data>
+  <data name="tsmAnalysis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="tsmAnalysis.Text" xml:space="preserve">
+    <value>分析窗口</value>
+  </data>
+  <data name="tsmLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 21</value>
+  </data>
+  <data name="tsmLabel.Text" xml:space="preserve">
+    <value>标签管理(&amp;L)</value>
+  </data>
+  <data name="tsmLabelModify.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F2</value>
+  </data>
+  <data name="tsmLabelModify.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="tsmLabelModify.Text" xml:space="preserve">
+    <value>标签修改</value>
   </data>
   <data name="帮助ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 21</value>
   </data>
-  <data name="btnYesterday.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="帮助ToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助(&amp;H)</value>
   </data>
+  <data name="tsmAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 22</value>
+  </data>
+  <data name="tsmAbout.Text" xml:space="preserve">
+    <value>关于(&amp;A)...</value>
+  </data>
+  <data name="tsmAboutLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 22</value>
+  </data>
+  <data name="tsmAboutLanguage.Text" xml:space="preserve">
+    <value>关于语言(&amp;L)</value>
+  </data>
+  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 22</value>
+  </data>
+  <data name="英文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 22</value>
+  </data>
+  <data name="cboFirstLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 118</value>
+  </data>
+  <data name="cboFirstLbl.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboFirstLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="cboFirstLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboFirstLbl.Name" xml:space="preserve">
+    <value>cboFirstLbl</value>
+  </data>
+  <data name="&gt;&gt;cboFirstLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboFirstLbl.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;cboFirstLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cboSecondLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 168</value>
+  </data>
+  <data name="cboSecondLbl.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboSecondLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="cboSecondLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cboSecondLbl.Name" xml:space="preserve">
+    <value>cboSecondLbl</value>
+  </data>
+  <data name="&gt;&gt;cboSecondLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboSecondLbl.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;cboSecondLbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dgvShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 7</value>
+  </data>
+  <data name="dgvShow.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 530</value>
+  </data>
+  <data name="dgvShow.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;dgvShow.Name" xml:space="preserve">
+    <value>dgvShow</value>
+  </data>
+  <data name="&gt;&gt;dgvShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvShow.Parent" xml:space="preserve">
+    <value>tabPageRecord</value>
+  </data>
+  <data name="&gt;&gt;dgvShow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="statusStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>349, 20</value>
+  </metadata>
+  <data name="statusStripMain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 10.5pt</value>
+  </data>
+  <data name="statusStripMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 628</value>
+  </data>
+  <data name="statusStripMain.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="statusStripMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1072, 25</value>
+  </data>
+  <data name="statusStripMain.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="statusStripMain.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStripMain.Name" xml:space="preserve">
+    <value>statusStripMain</value>
+  </data>
+  <data name="&gt;&gt;statusStripMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStripMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStripMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>当前操作:</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Name" xml:space="preserve">
+    <value>btnAddUnRecord</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Name" xml:space="preserve">
+    <value>dTPEndTime</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Name" xml:space="preserve">
+    <value>dTPBeginTime</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelRecord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 223</value>
+  </data>
+  <data name="panelRecord.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelRecord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 314</value>
+  </data>
+  <data name="panelRecord.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelRecord.Name" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;panelRecord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelRecord.Parent" xml:space="preserve">
+    <value>tabPageRecord</value>
+  </data>
+  <data name="&gt;&gt;panelRecord.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddUnRecord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 265</value>
+  </data>
+  <data name="btnAddUnRecord.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnAddUnRecord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 35</value>
+  </data>
+  <data name="btnAddUnRecord.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnAddUnRecord.Text" xml:space="preserve">
+    <value>添加未记录时间</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Name" xml:space="preserve">
+    <value>btnAddUnRecord</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;btnAddUnRecord.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dTPEndTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 68</value>
+  </data>
+  <data name="dTPEndTime.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dTPEndTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 29</value>
+  </data>
+  <data name="dTPEndTime.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Name" xml:space="preserve">
+    <value>dTPEndTime</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;dTPEndTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dTPBeginTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="dTPBeginTime.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dTPBeginTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 29</value>
+  </data>
+  <data name="dTPBeginTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Name" xml:space="preserve">
+    <value>dTPBeginTime</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.Parent" xml:space="preserve">
+    <value>panelRecord</value>
+  </data>
+  <data name="&gt;&gt;dTPBeginTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDownCountDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 61</value>
+  </data>
+  <data name="numericUpDownCountDown.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDownCountDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 29</value>
+  </data>
+  <data name="numericUpDownCountDown.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownCountDown.Name" xml:space="preserve">
+    <value>numericUpDownCountDown</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownCountDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownCountDown.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownCountDown.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblCountDown.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 63</value>
+  </data>
+  <data name="lblCountDown.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 21</value>
+  </data>
+  <data name="lblCountDown.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblCountDown.Text" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="&gt;&gt;lblCountDown.Name" xml:space="preserve">
+    <value>lblCountDown</value>
+  </data>
+  <data name="&gt;&gt;lblCountDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCountDown.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblCountDown.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnCountDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 3</value>
+  </data>
+  <data name="btnCountDown.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnCountDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 35</value>
+  </data>
+  <data name="btnCountDown.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnCountDown.Text" xml:space="preserve">
+    <value>开始倒计时</value>
+  </data>
+  <data name="&gt;&gt;btnCountDown.Name" xml:space="preserve">
+    <value>btnCountDown</value>
+  </data>
+  <data name="&gt;&gt;btnCountDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCountDown.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;btnCountDown.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnStopCountdown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 3</value>
+  </data>
+  <data name="btnStopCountdown.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnStopCountdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 35</value>
+  </data>
+  <data name="btnStopCountdown.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnStopCountdown.Text" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="&gt;&gt;btnStopCountdown.Name" xml:space="preserve">
+    <value>btnStopCountdown</value>
+  </data>
+  <data name="&gt;&gt;btnStopCountdown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStopCountdown.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;btnStopCountdown.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="contextMenuStripIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>774, 21</value>
+  </metadata>
   <data name="contextMenuStripIcon.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="contextMenuStripIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 92</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripIcon.Name" xml:space="preserve">
+    <value>contextMenuStripIcon</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsmOpenRecordForm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tsmOpenRecordForm.Text" xml:space="preserve">
+    <value>打开记录页面</value>
+  </data>
+  <data name="tsmBeginCountdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tsmBeginCountdown.Text" xml:space="preserve">
+    <value>开始倒计时</value>
+  </data>
+  <data name="tsmEndCountdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tsmEndCountdown.Text" xml:space="preserve">
+    <value>结束倒计时</value>
+  </data>
+  <data name="tsmExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tsmExit.Text" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Name" xml:space="preserve">
+    <value>lblCountdownLeft</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Name" xml:space="preserve">
+    <value>dtpCountdownEnd</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Name" xml:space="preserve">
+    <value>dtpCountdownBegin</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Name" xml:space="preserve">
+    <value>lblExplainCountdownLeft</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Name" xml:space="preserve">
+    <value>lblExplainCountdownEnd</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Name" xml:space="preserve">
+    <value>lblExplainCountdownBegin</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panelF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 78</value>
+  </data>
+  <data name="panelF.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 234</value>
+  </data>
+  <data name="panelF.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;panelF.Name" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;panelF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelF.Parent" xml:space="preserve">
+    <value>tabPageTomato</value>
+  </data>
+  <data name="&gt;&gt;panelF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblCountdownLeft.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountdownLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 185</value>
+  </data>
+  <data name="lblCountdownLeft.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountdownLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 21</value>
+  </data>
+  <data name="lblCountdownLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="lblCountdownLeft.Text" xml:space="preserve">
+    <value>x分钟</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Name" xml:space="preserve">
+    <value>lblCountdownLeft</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblCountdownLeft.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dtpCountdownEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 142</value>
+  </data>
+  <data name="dtpCountdownEnd.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtpCountdownEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 29</value>
+  </data>
+  <data name="dtpCountdownEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Name" xml:space="preserve">
+    <value>dtpCountdownEnd</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownEnd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpCountdownBegin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 106</value>
+  </data>
+  <data name="dtpCountdownBegin.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dtpCountdownBegin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 29</value>
+  </data>
+  <data name="dtpCountdownBegin.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Name" xml:space="preserve">
+    <value>dtpCountdownBegin</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;dtpCountdownBegin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblExplainCountdownLeft.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 185</value>
+  </data>
+  <data name="lblExplainCountdownLeft.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 21</value>
+  </data>
+  <data name="lblExplainCountdownLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="lblExplainCountdownLeft.Text" xml:space="preserve">
+    <value>剩余分钟:</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Name" xml:space="preserve">
+    <value>lblExplainCountdownLeft</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownLeft.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblExplainCountdownEnd.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 148</value>
+  </data>
+  <data name="lblExplainCountdownEnd.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 21</value>
+  </data>
+  <data name="lblExplainCountdownEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblExplainCountdownEnd.Text" xml:space="preserve">
+    <value>结束时间:</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Name" xml:space="preserve">
+    <value>lblExplainCountdownEnd</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownEnd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblExplainCountdownBegin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownBegin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 106</value>
+  </data>
+  <data name="lblExplainCountdownBegin.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblExplainCountdownBegin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 21</value>
+  </data>
+  <data name="lblExplainCountdownBegin.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblExplainCountdownBegin.Text" xml:space="preserve">
+    <value>开始时间:</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Name" xml:space="preserve">
+    <value>lblExplainCountdownBegin</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.Parent" xml:space="preserve">
+    <value>panelF</value>
+  </data>
+  <data name="&gt;&gt;lblExplainCountdownBegin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Name" xml:space="preserve">
+    <value>btnYesterday</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Name" xml:space="preserve">
+    <value>btnToday</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnToday.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnTomorrow.Name" xml:space="preserve">
+    <value>btnTomorrow</value>
+  </data>
+  <data name="&gt;&gt;btnTomorrow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTomorrow.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnTomorrow.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 7</value>
+  </data>
   <data name="panel1.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 203</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPageRecord</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnYesterday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 54</value>
+  </data>
+  <data name="btnYesterday.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnYesterday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 32</value>
+  </data>
+  <data name="btnYesterday.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Name" xml:space="preserve">
+    <value>btnYesterday</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnYesterday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnToday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 92</value>
+  </data>
+  <data name="btnToday.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnToday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 32</value>
+  </data>
+  <data name="btnToday.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Name" xml:space="preserve">
+    <value>btnToday</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnToday.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnToday.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnTomorrow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 130</value>
+  </data>
+  <data name="btnTomorrow.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="btnTomorrow.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 32</value>
   </data>
-  <data name="&gt;&gt;dgvShow.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="btnTomorrow.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="btnToday.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;btnTomorrow.Name" xml:space="preserve">
+    <value>btnTomorrow</value>
   </data>
-  <data name="&gt;&gt;lblCountdownLeft.Name" xml:space="preserve">
-    <value>lblCountdownLeft</value>
+  <data name="&gt;&gt;btnTomorrow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblFirstLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnTomorrow.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
+  <data name="&gt;&gt;btnTomorrow.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="timerTomato.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>504, 21</value>
+  </metadata>
+  <metadata name="notifyIconMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>633, 21</value>
+  </metadata>
   <data name="notifyIconMain.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAMDAQAAEABABoBgAAlgAAACAgEAABAAQA6AIAAP4GAAAQEBAAAQAEACgBAADmCQAAMDAAAAEA
@@ -746,488 +1661,311 @@
         AADgHwAA8D8AAPh/AAA=
 </value>
   </data>
-  <data name="&gt;&gt;numericUpDownCountDown.Parent" xml:space="preserve">
-    <value>panelF</value>
+  <data name="notifyIconMain.Text" xml:space="preserve">
+    <value>TimeRecorder</value>
   </data>
-  <data name="&gt;&gt;tsmFile.Name" xml:space="preserve">
-    <value>tsmFile</value>
-  </data>
-  <data name="&gt;&gt;mcMain.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="lblEndTime.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;dtpCountdownBegin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnYesterday.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="notifyIconMain.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="cboSecondLbl.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="tabPageRecord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
   </data>
-  <data name="&gt;&gt;tsmBeginCountdown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPageRecord.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="cboFirstLbl.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="tabPageRecord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1034, 554</value>
   </data>
-  <data name="lblExplainCountdownLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 21</value>
+  <data name="tabPageRecord.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;btnCountDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPageRecord.Text" xml:space="preserve">
+    <value>记录区</value>
   </data>
-  <data name="menuStripMain.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;tabPageRecord.Name" xml:space="preserve">
+    <value>tabPageRecord</value>
   </data>
-  <data name="&gt;&gt;dtpCountdownBegin.Name" xml:space="preserve">
-    <value>dtpCountdownBegin</value>
+  <data name="&gt;&gt;tabPageRecord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 217</value>
+  <data name="&gt;&gt;tabPageRecord.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownBegin.Parent" xml:space="preserve">
-    <value>panelF</value>
+  <data name="&gt;&gt;tabPageRecord.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="cboSecondLbl.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="tabPageTomato.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
   </data>
-  <data name="&gt;&gt;lblBeginTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPageTomato.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="tsmShowSummary.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F4</value>
+  <data name="tabPageTomato.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1034, 554</value>
   </data>
-  <data name="lblCountdownLeft.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tabPageTomato.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lblBeginTime.Name" xml:space="preserve">
-    <value>lblBeginTime</value>
+  <data name="tabPageTomato.Text" xml:space="preserve">
+    <value>番茄钟</value>
   </data>
-  <data name="&gt;&gt;btnStopCountdown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabPageTomato.Name" xml:space="preserve">
+    <value>tabPageTomato</value>
   </data>
-  <data name="&gt;&gt;tsmShowSummary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabPageTomato.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="statusStripMain.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tabPageTomato.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
   </data>
-  <data name="&gt;&gt;contextMenuStripIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabPageTomato.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="dTPBeginTime.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <metadata name="toolStripFormSummary.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>957, 21</value>
+  </metadata>
+  <data name="toolStripCboFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 25</value>
   </data>
-  <data name="btnAddUnRecord.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="toolStripCboFont.Text" xml:space="preserve">
+    <value>修改字体</value>
   </data>
-  <data name="menuStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="toolStripCboFontSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownEnd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripCboFontSize.Text" xml:space="preserve">
+    <value>修改字体大小</value>
   </data>
-  <data name="&gt;&gt;lblSecondLabel.Parent" xml:space="preserve">
-    <value>panelRecord</value>
+  <data name="toolStripBtnColor.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="lblCountdownLeft.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="toolStripBtnColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
-  <data name="menuStripMain.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="toolStripBtnColor.Text" xml:space="preserve">
+    <value>修改颜色(Ctrl+D)</value>
   </data>
-  <data name="menuStripMain.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="toolStripBtnBold.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnBold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnBold.Text" xml:space="preserve">
+    <value>加粗(Ctrl+B)</value>
+  </data>
+  <data name="toolStripBtnItalic.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnItalic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnItalic.Text" xml:space="preserve">
+    <value>斜体(Ctrl+I)</value>
+  </data>
+  <data name="toolStripBtnUnerLine.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnUnerLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnUnerLine.Text" xml:space="preserve">
+    <value>下划线(Ctrl+U)</value>
+  </data>
+  <data name="toolStripBtnStrikeout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnStrikeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnStrikeout.Text" xml:space="preserve">
+    <value>删除线(Ctrl+T)</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="toolStripBtnOutdent.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnOutdent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnOutdent.Text" xml:space="preserve">
+    <value>减少缩进(Ctrl+Shift+M)</value>
+  </data>
+  <data name="toolStripBtnIndent.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnIndent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnIndent.Text" xml:space="preserve">
+    <value>增加缩进(Ctrl+M)</value>
+  </data>
+  <data name="toolStripBtnList.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripBtnList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripBtnList.Text" xml:space="preserve">
+    <value>项目列表（Ctrl+Shift+W)</value>
+  </data>
+  <data name="toolStripFormSummary.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;tsmShowSummary.Name" xml:space="preserve">
-    <value>tsmShowSummary</value>
+  <data name="toolStripFormSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 25</value>
   </data>
-  <data name="&gt;&gt;tsmEndCountdown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripFormSummary.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="&gt;&gt;帮助ToolStripMenuItem.Name" xml:space="preserve">
-    <value>帮助ToolStripMenuItem</value>
+  <data name="toolStripFormSummary.Text" xml:space="preserve">
+    <value>toolStrip1</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownBegin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripFormSummary.Name" xml:space="preserve">
+    <value>toolStripFormSummary</value>
   </data>
-  <data name="lblSecondLabel.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;toolStripFormSummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripFormSummary.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
+  <data name="&gt;&gt;toolStripFormSummary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rTxtTodaySummary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 28</value>
+  </data>
+  <data name="rTxtTodaySummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 482</value>
+  </data>
+  <data name="rTxtTodaySummary.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rTxtTodaySummary.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rTxtTodaySummary.Name" xml:space="preserve">
+    <value>rTxtTodaySummary</value>
+  </data>
+  <data name="&gt;&gt;rTxtTodaySummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rTxtTodaySummary.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;rTxtTodaySummary.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 21</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 513</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPageSummary</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chartAnalysis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 21</value>
+  </data>
+  <data name="chartAnalysis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 502</value>
+  </data>
+  <data name="chartAnalysis.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="chartAnalysis.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chartAnalysis.Name" xml:space="preserve">
+    <value>chartAnalysis</value>
+  </data>
+  <data name="&gt;&gt;chartAnalysis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chartAnalysis.Parent" xml:space="preserve">
+    <value>tabPageSummary</value>
+  </data>
+  <data name="&gt;&gt;chartAnalysis.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPageSummary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
+  </data>
+  <data name="tabPageSummary.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageSummary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1034, 554</value>
+  </data>
+  <data name="tabPageSummary.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageSummary.Text" xml:space="preserve">
+    <value>今日总结</value>
+  </data>
+  <data name="&gt;&gt;tabPageSummary.Name" xml:space="preserve">
+    <value>tabPageSummary</value>
+  </data>
+  <data name="&gt;&gt;tabPageSummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageSummary.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageSummary.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 37</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1042, 588</value>
+  </data>
+  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>60</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>10, 21</value>
   </data>
-  <data name="&gt;&gt;cboSecondLbl.Name" xml:space="preserve">
-    <value>cboSecondLbl</value>
-  </data>
-  <data name="lblExplainCountdownEnd.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCountDown.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="tsmFile.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F4</value>
-  </data>
-  <data name="btnAddTodgv.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;timerTomato.Name" xml:space="preserve">
-    <value>timerTomato</value>
-  </data>
-  <data name="&gt;&gt;txtNote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvShow.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblExplainCountdownLeft.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="dTPBeginTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 20</value>
-  </data>
-  <data name="tsmLabelModify.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F2</value>
-  </data>
-  <data name="btnAddTodgv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 35</value>
-  </data>
-  <data name="lblBeginTime.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblCountdownLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 185</value>
-  </data>
-  <data name="lblBeginTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 26</value>
-  </data>
-  <data name="tsmAbout.Text" xml:space="preserve">
-    <value>关于(&amp;A)...</value>
-  </data>
-  <data name="&gt;&gt;lblCountdownLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dTPEndTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 29</value>
-  </data>
-  <data name="&gt;&gt;dTPBeginTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dtpCountdownEnd.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblSecondLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 168</value>
-  </data>
-  <data name="mcMain.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnTomorrow.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="lblExplainCountdownBegin.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="statusStripMain.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnAddUnRecord.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="panelRecord.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dTPEndTime.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCountdownLeft.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="lblBeginTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnYesterday.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;lblSecondLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCountDown.Text" xml:space="preserve">
-    <value>分钟</value>
-  </data>
-  <data name="&gt;&gt;lblNote.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="tsmShowSummary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="lblExplainCountdownBegin.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;tsmOpenRecordForm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnYesterday.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBeginTime.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;tsmLabelModify.Name" xml:space="preserve">
-    <value>tsmLabelModify</value>
-  </data>
-  <data name="&gt;&gt;lblBeginTime.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;dTPBeginTime.Name" xml:space="preserve">
-    <value>dTPBeginTime</value>
-  </data>
-  <data name="&gt;&gt;cboFirstLbl.Name" xml:space="preserve">
-    <value>cboFirstLbl</value>
-  </data>
-  <data name="contextMenuStripIcon.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="btnYesterday.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="cboFirstLbl.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblFirstLabel.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="tsmOpenRecordForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="lblNote.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;btnCountDown.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblFirstLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblExplainCountdownBegin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;notifyIconMain.Name" xml:space="preserve">
-    <value>notifyIconMain</value>
-  </data>
-  <data name="&gt;&gt;英文ToolStripMenuItem.Name" xml:space="preserve">
-    <value>英文ToolStripMenuItem</value>
-  </data>
-  <data name="tsmBeginCountdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="&gt;&gt;lblEndTime.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="btnStopCountdown.Text" xml:space="preserve">
-    <value>结束</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="contextMenuStripIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 92</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblExplainCountdownBegin.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblCountdownLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;tsmBeginCountdown.Name" xml:space="preserve">
-    <value>tsmBeginCountdown</value>
-  </data>
-  <data name="lblExplainCountdownLeft.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dTPEndTime.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;dtpCountdownBegin.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cboSecondLbl.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="btnStopCountdown.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="lblNote.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnCountDown.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownCountDown.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblFirstLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="panelRecord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 259</value>
-  </data>
-  <data name="lblEndTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
-  </data>
-  <data name="&gt;&gt;txtNote.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="txtNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 214</value>
-  </data>
-  <data name="panel1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;panelF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpCountdownEnd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dtpCountdownBegin.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="$this.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCountdownLeft.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tsmLabelModify.Text" xml:space="preserve">
-    <value>标签修改</value>
-  </data>
-  <data name="&gt;&gt;btnAddUnRecord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblExplainCountdownEnd.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblCountDown.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuStripMain.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="btnToday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 32</value>
-  </data>
-  <data name="numericUpDownCountDown.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="lblNote.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblFirstLabel.Text" xml:space="preserve">
-    <value>一级标签 :</value>
-  </data>
-  <data name="dtpCountdownEnd.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;panelF.Name" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="&gt;&gt;panelRecord.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;timerTomato.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dTPEndTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 68</value>
-  </data>
-  <data name="dTPBeginTime.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnCountDown.Name" xml:space="preserve">
-    <value>btnCountDown</value>
-  </data>
-  <data name="btnTomorrow.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDownCountDown.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblFirstLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lblFirstLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
-  </data>
-  <data name="&gt;&gt;dgvShow.Name" xml:space="preserve">
-    <value>dgvShow</value>
-  </data>
-  <data name="&gt;&gt;helpProviderMain.Name" xml:space="preserve">
-    <value>helpProviderMain</value>
-  </data>
-  <data name="btnToday.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="txtNote.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 25</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddUnRecord.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnToday.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblNote.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dtpCountdownEnd.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panelF.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblEndTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
-  </data>
-  <data name="lblExplainCountdownEnd.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnStopCountdown.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblCountdownLeft.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1072, 653</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1654,754 +2392,193 @@
         AADgHwAA8D8AAPh/AAA=
 </value>
   </data>
-  <data name="btnTomorrow.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;tsmOpenRecordForm.Name" xml:space="preserve">
-    <value>tsmOpenRecordForm</value>
-  </data>
-  <data name="lblCountDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 21</value>
-  </data>
-  <data name="btnAddTodgv.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnAddUnRecord.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 265</value>
-  </data>
-  <data name="&gt;&gt;中文ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dTPBeginTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 29</value>
-  </data>
-  <data name="lblEndTime.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="mcMain.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="panelF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>949, 60</value>
-  </data>
-  <data name="panelF.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;dTPBeginTime.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="&gt;&gt;lblCountDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAddTodgv.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panelRecord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="notifyIconMain.Text" xml:space="preserve">
-    <value>TimeRecorder</value>
-  </data>
-  <data name="&gt;&gt;lblNote.Name" xml:space="preserve">
-    <value>lblNote</value>
-  </data>
-  <data name="&gt;&gt;btnYesterday.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="btnStopCountdown.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;lblEndTime.Name" xml:space="preserve">
-    <value>lblEndTime</value>
-  </data>
-  <data name="&gt;&gt;tsmAbout.Name" xml:space="preserve">
-    <value>tsmAbout</value>
-  </data>
-  <data name="mcMain.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnStopCountdown.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="btnAddTodgv.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblCountDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 63</value>
-  </data>
-  <data name="dtpCountdownBegin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 29</value>
-  </data>
-  <data name="tsmFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
-  </data>
-  <data name="menuStripMain.Text" xml:space="preserve">
-    <value>menuStripMain</value>
-  </data>
-  <data name="&gt;&gt;lblCountDown.Name" xml:space="preserve">
-    <value>lblCountDown</value>
-  </data>
-  <data name="&gt;&gt;btnAddUnRecord.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="numericUpDownCountDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 29</value>
-  </data>
-  <data name="btnAddTodgv.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnTomorrow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 130</value>
-  </data>
-  <data name="btnStopCountdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 35</value>
-  </data>
-  <data name="&gt;&gt;dgvShow.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="dTPBeginTime.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblBeginTime.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 203</value>
-  </data>
-  <data name="lblEndTime.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;statusStripMain.Name" xml:space="preserve">
-    <value>statusStripMain</value>
-  </data>
-  <data name="lblBeginTime.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;statusStripMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mcMain.Name" xml:space="preserve">
-    <value>mcMain</value>
-  </data>
-  <data name="cboSecondLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 168</value>
-  </data>
-  <data name="lblSecondLabel.Text" xml:space="preserve">
-    <value>二级标签 :</value>
-  </data>
-  <data name="btnAddUnRecord.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dTPBeginTime.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblSecondLabel.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="statusStripMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 628</value>
-  </data>
-  <data name="lblFirstLabel.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnYesterday.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblExplainCountdownBegin.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panelRecord.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblExplainCountdownLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;btnAddTodgv.Name" xml:space="preserve">
-    <value>btnAddTodgv</value>
-  </data>
-  <data name="lblCountDown.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <data name="tsmEndCountdown.Text" xml:space="preserve">
-    <value>结束倒计时</value>
-  </data>
-  <data name="tsmShowSummary.Text" xml:space="preserve">
-    <value>每日总结表</value>
-  </data>
-  <data name="lblExplainCountdownEnd.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 12pt</value>
-  </data>
-  <data name="btnStopCountdown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 3</value>
-  </data>
-  <data name="btnStopCountdown.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dTPEndTime.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tsmAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;lblNote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblBeginTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
-  </data>
-  <data name="lblEndTime.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnToday.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblFirstLabel.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="dTPBeginTime.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnTomorrow.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dtpCountdownBegin.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="btnAddTodgv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 265</value>
-  </data>
-  <data name="btnCountDown.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="mcMain.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="cboFirstLbl.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 20</value>
-  </data>
-  <data name="txtNote.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="dgvShow.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="lblSecondLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="lblEndTime.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="tsmLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 21</value>
-  </data>
-  <data name="contextMenuStripIcon.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;notifyIconMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCountdownLeft.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;panelF.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="txtNote.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnToday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 92</value>
-  </data>
-  <data name="btnAddUnRecord.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="dTPEndTime.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;mcMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblCountdownLeft.Text" xml:space="preserve">
-    <value>x分钟</value>
-  </data>
-  <data name="&gt;&gt;btnCountDown.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="lblCountdownLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 21</value>
-  </data>
-  <data name="btnAddUnRecord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 35</value>
-  </data>
-  <data name="tsmExit.Text" xml:space="preserve">
-    <value>退出</value>
-  </data>
-  <data name="&gt;&gt;panelF.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mcMain.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblExplainCountdownLeft.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnAddTodgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCountDown.Text" xml:space="preserve">
-    <value>开始倒计时</value>
-  </data>
-  <data name="notifyIconMain.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnStopCountdown.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnTomorrow.Name" xml:space="preserve">
-    <value>btnTomorrow</value>
-  </data>
-  <data name="lblExplainCountdownLeft.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblExplainCountdownLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 185</value>
-  </data>
-  <data name="btnStopCountdown.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="btnCountDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 35</value>
-  </data>
-  <data name="&gt;&gt;helpProviderMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mcMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblSecondLabel.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;tsmAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cboFirstLbl.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="statusStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="lblExplainCountdownBegin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 106</value>
-  </data>
-  <data name="&gt;&gt;txtNote.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="btnCountDown.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCountDown.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="numericUpDownCountDown.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnToday.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;帮助ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblExplainCountdownBegin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 21</value>
-  </data>
-  <data name="tsmLabel.Text" xml:space="preserve">
-    <value>标签管理(&amp;L)</value>
-  </data>
-  <data name="menuStripMain.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="statusStripMain.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="lblExplainCountdownBegin.Text" xml:space="preserve">
-    <value>开始时间:</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tsmEndCountdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="&gt;&gt;tsmEndCountdown.Name" xml:space="preserve">
-    <value>tsmEndCountdown</value>
-  </data>
-  <data name="panelF.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="dgvShow.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="contextMenuStripIcon.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="btnTomorrow.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="tsmLabelModify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
-    <value>当前操作:</value>
-  </data>
-  <data name="&gt;&gt;tsmLabel.Name" xml:space="preserve">
-    <value>tsmLabel</value>
-  </data>
-  <data name="&gt;&gt;tsmAnalysis.Name" xml:space="preserve">
-    <value>tsmAnalysis</value>
-  </data>
-  <data name="&gt;&gt;dtpCountdownEnd.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="&gt;&gt;lblBeginTime.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="dgvShow.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnToday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tsmAnalysis.Text" xml:space="preserve">
-    <value>分析窗口</value>
-  </data>
-  <data name="&gt;&gt;lblFirstLabel.Name" xml:space="preserve">
-    <value>lblFirstLabel</value>
-  </data>
-  <data name="&gt;&gt;tsmExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panelRecord.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;panelRecord.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblSecondLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="tsmFile.Text" xml:space="preserve">
-    <value>文件(&amp;F)</value>
-  </data>
-  <data name="statusStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 25</value>
-  </data>
-  <data name="lblExplainCountdownEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 21</value>
-  </data>
-  <data name="&gt;&gt;lblFirstLabel.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="&gt;&gt;tsmFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStripMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="dtpCountdownEnd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 142</value>
-  </data>
-  <data name="&gt;&gt;cboSecondLbl.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;menuStripMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSecondLabel.Name" xml:space="preserve">
-    <value>lblSecondLabel</value>
-  </data>
-  <data name="&gt;&gt;dgvShow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dTPEndTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="英文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;lblEndTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTomorrow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtNote.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1227, 653</value>
-  </data>
-  <data name="cboSecondLbl.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="cboFirstLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 118</value>
-  </data>
-  <data name="numericUpDownCountDown.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="cboSecondLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownCountDown.Name" xml:space="preserve">
-    <value>numericUpDownCountDown</value>
-  </data>
-  <data name="&gt;&gt;lblNote.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="lblFirstLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 121</value>
-  </data>
-  <data name="&gt;&gt;tsmAboutLanguage.Name" xml:space="preserve">
-    <value>tsmAboutLanguage</value>
-  </data>
-  <data name="txtNote.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>主程序</value>
   </data>
-  <data name="lblNote.Text" xml:space="preserve">
-    <value>备注 :</value>
+  <data name="&gt;&gt;helpProviderMain.Name" xml:space="preserve">
+    <value>helpProviderMain</value>
   </data>
-  <data name="lblExplainCountdownEnd.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;helpProviderMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownEnd.Name" xml:space="preserve">
-    <value>lblExplainCountdownEnd</value>
+  <data name="&gt;&gt;tsmFile.Name" xml:space="preserve">
+    <value>tsmFile</value>
   </data>
-  <data name="statusStripMain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 10.5pt</value>
-  </data>
-  <data name="&gt;&gt;dTPBeginTime.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tsmExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="&gt;&gt;tsmLabelModify.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsmFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tsmBeginCountdown.Text" xml:space="preserve">
-    <value>开始倒计时</value>
+  <data name="&gt;&gt;tsmShowSummary.Name" xml:space="preserve">
+    <value>tsmShowSummary</value>
   </data>
-  <data name="dtpCountdownBegin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 106</value>
+  <data name="&gt;&gt;tsmShowSummary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnToday.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;tsmAnalysis.Name" xml:space="preserve">
+    <value>tsmAnalysis</value>
   </data>
-  <data name="cboSecondLbl.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tsmAnalysis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnCountDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 3</value>
-  </data>
-  <data name="btnAddTodgv.Text" xml:space="preserve">
-    <value>添加</value>
-  </data>
-  <data name="&gt;&gt;cboFirstLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnYesterday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 32</value>
-  </data>
-  <data name="numericUpDownCountDown.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblEndTime.Text" xml:space="preserve">
-    <value>结束时间 :</value>
+  <data name="&gt;&gt;tsmLabel.Name" xml:space="preserve">
+    <value>tsmLabel</value>
   </data>
   <data name="&gt;&gt;tsmLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblExplainCountdownBegin.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;tsmLabelModify.Name" xml:space="preserve">
+    <value>tsmLabelModify</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 50</value>
+  <data name="&gt;&gt;tsmLabelModify.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblExplainCountdownEnd.Parent" xml:space="preserve">
-    <value>panelF</value>
+  <data name="&gt;&gt;帮助ToolStripMenuItem.Name" xml:space="preserve">
+    <value>帮助ToolStripMenuItem</value>
   </data>
-  <data name="dgvShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>608, 530</value>
+  <data name="&gt;&gt;帮助ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnAddUnRecord.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;tsmAbout.Name" xml:space="preserve">
+    <value>tsmAbout</value>
   </data>
-  <data name="tsmAboutLanguage.Text" xml:space="preserve">
-    <value>关于语言(&amp;L)</value>
+  <data name="&gt;&gt;tsmAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cboSecondLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tsmAboutLanguage.Name" xml:space="preserve">
+    <value>tsmAboutLanguage</value>
   </data>
-  <data name="lblExplainCountdownLeft.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;tsmAboutLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnCountDown.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;中文ToolStripMenuItem.Name" xml:space="preserve">
+    <value>中文ToolStripMenuItem</value>
   </data>
-  <data name="lblCountdownLeft.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;中文ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
+  <data name="&gt;&gt;英文ToolStripMenuItem.Name" xml:space="preserve">
+    <value>英文ToolStripMenuItem</value>
   </data>
-  <data name="btnAddUnRecord.Text" xml:space="preserve">
-    <value>添加未记录时间</value>
+  <data name="&gt;&gt;英文ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblCountDown.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
   </data>
-  <data name="lblNote.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cboFirstLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;tsmOpenRecordForm.Name" xml:space="preserve">
+    <value>tsmOpenRecordForm</value>
   </data>
-  <data name="panel1.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;tsmOpenRecordForm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnToday.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+  <data name="&gt;&gt;tsmBeginCountdown.Name" xml:space="preserve">
+    <value>tsmBeginCountdown</value>
   </data>
-  <data name="&gt;&gt;btnToday.Name" xml:space="preserve">
-    <value>btnToday</value>
+  <data name="&gt;&gt;tsmBeginCountdown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblExplainCountdownEnd.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="&gt;&gt;tsmEndCountdown.Name" xml:space="preserve">
+    <value>tsmEndCountdown</value>
   </data>
-  <data name="lblNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 21</value>
-  </data>
-  <data name="&gt;&gt;dTPEndTime.Parent" xml:space="preserve">
-    <value>panelRecord</value>
-  </data>
-  <data name="&gt;&gt;dtpCountdownBegin.Parent" xml:space="preserve">
-    <value>panelF</value>
-  </data>
-  <data name="cboFirstLbl.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="panelRecord.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;dTPEndTime.Name" xml:space="preserve">
-    <value>dTPEndTime</value>
-  </data>
-  <data name="dgvShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 60</value>
+  <data name="&gt;&gt;tsmEndCountdown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsmExit.Name" xml:space="preserve">
     <value>tsmExit</value>
   </data>
-  <data name="lblNote.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tsmExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnYesterday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 54</value>
+  <data name="&gt;&gt;timerTomato.Name" xml:space="preserve">
+    <value>timerTomato</value>
   </data>
-  <data name="panelF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 234</value>
+  <data name="&gt;&gt;timerTomato.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblExplainCountdownEnd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 148</value>
+  <data name="&gt;&gt;notifyIconMain.Name" xml:space="preserve">
+    <value>notifyIconMain</value>
   </data>
-  <data name="tsmOpenRecordForm.Text" xml:space="preserve">
-    <value>打开记录页面</value>
+  <data name="&gt;&gt;notifyIconMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelRecord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 332</value>
+  <data name="&gt;&gt;toolStripCboFont.Name" xml:space="preserve">
+    <value>toolStripCboFont</value>
   </data>
-  <data name="&gt;&gt;btnStopCountdown.Name" xml:space="preserve">
-    <value>btnStopCountdown</value>
+  <data name="&gt;&gt;toolStripCboFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnAddUnRecord.Name" xml:space="preserve">
-    <value>btnAddUnRecord</value>
+  <data name="&gt;&gt;toolStripCboFontSize.Name" xml:space="preserve">
+    <value>toolStripCboFontSize</value>
   </data>
-  <data name="帮助ToolStripMenuItem.Text" xml:space="preserve">
-    <value>帮助(&amp;H)</value>
+  <data name="&gt;&gt;toolStripCboFontSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelRecord.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;toolStripBtnColor.Name" xml:space="preserve">
+    <value>toolStripBtnColor</value>
   </data>
-  <data name="&gt;&gt;btnTomorrow.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;toolStripBtnColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblExplainCountdownLeft.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;toolStripBtnBold.Name" xml:space="preserve">
+    <value>toolStripBtnBold</value>
   </data>
-  <data name="lblSecondLabel.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;toolStripBtnBold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;toolStripBtnItalic.Name" xml:space="preserve">
+    <value>toolStripBtnItalic</value>
   </data>
-  <data name="&gt;&gt;txtNote.Name" xml:space="preserve">
-    <value>txtNote</value>
+  <data name="&gt;&gt;toolStripBtnItalic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblCountDown.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="&gt;&gt;toolStripBtnUnerLine.Name" xml:space="preserve">
+    <value>toolStripBtnUnerLine</value>
   </data>
-  <metadata name="contextMenuStripIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>774, 21</value>
-  </metadata>
-  <metadata name="notifyIconMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>633, 21</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>60</value>
-  </metadata>
-  <metadata name="helpProviderMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>32, 18</value>
-  </metadata>
-  <metadata name="statusStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>349, 20</value>
-  </metadata>
-  <metadata name="timerTomato.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>504, 21</value>
-  </metadata>
-  <metadata name="menuStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>194, 20</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-Hans</value>
-  </metadata>
+  <data name="&gt;&gt;toolStripBtnUnerLine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnStrikeout.Name" xml:space="preserve">
+    <value>toolStripBtnStrikeout</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnStrikeout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnOutdent.Name" xml:space="preserve">
+    <value>toolStripBtnOutdent</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnOutdent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnIndent.Name" xml:space="preserve">
+    <value>toolStripBtnIndent</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnIndent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnList.Name" xml:space="preserve">
+    <value>toolStripBtnList</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

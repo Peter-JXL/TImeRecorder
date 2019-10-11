@@ -53,6 +53,9 @@ namespace TimeRecorder
             diaSavaFile.RestoreDirectory = true;
             diaSavaFile.Title = "选择要导出的位置";
 
+            cboShowType.ImeMode = ImeMode.On;
+            String[] chartType = { "饼图", "条形图", "柱状图", "圆环图", "漏斗图", "棱锥图" }; 
+            cboShowType.Items.AddRange(chartType);
         }
 
 
@@ -194,7 +197,30 @@ namespace TimeRecorder
 
         private void checkBoxShow3D_Click(object sender, EventArgs e)
         {
+            bool temp = chartAnalysis.ChartAreas[0].Area3DStyle.Enable3D;
+            chartAnalysis.ChartAreas[0].Area3DStyle.Enable3D = !temp;
+        }
 
+        private void cboShowType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //TODO: 待优化
+            var series = chartAnalysis.Series[chartPieName];
+            String[] chartType = { "饼图", "条形图", "柱状图", "圆环图", "漏斗图", "棱锥图" };
+
+            switch (cboShowType.Text)
+            {
+                case "饼图": series.ChartType = SeriesChartType.Pie; break;
+                case "条形图": series.ChartType = SeriesChartType.Bar; break;
+                case "柱状图": series.ChartType = SeriesChartType.Column; break;
+                case "圆环图": series.ChartType = SeriesChartType.Doughnut; break;
+                case "漏斗图": series.ChartType = SeriesChartType.Funnel; break;
+                case "棱锥图": series.ChartType = SeriesChartType.Pyramid; break;
+                case "ryramid": series.ChartType = SeriesChartType.Pyramid; break;
+                case "rdyramid": series.ChartType = SeriesChartType.Pyramid; break;
+                case "rdd": series.ChartType = SeriesChartType.Pyramid; break;
+                default:
+                    break;
+            }
         }
 
 

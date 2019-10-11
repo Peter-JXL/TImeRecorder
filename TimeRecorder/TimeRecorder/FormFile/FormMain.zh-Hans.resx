@@ -149,17 +149,23 @@
   <data name="tsmLabelModify.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 22</value>
   </data>
+  <data name="tsmAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 22</value>
+  </data>
   <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="中文ToolStripMenuItem.Text" xml:space="preserve">
     <value>中文 Chinese</value>
   </data>
   <data name="英文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="英文ToolStripMenuItem.Text" xml:space="preserve">
     <value>英文 English</value>
+  </data>
+  <data name="tsmAboutLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 22</value>
   </data>
   <data name="btnAddUnRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
