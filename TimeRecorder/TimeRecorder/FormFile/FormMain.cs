@@ -148,20 +148,20 @@ namespace TimeRecorder
 
             dgvShow.DataSource = myDataSet.Tables[dataTableName];
             dgvShow.Columns[0].Visible = false;  //ID列隐藏
-            dgvShow.Columns[1].Visible = false;  //日期列隐藏
-            dgvShow.Columns[2].DefaultCellStyle.Format = "HH:mm";  //开始时间列  小写的hh会将13:00显示为 1:00，即12小时制
-            dgvShow.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvShow.Columns[dateColumnName].Visible = false;  //日期列隐藏
+            dgvShow.Columns[beginTimeColumnName].DefaultCellStyle.Format = "HH:mm";  //开始时间列  小写的hh会将13:00显示为 1:00，即12小时制
+            dgvShow.Columns[beginTimeColumnName].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgvShow.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;//开始时间4个字变成一列字了
-            dgvShow.Columns[2].Width = 75;  //两行两列
+            dgvShow.Columns[beginTimeColumnName].Width = 75;  //两行两列
 
-            dgvShow.Columns[3].DefaultCellStyle.Format = "HH:mm";  //结束时间列
-            dgvShow.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvShow.Columns[endTimeColumnName].DefaultCellStyle.Format = "HH:mm";  //结束时间列
+            dgvShow.Columns[endTimeColumnName].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dgvShow.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            dgvShow.Columns[3].Width = 75;
+            dgvShow.Columns[endTimeColumnName].Width = 75;
 
 
-            dgvShow.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //一级标签列
-            dgvShow.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //二级标签列
+            dgvShow.Columns[firstLabelColumnName].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //一级标签列
+            dgvShow.Columns[secondLabelColumnName].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; //二级标签列
 
             dgvShow.Columns[dgvShow.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
