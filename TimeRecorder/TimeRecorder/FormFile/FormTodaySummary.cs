@@ -35,55 +35,7 @@ namespace TimeRecorder
 
 
 
-
-        public FormTodaySummary()
-        {
-            InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
-            fillCboFont();
-            fillCboFontSize();
-
-
-            rTxtTodaySummary.ImeMode = ImeMode.On;
-            rTxtTodaySummary.AcceptsTab = true; //按下tab键则增加空格而不是切换到下一个控件
-            rTxtTodaySummary.AutoWordSelection = true;
-
-            //用来决定当焦点离开文本框后，选中的文本是否还以选中的方式显示
-            //最好设置为false，否则改变字体、大小时不会显示选中的文本
-            rTxtTodaySummary.HideSelection = false;
-
-            chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
-
-
-        }
-
-        private void fillCboFont()
-        {
-            toolStripCboFont.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            toolStripCboFont.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-
-            var a = new System.Drawing.Text.InstalledFontCollection(); //引入系统安装的字体
-            foreach (var b in a.Families)
-            {
-                toolStripCboFont.Items.Add(b.Name);
-            }
-            toolStripCboFont.SelectedItem = "微软雅黑"; //默认显示的字体
-
-        }
-
-        private void fillCboFontSize()
-        {
-            toolStripCboFontSize.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            toolStripCboFontSize.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-
-            foreach (var f in fontSizeName)
-            {
-                toolStripCboFontSize.Items.Add(f);
-            }
-            toolStripCboFontSize.SelectedItem = "10";  //默认显示的字号
-        }
+        #region 文档保存与加载
 
         public void LoadChartPie(DataTable tableOfDay)
         {
@@ -139,6 +91,88 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
 
         }
+
+        public FormTodaySummary()
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;  //TODO:总结窗口在记录窗口的右边
+            fillCboFont();
+            fillCboFontSize();
+
+
+            rTxtTodaySummary.ImeMode = ImeMode.On;
+            rTxtTodaySummary.AcceptsTab = true; //按下tab键则增加空格而不是切换到下一个控件
+            rTxtTodaySummary.AutoWordSelection = true;
+
+            //用来决定当焦点离开文本框后，选中的文本是否还以选中的方式显示
+            //最好设置为false，否则改变字体、大小时不会显示选中的文本
+            rTxtTodaySummary.HideSelection = false;
+
+            chartAnalysis.AntiAliasing = AntiAliasingStyles.All; //文本和图形抗锯齿
+
+
+        }
+
+        public void LoadSummary(DateTime dt)
+        {
+            //TODO: 增删查改模板文件
+            if (!Directory.Exists(summaryDir))
+                Directory.CreateDirectory(summaryDir);
+
+            summaryFileName = summaryDir + dt.ToString("yyyyMMdd ") + dt.DayOfWeek + rtfExtison;
+            if (!File.Exists(summaryFileName))
+                rTxtTodaySummary.SaveFile(summaryFileName);
+            rTxtTodaySummary.Clear();  //避免更换日期时总结不消除
+            rTxtTodaySummary.LoadFile(summaryFileName);
+
+        }
+
+        private void rTxtTodaySummary_Leave(object sender, EventArgs e)
+        {
+            rTxtTodaySummary_save();
+        }
+
+        private void rTxtTodaySummary_save()
+        {
+            rTxtTodaySummary.SaveFile(summaryFileName);
+            //如果是在TextChanged事件里用SaveFile方法，会报错：有另一个进程在使用
+        }
+
+        private void FormTodaySummary_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            rTxtTodaySummary_save();
+        }
+
+        private void fillCboFont()
+        {
+            toolStripCboFont.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            toolStripCboFont.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+
+            var a = new System.Drawing.Text.InstalledFontCollection(); //引入系统安装的字体
+            foreach (var b in a.Families)
+            {
+                toolStripCboFont.Items.Add(b.Name);
+            }
+            toolStripCboFont.SelectedItem = "微软雅黑"; //默认显示的字体
+
+        }
+
+        private void fillCboFontSize()
+        {
+            toolStripCboFontSize.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            toolStripCboFontSize.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+
+            foreach (var f in fontSizeName)
+            {
+                toolStripCboFontSize.Items.Add(f);
+            }
+            toolStripCboFontSize.SelectedItem = "10";  //默认显示的字号
+        }
+
+
+        #endregion
 
 
         #region 富文本编辑
@@ -296,36 +330,6 @@ namespace TimeRecorder
 
         #endregion
 
-
-        public void LoadSummary(DateTime dt)
-        {
-            //TODO: 增删查改模板文件
-            if (!Directory.Exists(summaryDir))
-                Directory.CreateDirectory(summaryDir);
-
-            summaryFileName = summaryDir + dt.ToString("yyyyMMdd ") + dt.DayOfWeek + rtfExtison;
-            if (!File.Exists(summaryFileName))
-                rTxtTodaySummary.SaveFile(summaryFileName);
-            rTxtTodaySummary.Clear();  //避免更换日期时总结不消除
-            rTxtTodaySummary.LoadFile(summaryFileName);
-
-        }
-
-        private void rTxtTodaySummary_Leave(object sender, EventArgs e)
-        {
-            rTxtTodaySummary_save();
-        }
-
-        private void rTxtTodaySummary_save()
-        {
-            rTxtTodaySummary.SaveFile(summaryFileName);
-            //如果是在TextChanged事件里用SaveFile方法，会报错：有另一个进程在使用
-        }
-
-        private void FormTodaySummary_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            rTxtTodaySummary_save();
-        }
 
     }
 }

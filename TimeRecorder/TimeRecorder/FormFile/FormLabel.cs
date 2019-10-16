@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
@@ -41,8 +42,8 @@ namespace TimeRecorder
             dgvLabel.DataSource = myDataSet.Tables[labelTableName];
             dgvLabel.Columns[0].Visible = false;  //ID列隐藏
             dgvLabel.ImeMode = ImeMode.On;
-           
-            
+            dgvLabel.Sort(dgvLabel.Columns[1], ListSortDirection.Ascending); //按开始时间的升序排序
+
         }
 
 

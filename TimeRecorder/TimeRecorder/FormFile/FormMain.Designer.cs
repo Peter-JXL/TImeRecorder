@@ -44,7 +44,6 @@
             this.txtNote = new System.Windows.Forms.TextBox();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmShowSummary = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLabelModify = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,16 +185,9 @@
             // tsmFile
             // 
             this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmShowSummary,
             this.tsmAnalysis});
             this.tsmFile.Name = "tsmFile";
             resources.ApplyResources(this.tsmFile, "tsmFile");
-            // 
-            // tsmShowSummary
-            // 
-            this.tsmShowSummary.Name = "tsmShowSummary";
-            resources.ApplyResources(this.tsmShowSummary, "tsmShowSummary");
-            this.tsmShowSummary.Click += new System.EventHandler(this.tsmShowSummary_Click);
             // 
             // tsmAnalysis
             // 
@@ -719,7 +711,6 @@
         private System.Windows.Forms.ComboBox cboSecondLbl;
         private System.Windows.Forms.DateTimePicker dTPEndTime;
         private System.Windows.Forms.DateTimePicker dTPBeginTime;
-        private System.Windows.Forms.ToolStripMenuItem tsmShowSummary;
         private System.Windows.Forms.Timer timerTomato;
         private System.Windows.Forms.NumericUpDown numericUpDownCountDown;
         private System.Windows.Forms.Label lblCountDown;
