@@ -140,8 +140,6 @@ namespace TimeRecorder
             command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
 
-
-
             myDataSet.Tables[dataTableName].Clear();//清空数据，否则会叠加数据
             dataAdapter.Fill(myDataSet, dataTableName);
             connection.Close();
@@ -381,6 +379,15 @@ namespace TimeRecorder
             }
         }
 
+        private void dTPEndTime_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNote.Focus();
+            }
+        }
+
+
         private void btnAddUnRecord_Click(object sender, EventArgs e)
         {
 
@@ -563,7 +570,8 @@ namespace TimeRecorder
 
 
 
-        #region 今日总结数据定义
+
+        #region 今日总结-文档保存与加载
 
         string summaryDir = @"summary/";  //summary存放的目录
         string rtfExtison = ".rtf";
@@ -577,13 +585,6 @@ namespace TimeRecorder
 
         //利用榜和字号的关系定义一个字体大小的数组
         float[] fontSize = { 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72, 42, 36, 26, 24, 22, 18, 16, 15, 14, 12, 10.5F, 9, 7.5F, 6.5F, 5.5F, 5 };
-
-        #endregion
-
-
-
-        #region 文档保存与加载
-
 
         public void FormTodaySummaryLoad()
         {
@@ -690,7 +691,6 @@ namespace TimeRecorder
             chartAnalysis.Series[chartPieName].XValueType = ChartValueType.String;
 
         }
-
 
         public void LoadSummary(DateTime dt)
         {

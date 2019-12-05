@@ -316,7 +316,7 @@
             resources.ApplyResources(this.dTPEndTime, "dTPEndTime");
             this.dTPEndTime.Name = "dTPEndTime";
             this.helpProviderMain.SetShowHelp(this.dTPEndTime, ((bool)(resources.GetObject("dTPEndTime.ShowHelp"))));
-            this.dTPEndTime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_KeyDown);
+            this.dTPEndTime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dTPEndTime_KeyDown);
             // 
             // dTPBeginTime
             // 

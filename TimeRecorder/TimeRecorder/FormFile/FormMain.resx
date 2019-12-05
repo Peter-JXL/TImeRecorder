@@ -352,7 +352,7 @@
     <value>F9</value>
   </data>
   <data name="tsmAnalysis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="tsmAnalysis.Text" xml:space="preserve">
     <value>分析窗口</value>
@@ -370,7 +370,7 @@
     <value>F2</value>
   </data>
   <data name="tsmLabelModify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="tsmLabelModify.Text" xml:space="preserve">
     <value>标签修改</value>
@@ -382,7 +382,7 @@
     <value>标签管理(&amp;L)</value>
   </data>
   <data name="tsmAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>138, 22</value>
   </data>
   <data name="tsmAbout.Text" xml:space="preserve">
     <value>关于(&amp;A)...</value>
@@ -394,7 +394,7 @@
     <value>68, 22</value>
   </data>
   <data name="tsmAboutLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>138, 22</value>
   </data>
   <data name="tsmAboutLanguage.Text" xml:space="preserve">
     <value>关于语言(&amp;L)</value>
