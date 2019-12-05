@@ -52,10 +52,10 @@
             this.tabControlAnalysis = new System.Windows.Forms.TabControl();
             this.tabPageTotal = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblShowType = new System.Windows.Forms.Label();
-            this.cboShowType = new System.Windows.Forms.ComboBox();
+            this.btnExportToJPG = new System.Windows.Forms.Button();
             this.checkBoxShow3D = new System.Windows.Forms.CheckBox();
             this.checkBoxShowLegend = new System.Windows.Forms.CheckBox();
+            this.tabPageShowSourceData = new System.Windows.Forms.TabPage();
             this.tabPageEveryDay = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.cboEveryLabel = new System.Windows.Forms.ComboBox();
@@ -70,54 +70,45 @@
             this.dtpEveryBeginTime = new System.Windows.Forms.DateTimePicker();
             this.dtpEveryEndTime = new System.Windows.Forms.DateTimePicker();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPageIO = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboSecondLabel = new System.Windows.Forms.ComboBox();
+            this.groupBoxFilter = new System.Windows.Forms.GroupBox();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.btnIOExcelLabel = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cboFirstLabel = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnIOWordDaysAll = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnIOExcelDaysAll = new System.Windows.Forms.Button();
-            this.btnIOExcelDays = new System.Windows.Forms.Button();
-            this.btnIOWordDays = new System.Windows.Forms.Button();
-            this.grpIOAll = new System.Windows.Forms.GroupBox();
-            this.btnIOFileDir = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtIOFileDir = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpIOEndDate = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtShowNote = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cboShowSecondLabel = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cboShowFirstLabel = new System.Windows.Forms.ComboBox();
+            this.dgvShow = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dtpShowBeginTIme = new System.Windows.Forms.DateTimePicker();
+            this.dtpShowSecondTIme = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpIOBeginDate = new System.Windows.Forms.DateTimePicker();
-            this.btnExportToJPG = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
             this.tabControlAnalysis.SuspendLayout();
             this.tabPageTotal.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPageShowSourceData.SuspendLayout();
             this.tabPageEveryDay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.tabPageIO.SuspendLayout();
+            this.groupBoxFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.grpIOAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartAnalysis
             // 
-            this.chartAnalysis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartAreaPie";
             this.chartAnalysis.ChartAreas.Add(chartArea1);
             legend1.Name = "LegendPie";
             this.chartAnalysis.Legends.Add(legend1);
-            this.chartAnalysis.Location = new System.Drawing.Point(26, 157);
+            this.chartAnalysis.Location = new System.Drawing.Point(26, 194);
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series1.ChartArea = "ChartAreaPie";
@@ -128,7 +119,7 @@
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
             series1.YValuesPerPoint = 6;
             this.chartAnalysis.Series.Add(series1);
-            this.chartAnalysis.Size = new System.Drawing.Size(632, 450);
+            this.chartAnalysis.Size = new System.Drawing.Size(640, 521);
             this.chartAnalysis.TabIndex = 0;
             this.chartAnalysis.Text = "chart1";
             // 
@@ -194,9 +185,9 @@
             this.groupBoxType.Controls.Add(this.rdoColumn);
             this.groupBoxType.Controls.Add(this.rdoBar);
             this.groupBoxType.Controls.Add(this.rdoPie);
-            this.groupBoxType.Location = new System.Drawing.Point(460, 13);
+            this.groupBoxType.Location = new System.Drawing.Point(464, 13);
             this.groupBoxType.Name = "groupBoxType";
-            this.groupBoxType.Size = new System.Drawing.Size(345, 109);
+            this.groupBoxType.Size = new System.Drawing.Size(333, 109);
             this.groupBoxType.TabIndex = 9;
             this.groupBoxType.TabStop = false;
             this.groupBoxType.Text = "显示类型";
@@ -204,7 +195,7 @@
             // rdoPyramid
             // 
             this.rdoPyramid.AutoSize = true;
-            this.rdoPyramid.Location = new System.Drawing.Point(219, 63);
+            this.rdoPyramid.Location = new System.Drawing.Point(219, 76);
             this.rdoPyramid.Name = "rdoPyramid";
             this.rdoPyramid.Size = new System.Drawing.Size(76, 25);
             this.rdoPyramid.TabIndex = 5;
@@ -216,7 +207,7 @@
             // rdoFunnel
             // 
             this.rdoFunnel.AutoSize = true;
-            this.rdoFunnel.Location = new System.Drawing.Point(122, 63);
+            this.rdoFunnel.Location = new System.Drawing.Point(122, 76);
             this.rdoFunnel.Name = "rdoFunnel";
             this.rdoFunnel.Size = new System.Drawing.Size(76, 25);
             this.rdoFunnel.TabIndex = 4;
@@ -228,7 +219,7 @@
             // rdoDoughnut
             // 
             this.rdoDoughnut.AutoSize = true;
-            this.rdoDoughnut.Location = new System.Drawing.Point(22, 63);
+            this.rdoDoughnut.Location = new System.Drawing.Point(22, 76);
             this.rdoDoughnut.Name = "rdoDoughnut";
             this.rdoDoughnut.Size = new System.Drawing.Size(76, 25);
             this.rdoDoughnut.TabIndex = 3;
@@ -275,25 +266,28 @@
             // 
             // tabControlAnalysis
             // 
+            this.tabControlAnalysis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlAnalysis.Controls.Add(this.tabPageTotal);
             this.tabControlAnalysis.Controls.Add(this.tabPageEveryDay);
-            this.tabControlAnalysis.Controls.Add(this.tabPageIO);
+            this.tabControlAnalysis.Controls.Add(this.tabPageShowSourceData);
             this.tabControlAnalysis.Location = new System.Drawing.Point(12, 12);
             this.tabControlAnalysis.Name = "tabControlAnalysis";
             this.tabControlAnalysis.SelectedIndex = 0;
-            this.tabControlAnalysis.Size = new System.Drawing.Size(1073, 647);
+            this.tabControlAnalysis.Size = new System.Drawing.Size(1220, 824);
             this.tabControlAnalysis.TabIndex = 10;
             // 
             // tabPageTotal
             // 
             this.tabPageTotal.Controls.Add(this.groupBox3);
-            this.tabPageTotal.Controls.Add(this.chartAnalysis);
             this.tabPageTotal.Controls.Add(this.groupBoxType);
+            this.tabPageTotal.Controls.Add(this.chartAnalysis);
             this.tabPageTotal.Controls.Add(this.panel1);
             this.tabPageTotal.Location = new System.Drawing.Point(4, 30);
             this.tabPageTotal.Name = "tabPageTotal";
             this.tabPageTotal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTotal.Size = new System.Drawing.Size(1065, 613);
+            this.tabPageTotal.Size = new System.Drawing.Size(1212, 790);
             this.tabPageTotal.TabIndex = 0;
             this.tabPageTotal.Text = "数据汇总";
             this.tabPageTotal.UseVisualStyleBackColor = true;
@@ -301,39 +295,28 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnExportToJPG);
-            this.groupBox3.Controls.Add(this.lblShowType);
-            this.groupBox3.Controls.Add(this.cboShowType);
             this.groupBox3.Controls.Add(this.checkBoxShow3D);
             this.groupBox3.Controls.Add(this.checkBoxShowLegend);
-            this.groupBox3.Location = new System.Drawing.Point(664, 157);
+            this.groupBox3.Location = new System.Drawing.Point(851, 22);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(378, 438);
+            this.groupBox3.Size = new System.Drawing.Size(239, 352);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "图表设置";
             // 
-            // lblShowType
+            // btnExportToJPG
             // 
-            this.lblShowType.AutoSize = true;
-            this.lblShowType.Location = new System.Drawing.Point(15, 46);
-            this.lblShowType.Name = "lblShowType";
-            this.lblShowType.Size = new System.Drawing.Size(83, 21);
-            this.lblShowType.TabIndex = 3;
-            this.lblShowType.Text = "显示类型 :";
-            // 
-            // cboShowType
-            // 
-            this.cboShowType.FormattingEnabled = true;
-            this.cboShowType.Location = new System.Drawing.Point(104, 43);
-            this.cboShowType.Name = "cboShowType";
-            this.cboShowType.Size = new System.Drawing.Size(131, 29);
-            this.cboShowType.TabIndex = 2;
-            this.cboShowType.SelectedIndexChanged += new System.EventHandler(this.cboShowType_SelectedIndexChanged);
+            this.btnExportToJPG.Location = new System.Drawing.Point(22, 278);
+            this.btnExportToJPG.Name = "btnExportToJPG";
+            this.btnExportToJPG.Size = new System.Drawing.Size(140, 35);
+            this.btnExportToJPG.TabIndex = 8;
+            this.btnExportToJPG.Text = "导出为JPG图片";
+            this.btnExportToJPG.UseVisualStyleBackColor = true;
             // 
             // checkBoxShow3D
             // 
             this.checkBoxShow3D.AutoSize = true;
-            this.checkBoxShow3D.Location = new System.Drawing.Point(15, 147);
+            this.checkBoxShow3D.Location = new System.Drawing.Point(138, 54);
             this.checkBoxShow3D.Name = "checkBoxShow3D";
             this.checkBoxShow3D.Size = new System.Drawing.Size(82, 25);
             this.checkBoxShow3D.TabIndex = 1;
@@ -344,13 +327,26 @@
             // checkBoxShowLegend
             // 
             this.checkBoxShowLegend.AutoSize = true;
-            this.checkBoxShowLegend.Location = new System.Drawing.Point(15, 116);
+            this.checkBoxShowLegend.Location = new System.Drawing.Point(22, 54);
             this.checkBoxShowLegend.Name = "checkBoxShowLegend";
             this.checkBoxShowLegend.Size = new System.Drawing.Size(93, 25);
             this.checkBoxShowLegend.TabIndex = 0;
             this.checkBoxShowLegend.Text = "显示图例";
             this.checkBoxShowLegend.UseVisualStyleBackColor = true;
             this.checkBoxShowLegend.Click += new System.EventHandler(this.checkBoxShowLegend_Click);
+            // 
+            // tabPageShowSourceData
+            // 
+            this.tabPageShowSourceData.Controls.Add(this.groupBox2);
+            this.tabPageShowSourceData.Controls.Add(this.dgvShow);
+            this.tabPageShowSourceData.Controls.Add(this.groupBoxFilter);
+            this.tabPageShowSourceData.Location = new System.Drawing.Point(4, 30);
+            this.tabPageShowSourceData.Name = "tabPageShowSourceData";
+            this.tabPageShowSourceData.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageShowSourceData.Size = new System.Drawing.Size(1212, 790);
+            this.tabPageShowSourceData.TabIndex = 3;
+            this.tabPageShowSourceData.Text = "显示源数据";
+            this.tabPageShowSourceData.UseVisualStyleBackColor = true;
             // 
             // tabPageEveryDay
             // 
@@ -362,7 +358,7 @@
             this.tabPageEveryDay.Location = new System.Drawing.Point(4, 30);
             this.tabPageEveryDay.Name = "tabPageEveryDay";
             this.tabPageEveryDay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEveryDay.Size = new System.Drawing.Size(1065, 613);
+            this.tabPageEveryDay.Size = new System.Drawing.Size(1212, 790);
             this.tabPageEveryDay.TabIndex = 1;
             this.tabPageEveryDay.Text = "每日分布";
             this.tabPageEveryDay.UseVisualStyleBackColor = true;
@@ -499,235 +495,162 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // tabPageIO
+            // groupBoxFilter
             // 
-            this.tabPageIO.Controls.Add(this.groupBox2);
-            this.tabPageIO.Controls.Add(this.tableLayoutPanel1);
-            this.tabPageIO.Controls.Add(this.grpIOAll);
-            this.tabPageIO.Controls.Add(this.label7);
-            this.tabPageIO.Controls.Add(this.dtpIOEndDate);
-            this.tabPageIO.Controls.Add(this.label6);
-            this.tabPageIO.Controls.Add(this.dtpIOBeginDate);
-            this.tabPageIO.Location = new System.Drawing.Point(4, 30);
-            this.tabPageIO.Name = "tabPageIO";
-            this.tabPageIO.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIO.Size = new System.Drawing.Size(1065, 613);
-            this.tabPageIO.TabIndex = 2;
-            this.tabPageIO.Text = "数据导入/导出";
-            this.tabPageIO.UseVisualStyleBackColor = true;
+            this.groupBoxFilter.Controls.Add(this.label7);
+            this.groupBoxFilter.Controls.Add(this.label6);
+            this.groupBoxFilter.Controls.Add(this.dtpShowSecondTIme);
+            this.groupBoxFilter.Controls.Add(this.dtpShowBeginTIme);
+            this.groupBoxFilter.Controls.Add(this.btnFilter);
+            this.groupBoxFilter.Controls.Add(this.btnIOExcelLabel);
+            this.groupBoxFilter.Controls.Add(this.label17);
+            this.groupBoxFilter.Controls.Add(this.txtShowNote);
+            this.groupBoxFilter.Controls.Add(this.label14);
+            this.groupBoxFilter.Controls.Add(this.cboShowSecondLabel);
+            this.groupBoxFilter.Controls.Add(this.label13);
+            this.groupBoxFilter.Controls.Add(this.cboShowFirstLabel);
+            this.groupBoxFilter.Location = new System.Drawing.Point(751, 24);
+            this.groupBoxFilter.Name = "groupBoxFilter";
+            this.groupBoxFilter.Size = new System.Drawing.Size(337, 369);
+            this.groupBoxFilter.TabIndex = 12;
+            this.groupBoxFilter.TabStop = false;
+            this.groupBoxFilter.Text = "筛选条件";
             // 
-            // groupBox2
+            // btnFilter
             // 
-            this.groupBox2.Controls.Add(this.cboSecondLabel);
-            this.groupBox2.Controls.Add(this.btnIOExcelLabel);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.cboFirstLabel);
-            this.groupBox2.Location = new System.Drawing.Point(29, 398);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 134);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "导出指定标签数据";
-            // 
-            // cboSecondLabel
-            // 
-            this.cboSecondLabel.FormattingEnabled = true;
-            this.cboSecondLabel.Location = new System.Drawing.Point(240, 31);
-            this.cboSecondLabel.Name = "cboSecondLabel";
-            this.cboSecondLabel.Size = new System.Drawing.Size(121, 29);
-            this.cboSecondLabel.TabIndex = 14;
+            this.btnFilter.Location = new System.Drawing.Point(19, 253);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(105, 34);
+            this.btnFilter.TabIndex = 11;
+            this.btnFilter.Text = "筛选";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnIOExcelLabel
             // 
-            this.btnIOExcelLabel.Location = new System.Drawing.Point(128, 75);
+            this.btnIOExcelLabel.Location = new System.Drawing.Point(136, 253);
             this.btnIOExcelLabel.Name = "btnIOExcelLabel";
-            this.btnIOExcelLabel.Size = new System.Drawing.Size(214, 43);
+            this.btnIOExcelLabel.Size = new System.Drawing.Size(168, 34);
             this.btnIOExcelLabel.TabIndex = 13;
-            this.btnIOExcelLabel.Text = "导出指定标签数据到Excel";
+            this.btnIOExcelLabel.Text = "导出数据到Excel";
             this.btnIOExcelLabel.UseVisualStyleBackColor = true;
-            this.btnIOExcelLabel.Click += new System.EventHandler(this.btnIOExcelLabel_Click);
             // 
-            // label11
+            // label17
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 34);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 21);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "选择标签 :";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(25, 205);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 21);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "备注: ";
             // 
-            // cboFirstLabel
+            // txtShowNote
             // 
-            this.cboFirstLabel.FormattingEnabled = true;
-            this.cboFirstLabel.Location = new System.Drawing.Point(108, 31);
-            this.cboFirstLabel.Name = "cboFirstLabel";
-            this.cboFirstLabel.Size = new System.Drawing.Size(121, 29);
-            this.cboFirstLabel.TabIndex = 0;
+            this.txtShowNote.Location = new System.Drawing.Point(104, 202);
+            this.txtShowNote.Name = "txtShowNote";
+            this.txtShowNote.Size = new System.Drawing.Size(150, 29);
+            this.txtShowNote.TabIndex = 9;
             // 
-            // tableLayoutPanel1
+            // label14
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.94958F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.05042F));
-            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDaysAll, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDaysAll, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOExcelDays, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnIOWordDays, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 157);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.68217F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.31783F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 202);
-            this.tableLayoutPanel1.TabIndex = 10;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(15, 163);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 21);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "二级标签: ";
             // 
-            // btnIOWordDaysAll
+            // cboShowSecondLabel
             // 
-            this.btnIOWordDaysAll.Location = new System.Drawing.Point(236, 88);
-            this.btnIOWordDaysAll.Name = "btnIOWordDaysAll";
-            this.btnIOWordDaysAll.Size = new System.Drawing.Size(214, 40);
-            this.btnIOWordDaysAll.TabIndex = 12;
-            this.btnIOWordDaysAll.Text = "导出全部日志数据到Word";
-            this.btnIOWordDaysAll.UseVisualStyleBackColor = true;
-            this.btnIOWordDaysAll.Click += new System.EventHandler(this.btnIOWordDaysAll_Click);
+            this.cboShowSecondLabel.FormattingEnabled = true;
+            this.cboShowSecondLabel.Location = new System.Drawing.Point(104, 160);
+            this.cboShowSecondLabel.Name = "cboShowSecondLabel";
+            this.cboShowSecondLabel.Size = new System.Drawing.Size(150, 29);
+            this.cboShowSecondLabel.TabIndex = 4;
             // 
-            // label10
+            // label13
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 21);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "导出总结数据";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 116);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 21);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "一级标签: ";
             // 
-            // label9
+            // cboShowFirstLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 21);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "导出日期数据";
+            this.cboShowFirstLabel.FormattingEnabled = true;
+            this.cboShowFirstLabel.Location = new System.Drawing.Point(104, 113);
+            this.cboShowFirstLabel.Name = "cboShowFirstLabel";
+            this.cboShowFirstLabel.Size = new System.Drawing.Size(150, 29);
+            this.cboShowFirstLabel.TabIndex = 2;
+            this.cboShowFirstLabel.SelectedIndexChanged += new System.EventHandler(this.cboShowFirstLabel_SelectedIndexChanged);
             // 
-            // btnIOExcelDaysAll
+            // dgvShow
             // 
-            this.btnIOExcelDaysAll.Location = new System.Drawing.Point(3, 88);
-            this.btnIOExcelDaysAll.Name = "btnIOExcelDaysAll";
-            this.btnIOExcelDaysAll.Size = new System.Drawing.Size(214, 40);
-            this.btnIOExcelDaysAll.TabIndex = 5;
-            this.btnIOExcelDaysAll.Text = "导出全部日期数据到Excel";
-            this.btnIOExcelDaysAll.UseVisualStyleBackColor = true;
-            this.btnIOExcelDaysAll.Click += new System.EventHandler(this.btnIOExcelDaysAll_Click);
+            this.dgvShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShow.Location = new System.Drawing.Point(6, 6);
+            this.dgvShow.Name = "dgvShow";
+            this.dgvShow.RowTemplate.Height = 23;
+            this.dgvShow.Size = new System.Drawing.Size(712, 766);
+            this.dgvShow.TabIndex = 13;
             // 
-            // btnIOExcelDays
+            // groupBox2
             // 
-            this.btnIOExcelDays.Location = new System.Drawing.Point(3, 27);
-            this.btnIOExcelDays.Name = "btnIOExcelDays";
-            this.btnIOExcelDays.Size = new System.Drawing.Size(214, 43);
-            this.btnIOExcelDays.TabIndex = 1;
-            this.btnIOExcelDays.Text = "导出指定日期数据到Excel";
-            this.btnIOExcelDays.UseVisualStyleBackColor = true;
-            this.btnIOExcelDays.Click += new System.EventHandler(this.btnIOExcelDays_Click);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Location = new System.Drawing.Point(770, 421);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(318, 369);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "导出每日总结";
             // 
-            // btnIOWordDays
+            // button2
             // 
-            this.btnIOWordDays.Location = new System.Drawing.Point(236, 27);
-            this.btnIOWordDays.Name = "btnIOWordDays";
-            this.btnIOWordDays.Size = new System.Drawing.Size(214, 43);
-            this.btnIOWordDays.TabIndex = 9;
-            this.btnIOWordDays.Text = "导出指定日期数据到Word";
-            this.btnIOWordDays.UseVisualStyleBackColor = true;
-            this.btnIOWordDays.Click += new System.EventHandler(this.btnIOWordDays_Click);
+            this.button2.Location = new System.Drawing.Point(24, 143);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 34);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "导出数据到Excel";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // grpIOAll
+            // dtpShowBeginTIme
             // 
-            this.grpIOAll.Controls.Add(this.btnIOFileDir);
-            this.grpIOAll.Controls.Add(this.label8);
-            this.grpIOAll.Controls.Add(this.txtIOFileDir);
-            this.grpIOAll.Location = new System.Drawing.Point(368, 16);
-            this.grpIOAll.Name = "grpIOAll";
-            this.grpIOAll.Size = new System.Drawing.Size(368, 125);
-            this.grpIOAll.TabIndex = 8;
-            this.grpIOAll.TabStop = false;
-            this.grpIOAll.Text = "选择文件位置，默认与exe文件同路径";
+            this.dtpShowBeginTIme.Location = new System.Drawing.Point(104, 28);
+            this.dtpShowBeginTIme.Name = "dtpShowBeginTIme";
+            this.dtpShowBeginTIme.Size = new System.Drawing.Size(200, 29);
+            this.dtpShowBeginTIme.TabIndex = 14;
             // 
-            // btnIOFileDir
+            // dtpShowSecondTIme
             // 
-            this.btnIOFileDir.Location = new System.Drawing.Point(95, 78);
-            this.btnIOFileDir.Name = "btnIOFileDir";
-            this.btnIOFileDir.Size = new System.Drawing.Size(118, 39);
-            this.btnIOFileDir.TabIndex = 8;
-            this.btnIOFileDir.Text = "选择文件位置";
-            this.btnIOFileDir.UseVisualStyleBackColor = true;
-            this.btnIOFileDir.Click += new System.EventHandler(this.btnIOFileDir_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 21);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "文件位置 :";
-            // 
-            // txtIOFileDir
-            // 
-            this.txtIOFileDir.AcceptsReturn = true;
-            this.txtIOFileDir.Location = new System.Drawing.Point(95, 34);
-            this.txtIOFileDir.Name = "txtIOFileDir";
-            this.txtIOFileDir.Size = new System.Drawing.Size(257, 29);
-            this.txtIOFileDir.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "结束日期 :";
-            // 
-            // dtpIOEndDate
-            // 
-            this.dtpIOEndDate.Location = new System.Drawing.Point(114, 88);
-            this.dtpIOEndDate.Name = "dtpIOEndDate";
-            this.dtpIOEndDate.Size = new System.Drawing.Size(200, 29);
-            this.dtpIOEndDate.TabIndex = 3;
+            this.dtpShowSecondTIme.Location = new System.Drawing.Point(104, 75);
+            this.dtpShowSecondTIme.Name = "dtpShowSecondTIme";
+            this.dtpShowSecondTIme.Size = new System.Drawing.Size(200, 29);
+            this.dtpShowSecondTIme.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 45);
+            this.label6.Location = new System.Drawing.Point(6, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 21);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "开始日期 :";
+            this.label6.TabIndex = 16;
+            this.label6.Text = "开始时间: ";
             // 
-            // dtpIOBeginDate
+            // label7
             // 
-            this.dtpIOBeginDate.Location = new System.Drawing.Point(114, 39);
-            this.dtpIOBeginDate.Name = "dtpIOBeginDate";
-            this.dtpIOBeginDate.Size = new System.Drawing.Size(200, 29);
-            this.dtpIOBeginDate.TabIndex = 0;
-            // 
-            // btnExportToJPG
-            // 
-            this.btnExportToJPG.Location = new System.Drawing.Point(209, 376);
-            this.btnExportToJPG.Name = "btnExportToJPG";
-            this.btnExportToJPG.Size = new System.Drawing.Size(140, 42);
-            this.btnExportToJPG.TabIndex = 8;
-            this.btnExportToJPG.Text = "导出为JPG图片";
-            this.btnExportToJPG.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "二级标签: ";
             // 
             // FormAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 671);
+            this.ClientSize = new System.Drawing.Size(1244, 840);
             this.Controls.Add(this.tabControlAnalysis);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -743,6 +666,7 @@
             this.tabPageTotal.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPageShowSourceData.ResumeLayout(false);
             this.tabPageEveryDay.ResumeLayout(false);
             this.tabPageEveryDay.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -750,14 +674,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.tabPageIO.ResumeLayout(false);
-            this.tabPageIO.PerformLayout();
+            this.groupBoxFilter.ResumeLayout(false);
+            this.groupBoxFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.grpIOAll.ResumeLayout(false);
-            this.grpIOAll.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -794,32 +714,26 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboEveryLabel;
-        private System.Windows.Forms.TabPage tabPageIO;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnIOExcelDays;
-        private System.Windows.Forms.DateTimePicker dtpIOBeginDate;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dtpIOEndDate;
-        private System.Windows.Forms.Button btnIOExcelDaysAll;
-        private System.Windows.Forms.GroupBox grpIOAll;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtIOFileDir;
-        private System.Windows.Forms.Button btnIOFileDir;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnIOWordDays;
-        private System.Windows.Forms.Button btnIOWordDaysAll;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cboFirstLabel;
-        private System.Windows.Forms.Button btnIOExcelLabel;
-        private System.Windows.Forms.ComboBox cboSecondLabel;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBoxShowLegend;
         private System.Windows.Forms.CheckBox checkBoxShow3D;
-        private System.Windows.Forms.Label lblShowType;
-        private System.Windows.Forms.ComboBox cboShowType;
         private System.Windows.Forms.Button btnExportToJPG;
+        private System.Windows.Forms.TabPage tabPageShowSourceData;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvShow;
+        private System.Windows.Forms.GroupBox groupBoxFilter;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpShowSecondTIme;
+        private System.Windows.Forms.DateTimePicker dtpShowBeginTIme;
+        private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button btnIOExcelLabel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtShowNote;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cboShowSecondLabel;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cboShowFirstLabel;
     }
 }

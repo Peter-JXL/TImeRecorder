@@ -27,6 +27,7 @@ namespace TimeRecorder
         string filename;
         SaveFileDialog diaSavaFile;
         AccessHelper accessHelper;
+        DataSet myDataSet;
         #endregion
 
 
@@ -34,8 +35,7 @@ namespace TimeRecorder
         {
             InitializeComponent();
             chartAnalysis.Legends[0].Name = legendPieName;
-            chartAnalysis.Legends[0].Enabled = false;
-
+            chartAnalysis.Legends[0].Enabled = false;        
             chartAnalysis.Series[0].Name = chartPieName;
             chartAnalysis.Series[chartPieName].ChartType = SeriesChartType.Pie;
             chartAnalysis.Series[chartPieName].IsValueShownAsLabel = false;   //设置为true则不会显示文字
@@ -45,20 +45,55 @@ namespace TimeRecorder
 
             rdoPie.Checked = true; // 默认是饼状图
 
-            diaSavaFile = new SaveFileDialog();
             accessHelper = new AccessHelper();
+            myDataSet = new DataSet();
 
+            LoadLabelTable();
+            fillcboFirstLbl();
+
+            diaSavaFile = new SaveFileDialog();        
             diaSavaFile.Filter = ("Excel 文件(*.xls)|*.xlsx|Word 文件(*.doc*)|*.docx*");//后缀名。  
             diaSavaFile.AddExtension = true;
             diaSavaFile.RestoreDirectory = true;
             diaSavaFile.Title = "选择要导出的位置";
 
-            cboShowType.ImeMode = ImeMode.On;
-            String[] chartType = { "饼图", "条形图", "柱状图", "圆环图", "漏斗图", "棱锥图" }; 
-            cboShowType.Items.AddRange(chartType);
         }
 
+        private void LoadLabelTable()
+        {
+            DataTable LabelTableName = accessHelper.getLabelTable().Copy();
+            myDataSet.Tables.Add(LabelTableName);
+        }
 
+        private void fillcboFirstLbl()
+        {
+            cboShowFirstLabel.Items.Clear();
+            HashSet<string> firstLblSet = new HashSet<string>();   //定义集合是为了避免重复
+            foreach (DataRow item in myDataSet.Tables[LabelTableName].Rows)
+            {
+                firstLblSet.Add(item[firstLabelColumnName].ToString());
+            }
+            foreach (var n in firstLblSet)
+            {
+                cboShowFirstLabel.Items.Add(n);
+            }
+
+        }
+
+        private void cboShowFirstLabel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //选择某个一级标签后，用一级标签的子标签 填充二级标签下拉框
+            cboShowSecondLabel.Items.Clear();
+            HashSet<string> secondLblSet = new HashSet<string>();
+            foreach (DataRow item in myDataSet.Tables[LabelTableName].Rows)
+            {
+                if (item[firstLabelColumnName].ToString() == cboShowFirstLabel.Text)
+                {
+                    cboShowSecondLabel.Items.Add(item[secondLabelColumnName]);
+                }
+            }
+
+        }
 
         #region 数据汇总选项卡
 
@@ -141,7 +176,7 @@ namespace TimeRecorder
 
         private void btnEveryAnalysis_Click(object sender, EventArgs e)
         {
-            DataTable d = accessHelper.getLabelTime(dtpEveryBeginTime.Value, dtpEveryEndTime.Value, "");
+            DataTable d = accessHelper.getDaysTable(dtpEveryBeginTime.Value, dtpEveryEndTime.Value);
             LoadEveryChart(d);
         }
 
@@ -201,29 +236,32 @@ namespace TimeRecorder
             chartAnalysis.ChartAreas[0].Area3DStyle.Enable3D = !temp;
         }
 
-        private void cboShowType_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnFilter_Click(object sender, EventArgs e)
         {
-            //TODO: 待优化
-            var series = chartAnalysis.Series[chartPieName];
-            String[] chartType = { "饼图", "条形图", "柱状图", "圆环图", "漏斗图", "棱锥图" };
+            string sql = String.Format("select * from {0} where {1} >#{2}# and {3} < #{4}#", 
+                dataTableName, beginTimeColumnName, dtpShowBeginTIme.Value, endTimeColumnName, dtpShowSecondTIme.Value);
 
-            switch (cboShowType.Text)
+            if (! String.IsNullOrEmpty(cboShowFirstLabel.Text))
             {
-                case "饼图": series.ChartType = SeriesChartType.Pie; break;
-                case "条形图": series.ChartType = SeriesChartType.Bar; break;
-                case "柱状图": series.ChartType = SeriesChartType.Column; break;
-                case "圆环图": series.ChartType = SeriesChartType.Doughnut; break;
-                case "漏斗图": series.ChartType = SeriesChartType.Funnel; break;
-                case "棱锥图": series.ChartType = SeriesChartType.Pyramid; break;
-                case "ryramid": series.ChartType = SeriesChartType.Pyramid; break;
-                case "rdyramid": series.ChartType = SeriesChartType.Pyramid; break;
-                case "rdd": series.ChartType = SeriesChartType.Pyramid; break;
-                default:
-                    break;
+                sql = string.Format("{0} and where {1} = {2}", sql, firstLabelColumnName, cboShowFirstLabel.Text);                
             }
+            if(!String.IsNullOrEmpty(cboShowSecondLabel.Text))
+            {
+                sql = string.Format("{0} and where {1} = {2}", sql, secondLabelColumnName, cboShowSecondLabel.Text);
+            }
+            if (!String.IsNullOrEmpty(txtShowNote.Text))
+            {
+                sql = string.Format("{0} and where {1} like \'{2}\'", sql, noteColumnName, txtShowNote.Text);
+            }
+            Console.WriteLine(sql);
+            DataTable t = accessHelper.GetDataTableWithSql(sql);
+            dgvShow.DataSource = t;
         }
 
+        private void btnIOExcelLabel_Click_1(object sender, EventArgs e)
+        {
 
+        }
 
         #endregion
 
@@ -238,84 +276,83 @@ namespace TimeRecorder
             {
                 filename = diaSavaFile.FileName;
             }
-            txtIOFileDir.Text = filename;
+            //txtIOFileDir.Text = filename;
         }
 
 
         private void btnIOExcelDaysAll_Click(object sender, EventArgs e)
         {
             //将全部数据导出到Excel，工作表分布：总表为全部数据的表，然后每个月的数据一张表
-            try
-            {
-                bool isSuccess = false;
-                if (string.IsNullOrEmpty(txtIOFileDir.Text))
-                    isSuccess = accessHelper.exportAllDataToExcel();
+            //try
+            //{
+            //    bool isSuccess = false;
+            //    if (string.IsNullOrEmpty(txtIOFileDir.Text))
+            //        isSuccess = accessHelper.exportAllDataToExcel();
                 
-                else
-                    isSuccess = accessHelper.exportAllDataToExcel(filename);
+            //    else
+            //        isSuccess = accessHelper.exportAllDataToExcel(filename);
   
 
-                if (isSuccess)
-                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    if (isSuccess)
+            //        MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    throw;
+            //}
 
         }
 
         private void btnIOExcelDays_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string beginDate = dtpIOBeginDate.Value.ToShortDateString();
-                string endDate = dtpIOEndDate.Value.ToShortDateString();
+            //try
+            //{
+            //    string beginDate = dtpIOBeginDate.Value.ToShortDateString();
+            //    string endDate = dtpIOEndDate.Value.ToShortDateString();
 
-                bool isSuccess = false;
-                if (string.IsNullOrEmpty(txtIOFileDir.Text))
-                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value);
+            //    bool isSuccess = false;
+            //    if (string.IsNullOrEmpty(txtIOFileDir.Text))
+            //        isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value);
                 
-                else
-                    isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value, filename);
+            //    else
+            //        isSuccess = accessHelper.exportDaysDataToExcel(dtpIOBeginDate.Value, dtpIOEndDate.Value, filename);
                 
-                if (isSuccess)
-                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    if (isSuccess)
+            //        MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
 
         private void btnIOExcelLabel_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bool isSuccess = false;
-                if (string.IsNullOrEmpty(txtIOFileDir.Text))
-                    ;
+            //try
+            //{
+            //    bool isSuccess = false;
+            //    if (string.IsNullOrEmpty(txtIOFileDir.Text))
+            //        ;
 
-                else
-                    ;
+            //    else
+            //        ;
                 
 
-                if (isSuccess)
-                    MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    if (isSuccess)
+            //        MessageBox.Show("导出数据成功", "导出成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "导出失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         #endregion
-
 
 
 

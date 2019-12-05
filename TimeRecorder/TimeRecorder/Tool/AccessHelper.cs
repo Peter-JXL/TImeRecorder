@@ -46,7 +46,7 @@ namespace TimeRecorder
             return myDataSet.Tables[LabelTableName];
         }
 
-        public DataTable getDaysTable(DateTime beginDate, DateTime endDate)
+        public DataTable getDaysTable(DateTime beginDate, DateTime endDate, string firstLabel = null, string secondLabel = null, string note = null)
         {
             string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}#",
                                dataTableName, dateColumnName, beginDate, endDate);
@@ -63,24 +63,21 @@ namespace TimeRecorder
 
         }
 
-        public DataTable getLabelTime(DateTime beginDate, DateTime endDate, string Label)
-        {
-            //获取指定标签的时间
-            string sql = String.Format("select * from {0} where {1} >= #{2}# and {1} <= #{3}# and {4} = {5};",
-                                               dataTableName, dateColumnName, beginDate, endDate, firstLabelColumnName, Label);
+        
 
+        public DataTable GetDataTableWithSql(string sql)
+        {
             connection.Open();
             OleDbCommand command = new OleDbCommand(sql, connection);
             dataAdapter.SelectCommand = command;
             OleDbCommandBuilder builder = new OleDbCommandBuilder(dataAdapter);
 
             DataTable temp = new DataTable();
-            dataAdapter.Fill(temp, dataTableName);
+            dataAdapter.Fill(temp);
             connection.Close();
 
             return temp;
         }
-
 
         #region 导出Excel数据
 

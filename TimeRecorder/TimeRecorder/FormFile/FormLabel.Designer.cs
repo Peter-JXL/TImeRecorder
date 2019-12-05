@@ -39,23 +39,26 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(22, 12);
+            this.btnSave.Location = new System.Drawing.Point(22, 22);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 34);
             this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "保存更新";
+            this.btnSave.Text = "保存更新&S";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvLabel
             // 
+            this.dgvLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLabel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvLabel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvLabel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLabel.Location = new System.Drawing.Point(22, 71);
             this.dgvLabel.Name = "dgvLabel";
             this.dgvLabel.RowTemplate.Height = 23;
-            this.dgvLabel.Size = new System.Drawing.Size(703, 618);
+            this.dgvLabel.Size = new System.Drawing.Size(900, 651);
             this.dgvLabel.TabIndex = 8;
             // 
             // statusStripFormLabel
@@ -64,7 +67,7 @@
             this.toolStripStatusLabel1});
             this.statusStripFormLabel.Location = new System.Drawing.Point(0, 751);
             this.statusStripFormLabel.Name = "statusStripFormLabel";
-            this.statusStripFormLabel.Size = new System.Drawing.Size(737, 22);
+            this.statusStripFormLabel.Size = new System.Drawing.Size(934, 22);
             this.statusStripFormLabel.TabIndex = 13;
             this.statusStripFormLabel.Text = "statusStrip1";
             // 
@@ -78,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 773);
+            this.ClientSize = new System.Drawing.Size(934, 773);
             this.Controls.Add(this.statusStripFormLabel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvLabel);
