@@ -202,7 +202,7 @@ namespace TimeRecorder
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.S: saveToDataBase(); break;
+                    case Keys.A: saveToDataBase(); break;
                     case Keys.Left: btnYesterday.PerformClick(); break;
                     case Keys.Right: btnTomorrow.PerformClick(); break;
 
@@ -579,8 +579,7 @@ namespace TimeRecorder
         string chartPieName = "饼状图", legendPieName = "饼状图图例";
 
 
-        //以下是字体大小下拉框用的数据
-        //设置数组保存下拉菜单上要显示的字号的大小,
+        //以下是字体大小下拉框用的数据  设置数组保存下拉菜单上要显示的字号的大小,
         string[] fontSizeName = { "8", "9", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72", "初号", "小初", "一号", "小一", "二号", "小二", "三号", "小三", "四号", "小四", "五号", "小五", "六号", "小六", "七号", "八号" };
 
         //利用榜和字号的关系定义一个字体大小的数组
@@ -713,6 +712,7 @@ namespace TimeRecorder
 
         private void rTxtTodaySummary_save()
         {
+            Console.WriteLine(summaryFileName); 
             rTxtTodaySummary.SaveFile(summaryFileName);
             //如果是在TextChanged事件里用SaveFile方法，会报错：有另一个进程在使用
         }
@@ -724,7 +724,7 @@ namespace TimeRecorder
 
         private void rTxtTodaySummary_KeyDown(object sender, KeyEventArgs e)
         {
-
+            Console.WriteLine("rtxtkeydown" + e.KeyCode);
             if (e.Control)
             {
                 switch (e.KeyCode)
@@ -778,6 +778,7 @@ namespace TimeRecorder
                 rTxtTodaySummary.SelectionColor = diaColor.Color;
             }
         }
+
 
         private void toolStripBtnBold_Click(object sender, EventArgs e)
         {

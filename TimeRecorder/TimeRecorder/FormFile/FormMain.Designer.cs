@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnAddTodgv = new System.Windows.Forms.Button();
             this.lblBeginTime = new System.Windows.Forms.Label();
             this.helpProviderMain = new System.Windows.Forms.HelpProvider();
@@ -625,26 +625,27 @@
             // 
             resources.ApplyResources(this.rTxtTodaySummary, "rTxtTodaySummary");
             this.rTxtTodaySummary.Name = "rTxtTodaySummary";
+            this.rTxtTodaySummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rTxtTodaySummary_KeyDown);
             // 
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend1);
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend2);
             resources.ApplyResources(this.chartAnalysis, "chartAnalysis");
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartAreaPie";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "LegendPie";
-            series1.Name = "SeriesPie";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series1.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series1);
+            series2.ChartArea = "ChartAreaPie";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "LegendPie";
+            series2.Name = "SeriesPie";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series2.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series2);
             // 
             // FormMain
             // 
