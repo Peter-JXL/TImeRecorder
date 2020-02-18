@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -261,6 +255,28 @@ namespace TimeRecorder
         private void btnIOExcelLabel_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExportToJPG_Click(object sender, EventArgs e)
+        {
+            //SaveFileDialog saveImgFileName = new SaveFileDialog();
+            //saveImgFileName.Filter = "文本文件(*.png)|*.png|所有文件|*.*";//设置文件类型
+            //string GR_Path = @"D:";
+            //string fullFileName = GR_Path + "\\" + fileName + ".png";
+            //sfd.FileName = "保存";//设置默认文件名
+            //sfd.DefaultExt = "txt";//设置默认格式（可以不设）
+            //sfd.AddExtension = true;//设置自动在文件名中添加扩展名
+            //if (sfd.ShowDialog() == DialogResult.OK)
+            //{
+            //    txtPath.Text = "FileName:" + sfd.FileName + "\r\n";
+            //    using (StreamWriter sw = new StreamWriter(sfd.FileName))
+            //    {
+            //        sw.WriteLineAsync("今天是个好天气");
+            //    }
+            //}
+
+            //chart1.SaveImage(fullFileName, ChartImageFormat.Png);
+            
         }
 
         #endregion

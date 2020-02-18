@@ -55,7 +55,6 @@
             this.btnExportToJPG = new System.Windows.Forms.Button();
             this.checkBoxShow3D = new System.Windows.Forms.CheckBox();
             this.checkBoxShowLegend = new System.Windows.Forms.CheckBox();
-            this.tabPageShowSourceData = new System.Windows.Forms.TabPage();
             this.tabPageEveryDay = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.cboEveryLabel = new System.Windows.Forms.ComboBox();
@@ -70,7 +69,15 @@
             this.dtpEveryBeginTime = new System.Windows.Forms.DateTimePicker();
             this.dtpEveryEndTime = new System.Windows.Forms.DateTimePicker();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPageShowSourceData = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvShow = new System.Windows.Forms.DataGridView();
             this.groupBoxFilter = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpShowSecondTIme = new System.Windows.Forms.DateTimePicker();
+            this.dtpShowBeginTIme = new System.Windows.Forms.DateTimePicker();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnIOExcelLabel = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -79,27 +86,20 @@
             this.cboShowSecondLabel = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cboShowFirstLabel = new System.Windows.Forms.ComboBox();
-            this.dgvShow = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dtpShowBeginTIme = new System.Windows.Forms.DateTimePicker();
-            this.dtpShowSecondTIme = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartAnalysis)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBoxType.SuspendLayout();
             this.tabControlAnalysis.SuspendLayout();
             this.tabPageTotal.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tabPageShowSourceData.SuspendLayout();
             this.tabPageEveryDay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.groupBoxFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
+            this.tabPageShowSourceData.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
+            this.groupBoxFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartAnalysis
@@ -312,6 +312,7 @@
             this.btnExportToJPG.TabIndex = 8;
             this.btnExportToJPG.Text = "导出为JPG图片";
             this.btnExportToJPG.UseVisualStyleBackColor = true;
+            this.btnExportToJPG.Click += new System.EventHandler(this.btnExportToJPG_Click);
             // 
             // checkBoxShow3D
             // 
@@ -334,19 +335,6 @@
             this.checkBoxShowLegend.Text = "显示图例";
             this.checkBoxShowLegend.UseVisualStyleBackColor = true;
             this.checkBoxShowLegend.Click += new System.EventHandler(this.checkBoxShowLegend_Click);
-            // 
-            // tabPageShowSourceData
-            // 
-            this.tabPageShowSourceData.Controls.Add(this.groupBox2);
-            this.tabPageShowSourceData.Controls.Add(this.dgvShow);
-            this.tabPageShowSourceData.Controls.Add(this.groupBoxFilter);
-            this.tabPageShowSourceData.Location = new System.Drawing.Point(4, 30);
-            this.tabPageShowSourceData.Name = "tabPageShowSourceData";
-            this.tabPageShowSourceData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShowSourceData.Size = new System.Drawing.Size(1212, 790);
-            this.tabPageShowSourceData.TabIndex = 3;
-            this.tabPageShowSourceData.Text = "显示源数据";
-            this.tabPageShowSourceData.UseVisualStyleBackColor = true;
             // 
             // tabPageEveryDay
             // 
@@ -495,6 +483,47 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // tabPageShowSourceData
+            // 
+            this.tabPageShowSourceData.Controls.Add(this.groupBox2);
+            this.tabPageShowSourceData.Controls.Add(this.dgvShow);
+            this.tabPageShowSourceData.Controls.Add(this.groupBoxFilter);
+            this.tabPageShowSourceData.Location = new System.Drawing.Point(4, 30);
+            this.tabPageShowSourceData.Name = "tabPageShowSourceData";
+            this.tabPageShowSourceData.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageShowSourceData.Size = new System.Drawing.Size(1212, 790);
+            this.tabPageShowSourceData.TabIndex = 3;
+            this.tabPageShowSourceData.Text = "显示源数据";
+            this.tabPageShowSourceData.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Location = new System.Drawing.Point(770, 421);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(318, 369);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "导出每日总结";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(24, 143);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 34);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "导出数据到Excel";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dgvShow
+            // 
+            this.dgvShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShow.Location = new System.Drawing.Point(6, 6);
+            this.dgvShow.Name = "dgvShow";
+            this.dgvShow.RowTemplate.Height = 23;
+            this.dgvShow.Size = new System.Drawing.Size(712, 766);
+            this.dgvShow.TabIndex = 13;
+            // 
             // groupBoxFilter
             // 
             this.groupBoxFilter.Controls.Add(this.label7);
@@ -515,6 +544,38 @@
             this.groupBoxFilter.TabIndex = 12;
             this.groupBoxFilter.TabStop = false;
             this.groupBoxFilter.Text = "筛选条件";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "二级标签: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 21);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "开始时间: ";
+            // 
+            // dtpShowSecondTIme
+            // 
+            this.dtpShowSecondTIme.Location = new System.Drawing.Point(104, 75);
+            this.dtpShowSecondTIme.Name = "dtpShowSecondTIme";
+            this.dtpShowSecondTIme.Size = new System.Drawing.Size(200, 29);
+            this.dtpShowSecondTIme.TabIndex = 15;
+            // 
+            // dtpShowBeginTIme
+            // 
+            this.dtpShowBeginTIme.Location = new System.Drawing.Point(104, 28);
+            this.dtpShowBeginTIme.Name = "dtpShowBeginTIme";
+            this.dtpShowBeginTIme.Size = new System.Drawing.Size(200, 29);
+            this.dtpShowBeginTIme.TabIndex = 14;
             // 
             // btnFilter
             // 
@@ -586,66 +647,6 @@
             this.cboShowFirstLabel.TabIndex = 2;
             this.cboShowFirstLabel.SelectedIndexChanged += new System.EventHandler(this.cboShowFirstLabel_SelectedIndexChanged);
             // 
-            // dgvShow
-            // 
-            this.dgvShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShow.Location = new System.Drawing.Point(6, 6);
-            this.dgvShow.Name = "dgvShow";
-            this.dgvShow.RowTemplate.Height = 23;
-            this.dgvShow.Size = new System.Drawing.Size(712, 766);
-            this.dgvShow.TabIndex = 13;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Location = new System.Drawing.Point(770, 421);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(318, 369);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "导出每日总结";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(24, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 34);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "导出数据到Excel";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dtpShowBeginTIme
-            // 
-            this.dtpShowBeginTIme.Location = new System.Drawing.Point(104, 28);
-            this.dtpShowBeginTIme.Name = "dtpShowBeginTIme";
-            this.dtpShowBeginTIme.Size = new System.Drawing.Size(200, 29);
-            this.dtpShowBeginTIme.TabIndex = 14;
-            // 
-            // dtpShowSecondTIme
-            // 
-            this.dtpShowSecondTIme.Location = new System.Drawing.Point(104, 75);
-            this.dtpShowSecondTIme.Name = "dtpShowSecondTIme";
-            this.dtpShowSecondTIme.Size = new System.Drawing.Size(200, 29);
-            this.dtpShowSecondTIme.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 21);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "开始时间: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "二级标签: ";
-            // 
             // FormAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -666,7 +667,6 @@
             this.tabPageTotal.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.tabPageShowSourceData.ResumeLayout(false);
             this.tabPageEveryDay.ResumeLayout(false);
             this.tabPageEveryDay.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -674,10 +674,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPageShowSourceData.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).EndInit();
             this.groupBoxFilter.ResumeLayout(false);
             this.groupBoxFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

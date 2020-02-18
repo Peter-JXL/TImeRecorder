@@ -323,8 +323,10 @@ namespace TimeRecorder
         {
             DataRow newDataRow = myDataSet.Tables[dataTableName].NewRow();
             newDataRow[dateColumnName] = mcMain.SelectionStart.ToString("yyyy-MM-dd");
-            newDataRow[beginTimeColumnName] = dTPBeginTime.Value;  //建议不要用.Text，会将00:00 变成后一天的开始时间
-            newDataRow[endTimeColumnName] = dTPEndTime.Value;
+            //建议不要用.Text，会将00:00 变成后一天的开始时间
+
+            newDataRow[beginTimeColumnName] = deleteSeconds(dTPBeginTime.Value);  
+            newDataRow[endTimeColumnName] = deleteSeconds(dTPEndTime.Value);
             newDataRow[firstLabelColumnName] = cboFirstLbl.Text;
             newDataRow[secondLabelColumnName] = cboSecondLbl.Text;
             newDataRow[noteColumnName] = txtNote.Text;
@@ -335,6 +337,10 @@ namespace TimeRecorder
             txtNote.Clear();
             dTPEndTime.Focus();
 
+        }
+
+        private DateTime deleteSeconds(DateTime dt) {
+            return DateTime.Parse(dt.ToString("yyyy-MM-dd HH:mm"));
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
