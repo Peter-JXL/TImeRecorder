@@ -15,13 +15,13 @@ namespace TimeRecorder
     {
         #region 数据定义
 
-        string  dataTableName = GlobalData.dataTableName, 
+        string dataTableName = GlobalData.dataTableName,
                 labelTableName = GlobalData.labelTabelName,
-                firstLabelColumnName = GlobalData.firstLabelColumnName, 
+                firstLabelColumnName = GlobalData.firstLabelColumnName,
                 secondLabelColumnName = GlobalData.secondLabelColumnName,
-                dateColumnName = GlobalData.dateColumnName, 
+                dateColumnName = GlobalData.dateColumnName,
                 beginTimeColumnName = GlobalData.beginTimeColumnName,
-                endTimeColumnName = GlobalData.endTimeColumnName, 
+                endTimeColumnName = GlobalData.endTimeColumnName,
                 noteColumnName = GlobalData.noteColumnName;
 
         static string filePath = "Provider = Microsoft.ACE.OLEDB.12.0;  Data source = TimeRecorderData.accdb";
@@ -165,8 +165,6 @@ namespace TimeRecorder
             dgvShow.Sort(dgvShow.Columns[2], ListSortDirection.Ascending); //按开始时间的升序排序
 
             //TODO：根据一级标签设置颜色
-
-
         }
 
         private void setDtpBeginTime()
@@ -325,7 +323,7 @@ namespace TimeRecorder
             newDataRow[dateColumnName] = mcMain.SelectionStart.ToString("yyyy-MM-dd");
             //建议不要用.Text，会将00:00 变成后一天的开始时间
 
-            newDataRow[beginTimeColumnName] = deleteSeconds(dTPBeginTime.Value);  
+            newDataRow[beginTimeColumnName] = deleteSeconds(dTPBeginTime.Value);
             newDataRow[endTimeColumnName] = deleteSeconds(dTPEndTime.Value);
             newDataRow[firstLabelColumnName] = cboFirstLbl.Text;
             newDataRow[secondLabelColumnName] = cboSecondLbl.Text;
@@ -339,10 +337,81 @@ namespace TimeRecorder
 
         }
 
-        private DateTime deleteSeconds(DateTime dt) {
+        private DateTime deleteSeconds(DateTime dt)
+        {
             return DateTime.Parse(dt.ToString("yyyy-MM-dd HH:mm"));
         }
 
+        private void cleanDb_Click(object sender, EventArgs e)
+        {
+            string filePath = @"Provider = Microsoft.ACE.OLEDB.12.0;  Data source = D:\ATime\TimeRecorder\TimeRecorder\TimeRecorder\bin\Debug\TimeRecorderData.accdb";
+            OleDbConnection conn = new OleDbConnection(filePath);
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from dataTable";
+            conn.Open();
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime dt = (DateTime)reader["beginTime"];
+                if (dt.Second != 0)
+                {
+                    int id = (int)reader["id"];
+                    Console.WriteLine(id);
+                    Console.Write("情理中原始数据" + dt);
+                    Console.WriteLine("删除后的数据" + deleteSeconds(dt));
+                    OleDbCommand cmd2 = conn.CreateCommand();
+                    cmd2 = conn.CreateCommand();
+                    cmd2.CommandText = String.Format("update dataTable set beginTime = #{0}# where id = {1}", deleteSeconds(dt), id);
+                    cmd2.ExecuteNonQuery();
+                }
+            }
+
+            conn.Close();
+        }
+
+        private void 查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filePath = @"Provider = Microsoft.ACE.OLEDB.12.0;  Data source = D:\ATime\TimeRecorder\TimeRecorder\TimeRecorder\bin\Debug\TimeRecorderData.accdb";
+            OleDbConnection conn = new OleDbConnection(filePath);
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from dataTable where id = 7754";
+            conn.Open();
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine("hasrows");
+                DateTime dt = (DateTime)reader["endTime"];
+                Console.WriteLine(dt);
+            }
+            reader.Close();
+            conn.Close();
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filePath = @"Provider = Microsoft.ACE.OLEDB.12.0;  Data source = D:\ATime\TimeRecorder\TimeRecorder\TimeRecorder\bin\Debug\TimeRecorderData.accdb";
+            OleDbConnection conn = new OleDbConnection(filePath);
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from dataTable where id = 7754";
+            conn.Open();
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime dt = (DateTime)reader["endTime"];
+                Console.WriteLine(dt);
+                if (dt.Second != 0)
+                {
+                    OleDbCommand cmd2 = conn.CreateCommand();
+                    cmd2 = conn.CreateCommand();
+                    string sql2 = String.Format("update dataTable set endTime = #{0}# where id = {1}", deleteSeconds(dt), 7754);
+                    cmd2.CommandText = sql2;
+                    Console.WriteLine(sql2);
+                    cmd2.ExecuteNonQuery();
+                }
+            }
+            reader.Close();
+            conn.Close();
+        }
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
             //功能：根据备注来选定一级标签和二级标签
@@ -718,7 +787,7 @@ namespace TimeRecorder
 
         private void rTxtTodaySummary_save()
         {
-            Console.WriteLine(summaryFileName); 
+            Console.WriteLine(summaryFileName);
             rTxtTodaySummary.SaveFile(summaryFileName);
             //如果是在TextChanged事件里用SaveFile方法，会报错：有另一个进程在使用
         }
@@ -784,6 +853,7 @@ namespace TimeRecorder
                 rTxtTodaySummary.SelectionColor = diaColor.Color;
             }
         }
+
 
 
         private void toolStripBtnBold_Click(object sender, EventArgs e)

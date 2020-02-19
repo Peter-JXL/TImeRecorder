@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnAddTodgv = new System.Windows.Forms.Button();
             this.lblBeginTime = new System.Windows.Forms.Label();
             this.helpProviderMain = new System.Windows.Forms.HelpProvider();
@@ -102,6 +102,9 @@
             this.toolStripBtnList = new System.Windows.Forms.ToolStripButton();
             this.rTxtTodaySummary = new System.Windows.Forms.RichTextBox();
             this.chartAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cleanDb = new System.Windows.Forms.ToolStripMenuItem();
+            this.查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShow)).BeginInit();
             this.statusStripMain.SuspendLayout();
@@ -177,7 +180,10 @@
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmFile,
             this.tsmLabel,
-            this.帮助ToolStripMenuItem});
+            this.帮助ToolStripMenuItem,
+            this.cleanDb,
+            this.查询ToolStripMenuItem,
+            this.删除ToolStripMenuItem});
             resources.ApplyResources(this.menuStripMain, "menuStripMain");
             this.menuStripMain.Name = "menuStripMain";
             this.helpProviderMain.SetShowHelp(this.menuStripMain, ((bool)(resources.GetObject("menuStripMain.ShowHelp"))));
@@ -630,22 +636,40 @@
             // chartAnalysis
             // 
             this.chartAnalysis.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartAreaPie";
-            this.chartAnalysis.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "LegendPie";
-            this.chartAnalysis.Legends.Add(legend2);
+            chartArea5.BackColor = System.Drawing.Color.White;
+            chartArea5.Name = "ChartAreaPie";
+            this.chartAnalysis.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.Name = "LegendPie";
+            this.chartAnalysis.Legends.Add(legend5);
             resources.ApplyResources(this.chartAnalysis, "chartAnalysis");
             this.chartAnalysis.Name = "chartAnalysis";
             this.chartAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartAreaPie";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "LegendPie";
-            series2.Name = "SeriesPie";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series2.YValuesPerPoint = 2;
-            this.chartAnalysis.Series.Add(series2);
+            series5.ChartArea = "ChartAreaPie";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "LegendPie";
+            series5.Name = "SeriesPie";
+            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series5.YValuesPerPoint = 2;
+            this.chartAnalysis.Series.Add(series5);
+            // 
+            // cleanDb
+            // 
+            this.cleanDb.Name = "cleanDb";
+            resources.ApplyResources(this.cleanDb, "cleanDb");
+            this.cleanDb.Click += new System.EventHandler(this.cleanDb_Click);
+            // 
+            // 查询ToolStripMenuItem
+            // 
+            this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
+            resources.ApplyResources(this.查询ToolStripMenuItem, "查询ToolStripMenuItem");
+            this.查询ToolStripMenuItem.Click += new System.EventHandler(this.查询ToolStripMenuItem_Click);
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            resources.ApplyResources(this.删除ToolStripMenuItem, "删除ToolStripMenuItem");
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -757,6 +781,9 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnList;
         private System.Windows.Forms.RichTextBox rTxtTodaySummary;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAnalysis;
+        private System.Windows.Forms.ToolStripMenuItem cleanDb;
+        private System.Windows.Forms.ToolStripMenuItem 查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
     }
 }
 
