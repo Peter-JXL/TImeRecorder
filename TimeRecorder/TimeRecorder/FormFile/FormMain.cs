@@ -374,14 +374,16 @@ namespace TimeRecorder
             string filePath = @"Provider = Microsoft.ACE.OLEDB.12.0;  Data source = D:\ATime\TimeRecorder\TimeRecorder\TimeRecorder\bin\Debug\TimeRecorderData.accdb";
             OleDbConnection conn = new OleDbConnection(filePath);
             OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from dataTable where id = 7754";
+            cmd.CommandText = "select * from dataTable";
             conn.Open();
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine("hasrows");
                 DateTime dt = (DateTime)reader["endTime"];
-                Console.WriteLine(dt);
+                if (dt.Hour == 23 && dt.Minute == 59)
+                {
+                    Console.WriteLine(dt); 
+                }
             }
             reader.Close();
             conn.Close();
@@ -392,18 +394,26 @@ namespace TimeRecorder
             string filePath = @"Provider = Microsoft.ACE.OLEDB.12.0;  Data source = D:\ATime\TimeRecorder\TimeRecorder\TimeRecorder\bin\Debug\TimeRecorderData.accdb";
             OleDbConnection conn = new OleDbConnection(filePath);
             OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from dataTable where id = 7754";
+            cmd.CommandText = "select * from dataTable";
             conn.Open();
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 DateTime dt = (DateTime)reader["endTime"];
-                Console.WriteLine(dt);
-                if (dt.Second != 0)
+                if (dt.Hour == 23 && dt.Minute == 59)
                 {
+                    int id = (int)reader["id"];
+                    Console.WriteLine(id + "删除前：" +  dt );
+
+                    dt = dt.AddDays(1);
+                    dt = dt.AddHours(-23);
+                    dt = dt.AddMinutes(-59);
+                    Console.WriteLine(dt);
+                    string sql2 = String.Format("update dataTable set endTime = #{0}# where id = {1}", dt, id);
+                    Console.WriteLine(sql2);
+
                     OleDbCommand cmd2 = conn.CreateCommand();
                     cmd2 = conn.CreateCommand();
-                    string sql2 = String.Format("update dataTable set endTime = #{0}# where id = {1}", deleteSeconds(dt), 7754);
                     cmd2.CommandText = sql2;
                     Console.WriteLine(sql2);
                     cmd2.ExecuteNonQuery();
